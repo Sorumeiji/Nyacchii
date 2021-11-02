@@ -1,0 +1,30 @@
+{
+  "name": "project-minami",
+  "version": "1.0.0",
+  "description": "Portfolio Website for Nyacchii",
+  "main": "index.js",
+  "dependencies": {
+    "next": "^12.0.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "sass": "^1.43.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sorumeiji/project-minami-v2.git"
+  },
+  "author": "Kaleb Berry",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sorumeiji/project-minami-v2/issues"
+  },
+  "homepage": "https://github.com/Sorumeiji/project-minami-v2#readme"
+}
