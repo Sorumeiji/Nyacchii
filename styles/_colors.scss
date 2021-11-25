@@ -1,0 +1,13 @@
+@mixin colors {
+    --color-dark: hsl(0, 0%, 7%);
+    --color-light: hsl(0, 0%, 95%);
+    --color-light2: hsl(0, 0%, 98%);
+    --color-primary: hsl(15, 100%, 76%);
+    --color-accent: hsl(13, 100%, 65%);
+
+    h1 {
+        color: var(--color-dark);
+    }
+}
+
+// https://colorhunt.co/palette/9e83b97f7c82e6ddc4f8f8ff

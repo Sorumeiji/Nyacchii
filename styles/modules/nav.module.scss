@@ -1,0 +1,88 @@
+.wrapper {
+  background-color: var(--color-dark);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 2px 2px rgba(0, 0, 0, 0.15), 0 4px 4px rgba(0, 0, 0, 0.15),
+    0 8px 8px rgba(0, 0, 0, 0.15);
+  padding: 1.5em;
+}
+.primary_navigation {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 1em;
+}
+
+.primary_navigation a {
+  color: var(--color-light);
+}
+
+.primary_navigation a:hover {
+  color: var(--color-primary);
+}
+
+.active {
+  color: var(--color-primary) !important;
+}
+
+.Logo h4 {
+  color: aliceblue;
+}
+
+.mobile_nav_toggle {
+  display: none;
+}
+
+.mobile_nav_toggle:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 35em) {
+  .primary_navigation {
+    position: fixed;
+    inset: 0 0 0 30%;
+    z-index: 1000;
+    flex-direction: column;
+    padding: min(30vh, 10rem) 2em;
+    background: transparent;
+    padding: 10rem 2em;
+    background: #131313;
+    transform: translateX(100%);
+    transition: transform 350ms ease-in !important;
+  }
+
+  .primary_navigation li a {
+    color: white;
+  }
+
+  .primary_navigation[data-visible="true"] {
+    transform: translateX(0%);
+  }
+
+  .mobile_nav_toggle {
+    position: absolute;
+    display: block;
+    background: url("https://img.icons8.com/material-rounded/24/ffffff/menu--v1.png");
+    background-repeat: no-repeat;
+    z-index: 9999;
+    width: 1.5rem;
+    border: 0;
+    color: white;
+    aspect-ratio: 1;
+    right: 2rem;
+  }
+
+  .mobile_nav_toggle[aria-expanded="true"] {
+    background: url("https://img.icons8.com/ios-glyphs/25/ffffff/multiply.png");
+    background-repeat: no-repeat;
+    width: 1.5rem;
+  }
+}
+
+.sr_only {
+  clip: reac(0, 0, 0, 0);
+  clip-path: inset(50%);
+  position: absolute;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 1px;
+}

@@ -1,81 +1,232 @@
-html,
-body {
-    box-sizing: border-box;
-    height: 100%;
-    width: 100%;
+@use "/styles/colors";
+@use "/styles/fonts";
+
+:root {
+    @include colors.colors;
+    @include fonts.fonts;
 }
+
+/* Box sizing rules */
 *,
 *::before,
 *::after {
-    box-sizing: inherit;
+    box-sizing: border-box;
+}
+
+::selection {
+    color: #fff;
+    background: hsla(0, 0%, 7%, 0.822);
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol,
+ul[role="list"],
+ol[role="list"] {
+    list-style: none;
     padding: 0;
     margin: 0;
 }
 
+ul[role="list"] li {
+    display: inline-block;
+}
+
+ul[role="list"] li + li {
+    margin-left: 1em;
+}
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+html {
+    scroll-behavior: smooth !important;
+}
+
+/* Set core body defaults */
+body,
 #__next {
-    height: 100%;
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    font-smooth: antialiased;
+    overflow-x: hidden;
+    color: var(--color-dark);
+    background-color: var(--color-light);
     position: relative;
 }
 
-body {
-    padding: 0;
-    margin: 0;
-    min-height: 100vh;
-    background-color: hsl(0, 0%, 95%);
+.flow > * + * {
+    margin-top: var(--flow-space, 1em);
 }
 
-.container {
-    min-height: 100%;
+.post {
+    --flow-space: var(--h3);
+
+    width: 90vw;
+    width: clamp(16rem, 90vw, 70rem);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
 }
 
-.container aside {
-    background-color: hsl(0, 0%, 7%);
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+    color: currentColor;
+}
+
+a:hover {
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: min(55rem, 100%);
+    display: block;
+}
+
+figcaption {
+    font-size: var(--h3);
+    font-style: italic;
+    margin-top: 1rem;
+}
+
+blockquote {
+    padding-left: var(--h4);
+    border-left: 5px solid;
+    font-style: italic;
+}
+
+// :focus {
+//   outline: 2px dashed;
+//   outline-offset: 0.25rem;
+// }
+
+main:focus {
+    outline: none;
+}
+
+[href]:hover {
+    text-decoration: none;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+}
+
+*,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+}
+
+a[role="button"] {
+    color: #f3f3f3;
+    border: 1px solid black;
+    padding: 0.5em 1em;
+    border-radius: 0.2em;
+}
+
+a {
+    text-decoration: none;
+    transition: all 0.3s ease-in-out !important;
+}
+
+a:hover {
+    color: var(--color-primary);
+}
+
+section {
+    padding: 1em;
+}
+
+div[class*="span_"] {
+    padding: 1em;
+}
+
+footer {
+    background-color: var(--color-light2);
+    color: var(--pri-clr-midnight);
+    padding: 1em;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    padding: 1.5em;
+}
+
+footer a {
+    color: var(--pri-clr-midnight);
+}
+
+footer .row {
+    align-items: center;
+}
+
+footer .social {
+    display: flex;
+    gap: 1em;
+}
+
+footer .copy_lang {
+    display: flex;
+    gap: 1em;
+}
+
+div .layout {
+    position: relative;
+}
+
+@media (max-width: 35em) {
+    footer .copyright {
+        display: none;
+    }
 }
 
 @media (min-width: 600px) {
-    .row {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-between;
-        gap: 2%;
+    :root {
+        --type-scale: 1.2;
     }
-
-    .col-4 {
-        flex-basis: 100%;
+    .container {
+        width: 600px;
     }
 }
-
 @media (min-width: 900px) {
-    .col-1 {
-        flex-basis: 15%;
+    :root {
+        --type-scale: 1.25;
     }
-
-    .col-2 {
-        flex-basis: 32%;
-    }
-
-    .col-3 {
-        flex-basis: 49%;
-    }
-
-    .col-4 {
-        flex-basis: 66%;
-    }
-
-    .col-5 {
-        flex-basis: 83%;
-    }
-
-    .col-6 {
-        flex-basis: 100%;
+    .container {
+        width: 900px;
     }
 }
-
 @media (min-width: 1200px) {
+    :root {
+        --type-scale: 1.333;
+    }
+    .container {
+        width: 1200px;
+    }
 }
-
-// [class*="col-"] {
-//     width: 6;
-//     --initalBasis: calc(var(--width) / var(--columns) * 100%);
-//     flex-basis: var(--initalBasis);
-// }

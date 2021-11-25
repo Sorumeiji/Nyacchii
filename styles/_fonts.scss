@@ -1,0 +1,65 @@
+@use "../styles/colors";
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&family=Open+Sans:wght@300&display=swap");
+
+@mixin fonts {
+    --font-primary: "Open Sans Condensed", sans-serif;
+    --font-copy: "Open Sans", sans-serif;
+    --base-size: 1.2rem; // 16px
+    --type-scale: 1.2;
+    --h5: calc(var(--base-size) * var(--type-scale));
+    --h4: calc(var(--h5) * var(--type-scale));
+    --h3: calc(var(--h4) * var(--type-scale));
+    --h2: calc(var(--h3) * var(--type-scale));
+    --h1: calc(var(--h2) * var(--type-scale));
+}
+
+p,
+a,
+li {
+    font-size: var(--base-size);
+    font-family: var(--font-copy);
+    color: var(--primary-color);
+    line-height: 1.7;
+    max-width: 35ch;
+}
+
+h1 {
+    font-size: var(--h1);
+    font-family: var(--font-primary);
+    max-width: 20ch;
+}
+
+h2 {
+    font-size: var(--h2);
+    font-family: var(--font-primary);
+}
+
+h3 {
+    font-size: var(--h3);
+    font-family: var(--font-primary);
+}
+
+h4 {
+    font-size: var(--h4);
+    font-family: var(--font-primary);
+}
+
+h5 {
+    font-size: var(--h5);
+    font-family: var(--font-primary);
+}
+
+h2,
+h3 {
+    max-width: 25ch;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    color: var(--color-dark);
+    text-transform: capitalize;
+    font-weight: 300;
+}
