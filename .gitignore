@@ -3,3 +3,6 @@ dist
 public
 .next
 .env
+
+# Local Netlify folder
+.netlify
