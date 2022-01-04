@@ -145,10 +145,15 @@ main:focus {
 }
 
 a[role="button"] {
-    color: #f3f3f3;
+    color: #131313;
     border: 1px solid black;
     padding: 0.5em 1em;
-    border-radius: 0.2em;
+}
+
+a[role="button"]:hover {
+    border: 1px solid #131313;
+    background-color: #131313;
+    color: #fafafa;
 }
 
 a {
@@ -169,7 +174,7 @@ div[class*="span_"] {
 }
 
 footer {
-    background-color: var(--color-light2);
+    background-color: #fafafa;
     color: var(--pri-clr-midnight);
     padding: 1em;
     position: absolute;
@@ -208,7 +213,7 @@ div .layout {
 
 @media (min-width: 600px) {
     :root {
-        --type-scale: 1.2;
+        --type-scale: 1.25;
     }
     .container {
         width: 600px;
@@ -224,7 +229,7 @@ div .layout {
 }
 @media (min-width: 1200px) {
     :root {
-        --type-scale: 1.333;
+        --type-scale: 1.414;
     }
     .container {
         width: 1200px;

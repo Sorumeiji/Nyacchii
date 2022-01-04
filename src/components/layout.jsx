@@ -13,83 +13,9 @@ import { faInstagram, faTwitch, faTwitter, faYoutube } from '@fortawesome/free-b
 import { faCopyright, faGlobeAmericas } from '@fortawesome/free-solid-svg-icons';
 
 function Layout({ children }) {
-	const buttonRef = useRef();
-	const navRef = useRef();
-	const router = useRouter();
-
-	useEffect(() => {
-		buttonRef.current.addEventListener('click', toggle);
-	}, []);
-
-	function toggle(event) {
-		const visibilty = navRef.current.getAttribute('data-visible');
-		if (visibilty === 'false') {
-			navRef.current.setAttribute('data-visible', true);
-			buttonRef.current.setAttribute('aria-expanded', true);
-		} else {
-			navRef.current.setAttribute('data-visible', false);
-			buttonRef.current.setAttribute('aria-expanded', false);
-		}
-	}
-
 	return (
 		<>
 			<div className='layout'>
-				<div
-					className={`${Grid.row}
-				 ${Grid.container_fluid} 
-				 ${Nav.wrapper}
-				 ${Grid.middle_xs} 
-				 ${Grid.between_xs}`}>
-					<div className={`${Nav.Logo}`}>
-						<Image src={Logo} />
-					</div>
-
-					<button
-						className={`${Nav.mobile_nav_toggle}`}
-						aria-controls='primary_navigation'
-						ref={buttonRef}
-						aria-expanded='false'>
-						<span className={`${Nav.sr_only}`}>menu</span>
-					</button>
-
-					<nav>
-						<ul
-							id='primary_navigation'
-							data-visible='false'
-							ref={navRef}
-							className={`${Nav.primary_navigation}`}>
-							<li>
-								<Link href='/'>
-									<a className={router.pathname == '/' ? `${Nav.active}` : ''}>Home</a>
-								</Link>
-							</li>
-							<li>
-								<Link href='/digital'>
-									<a className={router.pathname == '/digital' ? `${Nav.active}` : ''}>
-										Digital Art
-									</a>
-								</Link>
-							</li>
-							<li>
-								<Link href='/emotes'>
-									<a className={router.pathname == '/emotes' ? `${Nav.active}` : ''}>Emotes</a>
-								</Link>
-							</li>
-							<li>
-								<a href='https://store.streamelements.com/nyacchii' target='_blank'>
-									Store
-								</a>
-							</li>
-							<li>
-								<Link href='/contact'>
-									<a className={router.pathname == '/contact' ? `${Nav.active}` : ''}>Contact</a>
-								</Link>
-							</li>
-						</ul>
-					</nav>
-				</div>
-
 				<motion.div
 					initial={{ opacity: 0 }}
 					animate={{ opacity: 1 }}
@@ -99,13 +25,10 @@ function Layout({ children }) {
 				</motion.div>
 			</div>
 			<footer>
-				<div className={`${Grid.container_fluid}`}>
-					<div className={`${Grid.row} ${Grid.between_xs}`}>
+				<div className={`${Grid.container} ${Grid.margin_center}`}>
+					<div className={`${Grid.row}  ${Grid.between_xs}`}>
 						<div className='copy_lang'>
-							<p>
-								<FontAwesomeIcon icon={faCopyright} />
-								&nbsp; NYACCHII 2021.
-							</p>
+							<p>&copy; NYACCHII 2021.</p>
 							<a className='copyright' href='#'>
 								<FontAwesomeIcon icon={faGlobeAmericas} />
 								&nbsp;Español

@@ -1,24 +1,9 @@
-.intro_container {
-    padding: 7em 0;
-    background-color: var(--color-light2);
+@use "../../styles/colors";
+
+.hero {
+    background-color: #fafafa;
 }
 
-.intro_container2 {
-    padding: 10em 0;
-}
-
-.preview {
-    gap: 1em;
-}
-
-.preview_small {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5em;
-}
-
-.bg {
-    background-image: url(/img/Vector.svg);
-    background-position: center;
-    background-repeat: no-repeat;
+.accent {
+    color: var(--color-primary);
 }

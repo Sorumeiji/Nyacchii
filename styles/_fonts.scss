@@ -1,11 +1,11 @@
 @use "../styles/colors";
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&family=Open+Sans:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
 
 @mixin fonts {
     --font-primary: "Open Sans Condensed", sans-serif;
     --font-copy: "Open Sans", sans-serif;
-    --base-size: 1.2rem; // 16px
-    --type-scale: 1.2;
+    --base-size: 1rem; // 16px
+    --type-scale: 1.25;
     --h5: calc(var(--base-size) * var(--type-scale));
     --h4: calc(var(--h5) * var(--type-scale));
     --h3: calc(var(--h4) * var(--type-scale));
@@ -62,4 +62,5 @@ h5 {
     color: var(--color-dark);
     text-transform: capitalize;
     font-weight: 300;
+    line-height: 1;
 }
