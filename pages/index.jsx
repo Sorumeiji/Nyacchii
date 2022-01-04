@@ -21,7 +21,7 @@ const Homepage = () => {
 					<div className={`${Grid['row']}`}>
 						<div>
 							<h1>
-								Digital Creative & Twitch Partner <span className={`${Home['accent']}`}>.</span>
+								Digital Creative & Twitch Partner<span className={`${Home['accent']}`}>.</span>
 							</h1>
 							<p>
 								Hello, my name is Nyacchii. I am a Full-Time Creative Streamer & Twitch Partner from

@@ -9,7 +9,7 @@ export default function MyApp({ Component, pageProps }) {
 				color='hsl(15, 100%, 76%)'
 				startPosition={0.3}
 				stopDelayMs={200}
-				height={1}
+				height={2}
 				showOnShallow={false}
 				options={{ showSpinner: false }}
 			/>
