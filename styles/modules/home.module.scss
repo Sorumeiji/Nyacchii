@@ -1,7 +1,24 @@
 @use "../../styles/colors";
 
 .hero {
+    background: url(../../img/simple_line_2.svg);
+    background-size: 50%;
     background-color: #fafafa;
+}
+
+.hero__content {
+    padding: 10em 0;
+}
+
+.hero__content h1 {
+}
+
+.hero__content p {
+    padding: 2em 0;
+}
+
+.hero__featured {
+    padding: 10em 0;
 }
 
 .accent {

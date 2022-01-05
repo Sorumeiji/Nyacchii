@@ -15,7 +15,7 @@ function contact() {
 			<section className={`${Home['hero']}`}>
 				<Navigation />
 				<div className={`${Grid['container']} ${Grid['margin_center']}`}>
-					<div className={`${Grid['row']}`}>
+					<div className={`${Grid['row']} ${Home['hero__content']}`}>
 						<div>
 							<h1>
 								Contact Me<span className={`${Home['accent']}`}>.</span>

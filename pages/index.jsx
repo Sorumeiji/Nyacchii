@@ -4,6 +4,7 @@ import Image from 'next/dist/client/image';
 import Layout from '../src/components/layout';
 import Grid from '../styles/modules/grid.module.scss';
 import Home from '../styles/modules/home.module.scss';
+import Nav from '../styles/modules/nav.module.scss';
 import Navigation from '../src/components/Navigation';
 import Button from '../styles/modules/button.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -11,24 +12,24 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Vector from '../img/Vector.svg';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 
-const Homepage = () => {
+const index = () => {
 	return (
 		<Layout>
-			<div className={`${Navigation['grey_line']}`}>&nbsp;</div>
+			<div className={`${Nav['grey_line']}`}>&nbsp;</div>
 			<section className={`${Home['hero']}`}>
 				<Navigation />
 				<div className={`${Grid['container']} ${Grid['margin_center']}`}>
-					<div className={`${Grid['row']}`}>
-						<div>
+					<div className={`${Grid['row']} ${Home['hero__content']}`}>
+						<div className={`${Grid['col_xs_8']}`}>
 							<h1>
 								Digital Creative & Twitch Partner<span className={`${Home['accent']}`}>.</span>
 							</h1>
 							<p>
-								Hello, my name is Nyacchii. I am a Full-Time Creative Streamer & Twitch Partner from
-								Mexico. Expertise in digital and traditional art.
+								Hello, my name is Nyacchii. I am a Full-Time Creative Streamer and Twitch Partner
+								from Mexico. Expertise in digital and traditional art.
 							</p>
 							<a href='' role='button'>
-								Featured Art &nbsp;{' '}
+								Featured Art &nbsp;
 								<span className={`${Home['accent']}`}>
 									<FontAwesomeIcon icon={faHeart} />
 								</span>
@@ -37,7 +38,7 @@ const Homepage = () => {
 					</div>
 				</div>
 			</section>
-			<section className={`${Home['hero_content']}`}>
+			<section className={`${Home['hero__featured']}`}>
 				<div className={`${Grid['container']} ${Grid['margin_center']}`}>
 					<div>
 						<p>Click on Images for full preview.</p>
@@ -72,4 +73,4 @@ const Homepage = () => {
 	);
 };
 
-export default Homepage;
+export default index;

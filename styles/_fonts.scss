@@ -2,8 +2,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
 
 @mixin fonts {
-    --font-primary: "Open Sans Condensed", sans-serif;
+    --font-primary: "Open Sans", sans-serif;
     --font-copy: "Open Sans", sans-serif;
+    --font-semi: 600;
+    --font-light: 400;
     --base-size: 1rem; // 16px
     --type-scale: 1.25;
     --h5: calc(var(--base-size) * var(--type-scale));
@@ -20,7 +22,7 @@ li {
     font-family: var(--font-copy);
     color: var(--primary-color);
     line-height: 1.7;
-    max-width: 35ch;
+    max-width: 40ch;
 }
 
 h1 {
@@ -63,4 +65,5 @@ h5 {
     text-transform: capitalize;
     font-weight: 300;
     line-height: 1;
+    font-weight: var(--font-semi);
 }

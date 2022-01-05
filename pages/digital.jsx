@@ -14,14 +14,14 @@ const digital = () => {
 			<section className={`${Home['hero']}`}>
 				<Navigation />
 				<div className={`${Grid['container']} ${Grid['margin_center']}`}>
-					<div className={`${Grid['row']}`}>
+					<div className={`${Grid['row']} ${Home['hero__content']}`}>
 						<div>
 							<h1>
 								Digital Art<span className={`${Home['accent']}`}>.</span>
 							</h1>
 							<p>
 								Digital drawings are my speciality. They are created in my own cute and simplistic
-								style with soft, cute,and warm colors.
+								style with soft, and warm colors.
 							</p>
 							<a href='' role='button'>
 								Preview Art &nbsp;

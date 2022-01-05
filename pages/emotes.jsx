@@ -14,14 +14,14 @@ const emotes = () => {
 			<section className={`${Home['hero']}`}>
 				<Navigation />
 				<div className={`${Grid['container']} ${Grid['margin_center']}`}>
-					<div className={`${Grid['row']}`}>
+					<div className={`${Grid['row']} ${Home['hero__content']}`}>
 						<div>
 							<h1>
 								Twitch Emotes<span className={`${Home['accent']}`}>.</span>
 							</h1>
 							<p>
 								I offer static and animated emotes. Each emote goes through a process of detailed
-								work, from sketch to the final drawing.
+								work, from initial sketch, to the final drawing.
 							</p>
 							<a href='' role='button'>
 								See Emotes &nbsp;
