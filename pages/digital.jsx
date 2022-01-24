@@ -10,7 +10,6 @@ import { faArrowRight, faPaintBrush } from '@fortawesome/free-solid-svg-icons';
 const digital = () => {
 	return (
 		<Layout>
-			<div className={`${Navigation['grey_line']}`}>&nbsp;</div>
 			<section className={`${Home['hero']}`}>
 				<Navigation />
 				<div className={`${Grid['container']} ${Grid['margin_center']}`}>

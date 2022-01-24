@@ -8,14 +8,17 @@ import Nav from '../styles/modules/nav.module.scss';
 import Navigation from '../src/components/Navigation';
 import Button from '../styles/modules/button.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
-import Vector from '../img/Vector.svg';
+import art_01 from '../img/featured/01.png';
+import art_02 from '../img/featured/02.png';
+import art_03 from '../img/featured/03.png';
+import art_04 from '../img/featured/04.png';
+import art_05 from '../img/featured/05.png';
+import art_06 from '../img/featured/06.png';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 
 const index = () => {
 	return (
 		<Layout>
-			<div className={`${Nav['grey_line']}`}>&nbsp;</div>
 			<section className={`${Home['hero']}`}>
 				<Navigation />
 				<div className={`${Grid['container']} ${Grid['margin_center']}`}>
@@ -28,43 +31,50 @@ const index = () => {
 								Hello, my name is Nyacchii. I am a Full-Time Creative Streamer and Twitch Partner
 								from Mexico. Expertise in digital and traditional art.
 							</p>
-							<a href='' role='button'>
-								Featured Art &nbsp;
-								<span className={`${Home['accent']}`}>
-									<FontAwesomeIcon icon={faHeart} />
-								</span>
-							</a>
+							<div className={`${Button['button']}`}>
+								<a href='#hero__featured' role='button'>
+									Preview My Art &nbsp;
+									<span className={`${Home['accent']}`}>
+										<FontAwesomeIcon icon={faHeart} />
+									</span>
+								</a>
+							</div>
 						</div>
 					</div>
 				</div>
 			</section>
-			<section className={`${Home['hero__featured']}`}>
+
+			<section id='hero__featured' className={`${Home['hero__featured']}`}>
 				<div className={`${Grid['container']} ${Grid['margin_center']}`}>
-					<div>
-						<p>Click on Images for full preview.</p>
-					</div>
 					<div className={`${Grid['row']}`}>
-						<div className={`${Grid['col_xs_4']}`}>
-							<img src='https://picsum.photos/id/870/580/380' />
-						</div>
-						<div className={`${Grid['col_xs_4']}`}>
-							<img src='https://picsum.photos/id/872/580/380' />
+						<div className={`${Grid['col_xs_8']}`}>
+							<p>
+								Click on Images for full preview<span className={`${Home['accent']}`}>.</span>
+							</p>
 						</div>
 					</div>
 					<div className={`${Grid['row']}`}>
-						<div className={`${Grid['col_xs_4']}`}>
-							<img src='https://picsum.photos/id/874/580/380' />
+						<div className={`${Grid['col_lg_4']} ${Grid['col_xs_8']}`}>
+							<Image src={art_01} />
 						</div>
-						<div className={`${Grid['col_xs_4']}`}>
-							<img src='https://picsum.photos/id/876/580/380' />
+						<div className={`${Grid['col_lg_4']} ${Grid['col_xs_8']}`}>
+							<Image src={art_02} />
 						</div>
 					</div>
 					<div className={`${Grid['row']}`}>
-						<div className={`${Grid['col_xs_4']}`}>
-							<img src='https://picsum.photos/id/878/580/380' />
+						<div className={`${Grid['col_lg_4']} ${Grid['col_xs_8']}`}>
+							<Image src={art_03} />
 						</div>
-						<div className={`${Grid['col_xs_4']}`}>
-							<img src='https://picsum.photos/id/880/580/380' />
+						<div className={`${Grid['col_lg_4']} ${Grid['col_xs_8']}`}>
+							<Image src={art_04} />
+						</div>
+					</div>
+					<div className={`${Grid['row']}`}>
+						<div className={`${Grid['col_lg_4']} ${Grid['col_xs_8']}`}>
+							<Image src={art_05} />
+						</div>
+						<div className={`${Grid['col_lg_4']} ${Grid['col_xs_8']}`}>
+							<Image src={art_06} />
 						</div>
 					</div>
 				</div>

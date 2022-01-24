@@ -11,7 +11,6 @@ import { faDiscord, faTwitter } from '@fortawesome/free-brands-svg-icons';
 function contact() {
 	return (
 		<Layout>
-			<div className={`${Navigation['grey_line']}`}>&nbsp;</div>
 			<section className={`${Home['hero']}`}>
 				<Navigation />
 				<div className={`${Grid['container']} ${Grid['margin_center']}`}>

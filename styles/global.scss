@@ -145,25 +145,25 @@ main:focus {
 }
 
 a[role="button"] {
-    color: #131313;
-    border: 1px solid black;
-    padding: 0.5em 1em;
+    color: #fafafa;
+    background-color: #1d1c1c;
+    padding: 1em 1em;
+    font-weight: var(--font-semi);
+    border-radius: 5px;
 }
 
 a[role="button"]:hover {
-    border: 1px solid #131313;
-    background-color: #131313;
-    color: #fafafa;
+    background-color: #1d1c1cde;
 }
 
 a {
     text-decoration: none;
-    transition: all 0.3s ease-in-out !important;
+    transition: all 0.2s ease-in-out !important;
 }
 
-a:hover {
-    color: var(--color-primary);
-}
+// a:hover {
+//     color: var(--color-primary);
+// }
 
 section {
     padding: 1em;

@@ -1,9 +1,9 @@
-.grey_line {
-  padding: 0.1em;
-  display: block;
-  width: 100%;
-  background-color: #f3f3f3;
-}
+// .grey_line {
+//   padding: 0.1px;
+//   display: block;
+//   width: 100%;
+//   background-color: #f3f3f3;
+// }
 
 .primary_navigation {
   display: flex;
@@ -14,7 +14,7 @@
 }
 
 .primary_navigation a {
-  color: var(--color-dark);
+  color: var(--color-light);
 }
 
 .primary_navigation a:hover {

@@ -3,7 +3,7 @@
 .hero {
     background: url(../../img/simple_line_2.svg);
     background-size: 50%;
-    background-color: #fafafa;
+    background-color: #131313;
 }
 
 .hero__content {
@@ -11,14 +11,29 @@
 }
 
 .hero__content h1 {
+    color: #fafafa;
 }
 
 .hero__content p {
-    padding: 2em 0;
+    padding: 3em 0;
+    color: #fafafa;
 }
 
 .hero__featured {
     padding: 10em 0;
+}
+
+.hero__featured img {
+    border-radius: 5px;
+}
+
+.hero__featured img:hover {
+    cursor: pointer;
+}
+
+.hero__featured p {
+    padding-bottom: 1em;
+    font-weight: 600;
 }
 
 .accent {

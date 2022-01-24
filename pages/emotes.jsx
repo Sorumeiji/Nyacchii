@@ -10,7 +10,6 @@ import { faArrowRight, faGrinSquintTears, faPaintBrush } from '@fortawesome/free
 const emotes = () => {
 	return (
 		<Layout>
-			<div className={`${Navigation['grey_line']}`}>&nbsp;</div>
 			<section className={`${Home['hero']}`}>
 				<Navigation />
 				<div className={`${Grid['container']} ${Grid['margin_center']}`}>
