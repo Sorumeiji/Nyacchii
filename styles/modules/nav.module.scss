@@ -14,19 +14,15 @@
 }
 
 .primary_navigation a {
-  color: var(--color-light);
+  color: var(--color-dark);
 }
 
 .primary_navigation a:hover {
-  color: var(--color-primary);
+  color: #202020;
 }
 
 .active {
-  color: var(--color-primary) !important;
-}
-
-.Logo h4 {
-  color: aliceblue;
+  color: #202020 !important;
 }
 
 .mobile_nav_toggle {

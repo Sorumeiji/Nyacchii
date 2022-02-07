@@ -9,7 +9,7 @@ import { faArrowRight, faGrinSquintTears, faPaintBrush } from '@fortawesome/free
 
 const emotes = () => {
 	return (
-		<Layout>
+		<>
 			<section className={`${Home['hero']}`}>
 				<Navigation />
 				<div className={`${Grid['container']} ${Grid['margin_center']}`}>
@@ -88,7 +88,7 @@ const emotes = () => {
 					</div>
 				</div>
 			</section>
-		</Layout>
+		</>
 	);
 };
 

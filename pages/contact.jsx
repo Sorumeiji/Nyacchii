@@ -10,7 +10,7 @@ import { faDiscord, faTwitter } from '@fortawesome/free-brands-svg-icons';
 
 function contact() {
 	return (
-		<Layout>
+		<>
 			<section className={`${Home['hero']}`}>
 				<Navigation />
 				<div className={`${Grid['container']} ${Grid['margin_center']}`}>
@@ -39,7 +39,7 @@ function contact() {
 					</div>
 				</div>
 			</section>
-		</Layout>
+		</>
 	);
 }
 

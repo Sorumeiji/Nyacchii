@@ -9,7 +9,7 @@ import { faArrowRight, faPaintBrush } from '@fortawesome/free-solid-svg-icons';
 
 const digital = () => {
 	return (
-		<Layout>
+		<>
 			<section className={`${Home['hero']}`}>
 				<Navigation />
 				<div className={`${Grid['container']} ${Grid['margin_center']}`}>
@@ -32,6 +32,7 @@ const digital = () => {
 					</div>
 				</div>
 			</section>
+
 			<section className={`${Digital['digital_content']}`}>
 				<div className={`${Grid['container']} ${Grid['margin_center']}`}>
 					<div className={`${Grid['row']}`}>
@@ -92,7 +93,7 @@ const digital = () => {
 					</div>
 				</div>
 			</section>
-		</Layout>
+		</>
 	);
 };
 
