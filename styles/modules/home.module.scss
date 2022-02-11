@@ -3,7 +3,7 @@
 .hero {
     background: url(../../img/simple_line_2.svg);
     background-size: 50%;
-    background-color: #e9e9e9;
+    background-color: #ffebe5 conic-gradient(from 270deg at 75% 0, #fff, #ffebe5);
     padding: 5em 0;
 }
 
@@ -25,12 +25,8 @@
     padding: 10em 0;
 }
 
-.hero__featured h3 {
+.hero__featured h2 {
     padding: 2em 0;
-}
-
-.hero__featured img {
-    border-radius: 5px;
 }
 
 .hero__featured img:hover {
@@ -44,4 +40,17 @@
 
 .accent {
     color: var(--color-primary);
+}
+
+.gallery__container {
+}
+
+.gallery__container {
+}
+
+.gallery__item {
+    margin: 1.2em 0;
+}
+.gallery__item img {
+    border-radius: 5px;
 }

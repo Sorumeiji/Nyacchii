@@ -68,7 +68,7 @@ const Navigation = () => {
 					</li>
 					<li>
 						<a href='https://store.streamelements.com/nyacchii' target='_blank'>
-							Store
+							Shop
 						</a>
 					</li>
 					<li>

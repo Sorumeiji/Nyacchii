@@ -36,12 +36,7 @@ h2 {
     font-family: var(--font-primary);
 }
 
-h3 {
-    font-size: var(--h3);
-    font-family: var(--font-primary);
-}
-
-h3::after {
+h2::after {
     content: "";
     border-bottom: 3px solid #363636;
     display: block;
@@ -49,6 +44,11 @@ h3::after {
     width: 2em;
     left: 0;
     height: 30px;
+}
+
+h3 {
+    font-size: var(--h3);
+    font-family: var(--font-primary);
 }
 
 h4 {
