@@ -28,10 +28,12 @@ function Layout({ children }) {
 				<div className={`${Grid.container} ${Grid.margin_center}`}>
 					<div className={`${Grid.row}  ${Grid.between_xs}`}>
 						<div className='copy_lang'>
-							<p>&copy; NYACCHII 2021.</p>
+							<p>&copy; NYACCHII. 2022. All Rights Reserved.</p>
 							<a className='copyright' href='#'>
-								<FontAwesomeIcon icon={faGlobeAmericas} />
-								&nbsp;Español
+								Privacy Policy
+							</a>
+							<a className='copyright' href='#'>
+								Terms of Service
 							</a>
 						</div>
 

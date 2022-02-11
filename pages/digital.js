@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 import Home from '../styles/modules/home.module.scss';
 import Button from '../styles/modules/button.module.scss';
@@ -9,6 +10,10 @@ import Navigation from '../src/components/Navigation';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight, faPaintBrush } from '@fortawesome/free-solid-svg-icons';
+
+import bust from '../img/pricing/bust.png';
+import halfbody from '../img/pricing/halfbody.png';
+import fullbody from '../img/pricing/fullbody.png';
 
 const digital = () => {
 	return (
@@ -26,8 +31,8 @@ const digital = () => {
 								style with soft, and warm colors.
 							</p>
 							<div className={`${Button['button']}`}>
-								<a href='#hero__featured' role='button'>
-									Preview My Art &nbsp;
+								<a href='#digital__featured' role='button'>
+									View Digital Pricing &nbsp;
 									<span className={`${Home['accent']}`}>
 										<FontAwesomeIcon icon={faPaintBrush} />
 									</span>
@@ -41,59 +46,71 @@ const digital = () => {
 			<section id='digital__featured' className={`${DigitalArt['digital__featured']}`}>
 				<div className={`${Grid['container']} ${Grid['margin_center']}`}>
 					<div className={`${Grid['row']}`}>
-						<div className={`${Grid['col_8_xs']}`}>
-							<h3>
-								Digital Art Examples<span className={`${Home['accent']}`}>.</span>
-							</h3>
-							<p>Click on Images for full preview.</p>
+						<div className={`${Grid['col_xs_8']} ${DigitalArt['pricing__title']}`}>
+							<h2>
+								Digital Pricing<span className={`${Home['accent']}`}>.</span>
+							</h2>
+						</div>
+					</div>
+
+					<div className={`${Grid['row']} ${DigitalArt['pricing']}`}>
+						<div className={`${Grid['col_xs_4']} ${DigitalArt['pricing__prices']}`}>
+							<div className={`${DigitalArt['pricing__example']}`}>
+								<Image src={bust} />
+							</div>
+						</div>
+						<div className={`${Grid['col_xs_4']} ${DigitalArt['pricing__text']}`}>
+							<h4>
+								<span className={`${Home['accent']}`}>x</span> Bust: $35 USD
+							</h4>
+							<p>
+								A bust is a portrait of a character which includes the head, neck, and part of the
+								shoulders.
+							</p>
+						</div>
+					</div>
+
+					<div className={`${Grid['row']} ${DigitalArt['pricing']}`}>
+						<div className={`${Grid['col_xs_4']} ${DigitalArt['pricing__prices']}`}>
+							<div className={`${DigitalArt['pricing__example']}`}>
+								<Image src={halfbody} />
+							</div>
+						</div>
+						<div className={`${Grid['col_xs_4']} ${DigitalArt['pricing__text']}`}>
+							<h4>
+								<span className={`${Home['accent']}`}>x</span> Half-Body: $45 USD
+							</h4>
+							<p>
+								A half-body is a portrait of a character which is showing only the body from the
+								waist up and including the hands.
+							</p>
+						</div>
+					</div>
+
+					<div className={`${Grid['row']} ${DigitalArt['pricing']}`}>
+						<div className={`${Grid['col_xs_4']} ${DigitalArt['pricing__prices']}`}>
+							<div className={`${DigitalArt['pricing__example']}`}>
+								<Image src={fullbody} />
+							</div>
+						</div>
+						<div className={`${Grid['col_xs_4']} ${DigitalArt['pricing__text']}`}>
+							<h4>
+								<span className={`${Home['accent']}`}>x</span> Full-body: $55 USD
+							</h4>
+							<p>A Full-body is a portrait of a character which is showing the whole body.</p>
 						</div>
 					</div>
 
 					<div className={`${Grid['row']}`}>
-						<div className={`${Grid['col_xs_4']}`}>
-							<img src='https://picsum.photos/id/870/580/380' />
-						</div>
-						<div className={`${Grid['col_xs_4']}`}>
-							<img src='https://picsum.photos/id/872/580/380' />
-						</div>
-					</div>
-					<div className={`${Grid['row']}`}>
-						<div className={`${Grid['col_xs_4']}`}>
-							<img src='https://picsum.photos/id/874/580/380' />
-						</div>
-						<div className={`${Grid['col_xs_4']}`}>
-							<img src='https://picsum.photos/id/876/580/380' />
-						</div>
-					</div>
-					<div className={`${Grid['row']}`}>
-						<div className={`${Grid['col_xs_4']}`}>
-							<img src='https://picsum.photos/id/878/580/380' />
-						</div>
-						<div className={`${Grid['col_xs_4']}`}>
-							<img src='https://picsum.photos/id/880/580/380' />
-						</div>
-					</div>
-					<div className={`${Grid['row']}`}>
 						<div className={`${Grid['col_8_xs']}`}>
-							<h3>
-								Digital Art Pricing<span className={`${Home['accent']}`}>.</span>
-							</h3>
-							<p>
-								<span className={`${Home['accent']}`}>x</span> Bust: $35 USD
-							</p>
-							<p>
-								<span className={`${Home['accent']}`}>x</span> Half-Body: $45 USD
-							</p>
-							<p>
-								<span className={`${Home['accent']}`}>x</span> Full-Body: $55 USD
-							</p>
-						</div>
-					</div>
-					<div className={`${Grid['row']}`}>
-						<div className={`${Grid['col_8_xs']}`}>
-							<a href='#' role='button'>
-								Contact Me &nbsp; <FontAwesomeIcon icon={faArrowRight} />
-							</a>
+							<div className={`${Button['button']}`}>
+								<a href='#hero__featured' role='button'>
+									Get in touch &nbsp;
+									<span className={`${Home['accent']}`}>
+										<FontAwesomeIcon icon={faArrowRight} />
+									</span>
+								</a>
+							</div>
 						</div>
 					</div>
 				</div>

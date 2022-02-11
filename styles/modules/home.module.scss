@@ -1,9 +1,8 @@
 @use "../../styles/colors";
 
 .hero {
-    background: url(../../img/simple_line_2.svg);
+    background-image: url(../../img/simple_line_2.svg);
     background-size: 50%;
-    background-color: #ffebe5 conic-gradient(from 270deg at 75% 0, #fff, #ffebe5);
     padding: 5em 0;
 }
 
@@ -22,15 +21,20 @@
 }
 
 .hero__featured {
-    padding: 10em 0;
+    padding: 5em 0;
 }
 
 .hero__featured h2 {
     padding: 2em 0;
 }
 
+.hero__featured img {
+    transition: all 0.25s ease-out !important;
+}
+
 .hero__featured img:hover {
     cursor: pointer;
+    -webkit-filter: opacity(80%);
 }
 
 .hero__featured p {

@@ -15,10 +15,13 @@
 
 .primary_navigation a {
   color: var(--color-dark);
+  transition: all 0.25s ease-out !important;
 }
 
 .primary_navigation a:hover {
   color: #202020;
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid #131313;
 }
 
 .active {

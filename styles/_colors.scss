@@ -1,9 +1,9 @@
 @mixin colors {
-    --color-dark: #363636;
-    --color-light: #e9e9e9;
+    --color-dark: hsl(0, 0%, 21%);
+    --color-light: hsl(0, 0%, 91%);
     --color-light2: hsl(0, 0%, 98%);
-    --color-primary: #ffa385;
-    --color-accent: rgb(255, 115, 77);
+    --color-primary: hsl(15, 100%, 76%);
+    --color-accent: hsl(13, 100%, 65%);
 
     h1 {
         color: var(--color-dark);
