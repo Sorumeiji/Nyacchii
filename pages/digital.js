@@ -10,6 +10,7 @@ import Navigation from '../src/components/Navigation';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight, faPaintBrush } from '@fortawesome/free-solid-svg-icons';
+import { faInstagram, faTwitch, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons';
 
 import bust from '../img/pricing/bust.png';
 import halfbody from '../img/pricing/halfbody.png';
@@ -30,13 +31,43 @@ const digital = () => {
 								Digital drawings are my speciality. They are created in my own cute and simplistic
 								style with soft, and warm colors.
 							</p>
-							<div className={`${Button['button']}`}>
-								<a href='#digital__featured' role='button'>
-									View Digital Pricing &nbsp;
-									<span className={`${Home['accent']}`}>
-										<FontAwesomeIcon icon={faPaintBrush} />
-									</span>
-								</a>
+							<div className={`${Grid['row']}`}>
+								<div className={`${Grid['col_xs_4']}`}>
+									<div className={`${Button['button']}`}>
+										<a href='#digital__featured' role='button'>
+											View Digital Pricing &nbsp;
+											<span className={`${Home['accent']}`}>
+												<FontAwesomeIcon icon={faPaintBrush} />
+											</span>
+										</a>
+									</div>
+								</div>
+								<div className={`${Grid['col_xs_4']} ${DigitalArt['social__container']}`}>
+									<ul className={`${DigitalArt['social']}`}>
+										<li>
+											<a href='https://www.twitch.tv/nyacchii' target='_blank'>
+												<FontAwesomeIcon icon={faTwitch} />
+											</a>
+										</li>
+										<li>
+											<a href='https://twitter.com/nyacchii_art' target='_blank'>
+												<FontAwesomeIcon icon={faTwitter} />
+											</a>
+										</li>
+										<li>
+											<a href='https://www.instagram.com/nyacchii.art/?hl=en' target='_blank'>
+												<FontAwesomeIcon icon={faInstagram} />
+											</a>
+										</li>
+										<li>
+											<a
+												href='https://www.youtube.com/channel/UC8QRmNyX61s10GytF0CpOgw'
+												target='_blank'>
+												<FontAwesomeIcon icon={faYoutube} />
+											</a>
+										</li>
+									</ul>
+								</div>
 							</div>
 						</div>
 					</div>

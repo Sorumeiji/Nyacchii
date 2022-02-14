@@ -1,8 +1,6 @@
 @use "../../styles/colors";
 
 .hero {
-    background-image: url(../../img/simple_line_2.svg);
-    background-size: 50%;
     padding: 5em 0;
 }
 
@@ -22,6 +20,7 @@
 
 .hero__featured {
     padding: 5em 0;
+    background-color: #fff4f0;
 }
 
 .hero__featured h2 {

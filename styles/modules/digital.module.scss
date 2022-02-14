@@ -1,5 +1,16 @@
 .digital__featured {
-    padding: 10em 0;
+    padding: 5em 0;
+}
+
+.social {
+    display: flex;
+    gap: 1em;
+    justify-content: end;
+    color: #131313;
+}
+
+.social__container {
+    margin-top: auto;
 }
 
 .pricing {
