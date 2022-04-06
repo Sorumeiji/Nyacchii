@@ -1,4 +1,3 @@
-import Home from '../styles/modules/home.module.scss';
 import Navigation from '../src/components/Navigation';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
