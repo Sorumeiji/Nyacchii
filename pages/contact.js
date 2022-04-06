@@ -6,13 +6,13 @@ import { faDiscord, faTwitter } from '@fortawesome/free-brands-svg-icons';
 function contact() {
 	return (
 		<>
-			<section className={`${Home['hero']}`}>
+			<section>
 				<Navigation />
 				<div>
-					<div className={`${Home['hero__content']}`}>
+					<div>
 						<div>
 							<h1>
-								Contact Me<span className={`${Home['accent']}`}>.</span>
+								Contact Me<span>.</span>
 							</h1>
 							<p>
 								Want to hire me for commissions? Send me a direct message on Discord or on Twitter
@@ -21,7 +21,7 @@ function contact() {
 							<div>
 								<a href='#' role='button'>
 									Discord &nbsp;
-									<span className={`${Home['accent']}`}>
+									<span>
 										<FontAwesomeIcon icon={faDiscord} />
 									</span>
 								</a>
@@ -29,7 +29,7 @@ function contact() {
 							<div>
 								<a href='#' role='button'>
 									Twitter &nbsp;
-									<span className={`${Home['accent']}`}>
+									<span>
 										<FontAwesomeIcon icon={faTwitter} />
 									</span>
 								</a>
