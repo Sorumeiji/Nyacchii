@@ -1,92 +1,86 @@
 import { useEffect, useRef } from 'react';
-import Image from 'next/dist/client/image';
 import { gsap } from 'gsap/dist/gsap';
-
-import Grid from '../styles/modules/grid.module.scss';
-import Home from '../styles/modules/home.module.scss';
-import Button from '../styles/modules/button.module.scss';
-
+import Image from 'next/image';
 import Navigation from '../src/components/Navigation';
 
+import feature01 from '../img/featured/01.png';
+import feature02 from '../img/featured/02.png';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHeart } from '@fortawesome/free-solid-svg-icons';
+import { faArrowRight, faHeart } from '@fortawesome/free-solid-svg-icons';
+import { faTwitch } from '@fortawesome/free-brands-svg-icons';
 
-import art_01 from '../img/featured/01.png';
-import art_02 from '../img/featured/02.png';
-import art_03 from '../img/featured/03.png';
-import art_04 from '../img/featured/04.png';
-import art_05 from '../img/featured/05.png';
-import art_06 from '../img/featured/06.png';
-
-const index = () => {
+const Index = () => {
 	return (
 		<>
-			<section className={`${Home['hero']}`}>
+			<section className='hero'>
 				<Navigation />
-				<div className={`${Grid['container']} ${Grid['margin_center']}`}>
-					<div className={`${Grid['row']} ${Home['hero__content']}`}>
-						<div className={`${Grid['col_xs_8']}`}>
-							<h1>
-								Digital Creative & Twitch Partner<span className={`${Home['accent']}`}>.</span>
-							</h1>
-							<p>
-								Hello, my name is Nyacchii. I am a Full-Time Creative Streamer and Twitch Partner
-								from Mexico. Expertise in digital and traditional art.
-							</p>
-							<div className={`${Button['button']}`}>
-								<a href='#hero__featured' role='button'>
-									Preview My Art &nbsp;
-									<span className={`${Home['accent']}`}>
-										<FontAwesomeIcon icon={faHeart} />
-									</span>
-								</a>
-							</div>
-						</div>
+				<article>
+					<h1>
+						Digital Creative & Twitch Partner<span className='accent'>.</span>
+					</h1>
+					<p>
+						Hello, my name is Nyacchii. I am a Full-Time Creative Streamer and Twitch Partner from
+						Mexico. Expertise in digital and traditional art.
+					</p>
+					<div>
+						<a href='#featured' role='button'>
+							Preview Works &nbsp;
+							<span className='accent'>
+								<FontAwesomeIcon icon={faHeart} />
+							</span>
+						</a>
 					</div>
-				</div>
+					<div>
+						<a href='https://www.twitch.tv/nyacchii' target='_blank' role='outlineButton'>
+							Follow on Twitch &nbsp;
+							<span className='accent'>
+								<FontAwesomeIcon icon={faTwitch} />
+							</span>
+						</a>
+					</div>
+				</article>
 			</section>
 
-			<section id='hero__featured' className={`${Home['hero__featured']}`}>
-				<div className={`${Grid['container']} ${Grid['margin_center']}`}>
-					<div className={`${Grid['row']}`}>
-						<div className={`${Grid['col_xs_8']}`}>
-							<h2>
-								Featured Works<span className={`${Home['accent']}`}>.</span>
-							</h2>
+			<section className='featured'>
+				<article>
+					<h2 className='gradient'>Works on Dispay.</h2>
+					<div className='displayGallery'>
+						<div className='displayGallery__item image-container'>
+							<img src='https://res.cloudinary.com/dhclgoera/image/upload/v1649251744/Nyacchii/Featured/02_knhpx2.png' />
+						</div>
+						<div className='displayGallery__item'></div>
+						<div className='displayGallery__item'></div>
+						<div className='displayGallery__item'></div>
+						<div className='displayGallery__item'></div>
+						<div className='displayGallery__item'></div>
+					</div>
+				</article>
+
+				<article>
+					<h2>Stream Schedule</h2>
+					<a>Twitch.tv/Nyacchii</a>
+					<div>
+						<div>
+							<p>Mon Tue Wed Fri Sat</p>
+							<p>Regular: 5PM - 9PM CST</p>
+						</div>
+						<div>
+							<p>Thursday</p>
+							<p>Gaming: 5PM - 9PM CST</p>
+						</div>
+						<div>
+							<p>Sunday</p>
+							<p>Traditional Raffle: 5PM - 9PM CST</p>
 						</div>
 					</div>
-					<div className={`${Grid['row']}`}>
-						<div className={`${Grid['col_xs_8']}`}>
-							<div className={`${Grid['row']} ${Home['gallery__container']}`}>
-								<div className={`${Grid['col_lg_4']} ${Grid['col_xs_8']} ${Home['gallery__col']}`}>
-									<div className={`${Home['gallery__item']}`}>
-										<Image src={art_01} />
-									</div>
-									<div className={`${Home['gallery__item']}`}>
-										<Image src={art_04} />
-									</div>
-									<div className={`${Home['gallery__item']}`}>
-										<Image src={art_05} />
-									</div>
-								</div>
-								<div className={`${Grid['col_lg_4']} ${Grid['col_xs_8']} ${Home['gallery__col']}`}>
-									<div className={`${Home['gallery__item']}`}>
-										<Image src={art_02} />
-									</div>
-									<div className={`${Home['gallery__item']}`}>
-										<Image src={art_03} />
-									</div>
-									<div className={`${Home['gallery__item']}`}>
-										<Image src={art_06} />
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+					<a href='#'>
+						View Commissions <FontAwesomeIcon icon={faArrowRight} />
+					</a>
+				</article>
 			</section>
 		</>
 	);
 };
 
-export default index;
+export default Index;

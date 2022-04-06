@@ -2,7 +2,6 @@ import React from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useEffect, useRef } from 'react';
-import Grid from '../../styles/modules/grid.module.scss';
 import Nav from '../../styles/modules/nav.module.scss';
 import Logo from '../../img/logo.svg';
 import Image from 'next/image';
@@ -27,12 +26,7 @@ const Navigation = () => {
 		}
 	}
 	return (
-		<div
-			className={`${Grid.row}
-				 ${Grid.container} 
-				 ${Nav.wrapper}
-				 ${Grid.middle_xs} 
-				 ${Grid.between_xs}  ${Grid.margin_center} `}>
+		<div className={`${Nav.wrapper}`}>
 			<div className={`${Nav.Logo}`}>
 				<Image src={Logo} />
 			</div>
@@ -57,14 +51,14 @@ const Navigation = () => {
 						</Link>
 					</li>
 					<li>
-						<Link href='/digital'>
-							<a className={router.pathname == '/digital' ? `${Nav.active}` : ''}>Digital Art</a>
+						<Link href='/commission'>
+							<a className={router.pathname == '/commission' ? `${Nav.active}` : ''}>Commission</a>
 						</Link>
 					</li>
 					<li>
-						<Link href='/emotes'>
-							<a className={router.pathname == '/emotes' ? `${Nav.active}` : ''}>Emotes</a>
-						</Link>
+						<a href='https://www.instagram.com/nyacchii.art/' target='_blank'>
+							Portfolio
+						</a>
 					</li>
 					<li>
 						<a href='https://store.streamelements.com/nyacchii' target='_blank'>

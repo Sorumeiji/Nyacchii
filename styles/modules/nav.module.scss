@@ -14,18 +14,18 @@
 }
 
 .primary_navigation a {
-  color: var(--color-dark);
+  color: var(--color-light);
   transition: all 0.25s ease-out !important;
 }
 
 .primary_navigation a:hover {
-  color: #202020;
+  color: #e8e8e8d3;
   padding-bottom: 0.5em;
-  border-bottom: 1px solid #131313;
+  border-bottom: 1px solid #e8e8e8;
 }
 
 .active {
-  color: #202020 !important;
+  color: #ffffff !important;
 }
 
 .mobile_nav_toggle {

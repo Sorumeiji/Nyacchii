@@ -1,9 +1,13 @@
-@use "/styles/colors";
-@use "/styles/fonts";
+@use "/styles/utility/colors";
+@use "/styles/utility/fonts";
+@use "/styles/utility/componets";
+@use "/styles/utility/grid";
+
+@use "/styles/layout/home";
 
 :root {
-    @include colors.colors;
-    @include fonts.fonts;
+    // @include colors.colors;
+    //@include fonts.fonts;
 }
 
 /* Box sizing rules */
@@ -50,6 +54,7 @@ ul[role="list"] li + li {
 }
 
 /* Set core root defaults */
+
 html:focus-within {
     scroll-behavior: smooth;
 }
@@ -59,6 +64,7 @@ html {
 }
 
 /* Set core body defaults */
+
 body,
 #__next {
     min-height: 100vh;
@@ -66,7 +72,7 @@ body,
     font-smooth: antialiased;
     overflow-x: hidden;
     color: var(--color-dark);
-    background: conic-gradient(from 90deg at 25% 0, #ffd9ce, rgba(255, 217, 206, 0) 50%);
+    background: var(--color-background);
     position: relative;
 }
 
@@ -74,9 +80,12 @@ body,
     margin-top: var(--flow-space, 1em);
 }
 
+.accent {
+    color: var(--color-accent);
+}
+
 .post {
     --flow-space: var(--h3);
-
     width: 90vw;
     width: clamp(16rem, 90vw, 70rem);
     margin-left: auto;
@@ -85,20 +94,23 @@ body,
     padding-right: 1.5rem;
 }
 
-/* A elements that don't have a class get default styles */
-a:not([class]) {
-    text-decoration-skip-ink: auto;
-    color: currentColor;
-}
-
-a:hover {
-}
-
 /* Make images easier to work with */
 img,
 picture {
     max-width: min(55rem, 100%);
     display: block;
+}
+
+.image-container {
+    max-width: 100%;
+    > div {
+        position: unset !important;
+    }
+    .image {
+        object-fit: contain;
+        max-width: 100% !important;
+        height: unset !important;
+    }
 }
 
 figcaption {
@@ -122,28 +134,11 @@ main:focus {
 }
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+
 @media (prefers-reduced-motion: reduce) {
     html:focus-within {
         scroll-behavior: auto;
     }
-}
-
-a[role="button"] {
-    color: #fafafa;
-    background-color: var(--color-dark);
-    padding: 1em 1em;
-    font-weight: var(--font-semi);
-    border-radius: 5px;
-    transition: all 0.25s ease-out !important;
-}
-
-a[role="button"] + a[role="button"] {
-    margin-left: 1em;
-}
-
-a[role="button"]:hover {
-    background-color: #202020;
-    padding: 1em 1.5em;
 }
 
 a {
@@ -154,67 +149,14 @@ section {
     padding: 1em;
 }
 
+footer {
+    background-color: var(--footer-bg);
+}
+
 div[class*="span_"] {
     padding: 1em;
 }
 
-footer {
-    padding: 5em 0;
-    background: conic-gradient(from 90deg at 25% 0, #ffd9ce, rgba(255, 217, 206, 0) 50%);
-    color: var(--pri-clr-midnight);
-    width: 100%;
-    bottom: 0;
-}
-
-footer a {
-    color: var(--pri-clr-midnight);
-}
-
-footer .row {
-    align-items: center;
-}
-
-footer .social {
-    display: flex;
-    gap: 1em;
-}
-
-footer .copy_lang {
-    display: flex;
-    gap: 1em;
-}
-
 div .layout {
     position: relative;
-}
-
-@media (max-width: 35em) {
-    footer .copyright {
-        display: none;
-    }
-}
-
-@media (min-width: 600px) {
-    :root {
-        --type-scale: 1.25;
-    }
-    .container {
-        width: 600px;
-    }
-}
-@media (min-width: 900px) {
-    :root {
-        --type-scale: 1.25;
-    }
-    .container {
-        width: 900px;
-    }
-}
-@media (min-width: 1200px) {
-    :root {
-        --type-scale: 1.414;
-    }
-    .container {
-        width: 1200px;
-    }
 }

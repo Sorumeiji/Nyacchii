@@ -1,0 +1,17 @@
+.hero {
+    background-color: var(--color-bg-light);
+}
+
+.featured {
+    background-color: var(--color-bg-dark);
+    h2 {
+        padding-block: 0.5em;
+    }
+
+    .displayGallery {
+        display: grid;
+        gap: 1em;
+        .displayGallery__item {
+        }
+    }
+}

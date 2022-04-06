@@ -1,0 +1,27 @@
+:root {
+    --color-bg-light: hsl(225, 25%, 6%);
+    --color-bg-dark: hsl(223, 26%, 5%);
+    --color-text: hsl(0, 0%, 98%);
+    --color-accent: hsl(13, 96%, 70%);
+
+    --color-gradient: linear-gradient(
+        45deg,
+        hsl(13deg 96% 70%) 0%,
+        hsl(349deg 96% 69%) 17%,
+        hsl(324deg 96% 67%) 34%,
+        hsl(300deg 96% 66%) 50%,
+        hsl(276deg 96% 64%) 66%,
+        hsl(252deg 96% 63%) 83%,
+        hsl(227deg 96% 61%) 100%
+    );
+
+    --box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.07), 0 4px 8px rgba(0, 0, 0, 0.07),
+        0 8px 16px rgba(0, 0, 0, 0.07), 0 16px 32px rgba(0, 0, 0, 0.07), 0 32px 64px rgba(0, 0, 0, 0.07);
+    --footer-bg: hsl(223, 21%, 6%);
+}
+
+.gradient {
+    background-image: var(--color-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
