@@ -1,17 +1,49 @@
 .hero {
-    background-color: var(--color-bg-light);
+    background-color: #0c0e14;
+    // background-image: url(../../img/backgrounds/test.png);
+    // background-size: contain;
+    // background-repeat: no-repeat;
+    // background-attachment: fixed;
+    // background-position: right;
+
+    h1,
+    p {
+        padding-block: 0.5em;
+        color: var(--color-text);
+    }
 }
 
 .featured {
     background-color: var(--color-bg-dark);
     h2 {
-        padding-block: 0.5em;
+        padding-block: 2em;
+        color: var(--color-text);
+    }
+
+    .title {
+        padding-block: 2 em;
+
+        h2 {
+            padding-block: 0.5em;
+        }
     }
 
     .displayGallery {
         display: grid;
-        gap: 1em;
+        gap: 32px;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
         .displayGallery__item {
+            background-color: #0d0f14;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            border-radius: 0.1em;
+            padding: 0;
+        }
+
+        .displayGallery__item:hover {
+            cursor: pointer;
         }
     }
 }

@@ -1,0 +1,15 @@
+.container {
+    width: 1200px;
+    max-width: 90%;
+    margin-inline: auto;
+    padding-block: 5em;
+}
+
+.navigation-container {
+    display: flex;
+    justify-content: space-between;
+    margin-block: 2em;
+    align-items: center;
+    max-width: 80%;
+    margin-inline: auto;
+}

@@ -26,7 +26,7 @@ const Navigation = () => {
 		}
 	}
 	return (
-		<div className={`${Nav.wrapper}`}>
+		<div className='navigation-container'>
 			<div className={`${Nav.Logo}`}>
 				<Image src={Logo} />
 			</div>
