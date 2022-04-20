@@ -48,7 +48,7 @@ const Index = () => {
 				</article>
 			</section>
 
-			<section className='featured'>
+			<section id='featured' className='featured'>
 				<article className='container'>
 					<h2>
 						Works on Display<span className='accent'>.</span>

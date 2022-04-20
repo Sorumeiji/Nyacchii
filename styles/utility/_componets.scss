@@ -63,3 +63,9 @@ a:not([class]) {
 .twitch-link:hover {
     color: var(--color-accent);
 }
+
+.decoration {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
