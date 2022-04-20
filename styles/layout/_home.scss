@@ -21,11 +21,30 @@
     }
 
     .title {
-        padding-block: 2 em;
+        padding-block: 2em;
 
         h2 {
             padding-block: 0.5em;
         }
+    }
+
+    .schedule {
+        display: grid;
+        gap: 32px;
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+        padding-block: 5em;
+    }
+
+    .schedule-item {
+        background-color: #0d0f14;
+        padding-inline: 2em;
+        padding-block: 2em;
+        transition: all 0.25s ease-out !important;
+        border-radius: 0.5em;
+    }
+    .schedule-item:hover {
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08), 0 2px 2px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.16),
+            0 8px 8px rgba(0, 0, 0, 0.2);
     }
 
     .displayGallery {
@@ -38,12 +57,15 @@
             justify-content: center;
             align-items: center;
             position: relative;
-            border-radius: 0.1em;
+            border-radius: 0.5em;
             padding: 0;
+            transition: all 0.25s ease-out !important;
         }
 
         .displayGallery__item:hover {
             cursor: pointer;
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08), 0 2px 2px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.16),
+                0 8px 8px rgba(0, 0, 0, 0.2);
         }
     }
 }

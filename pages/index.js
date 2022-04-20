@@ -80,26 +80,30 @@ const Index = () => {
 						<h2>
 							Stream Schedule<span className='accent'>.</span>
 						</h2>
-						<a>
+						<a className='twitch-link' href='https://www.twitch.tv/nyacchii' target='_blank'>
 							<span className='link-style'>Twitch.tv</span>/Nyacchii
 						</a>
 					</div>
 					<div className='schedule'>
-						<div>
-							<p>Mon Tue Wed Fri Sat</p>
+						<div className='schedule-item'>
+							<p className='accent'>Monday</p>
+							<p>No Stream</p>
+						</div>
+						<div className='schedule-item'>
+							<p className='accent'>Tue Wed Fri Sat</p>
 							<p>Regular: 5PM - 9PM CST</p>
 						</div>
-						<div>
-							<p>Thursday</p>
+						<div className='schedule-item'>
+							<p className='accent'>Thursday</p>
 							<p>Gaming: 5PM - 9PM CST</p>
 						</div>
-						<div>
-							<p>Sunday</p>
+						<div className='schedule-item'>
+							<p className='accent'>Sunday</p>
 							<p>Traditional Raffle: 5PM - 9PM CST</p>
 						</div>
 					</div>
-					<a href='#'>
-						View Commissions <FontAwesomeIcon icon={faArrowRight} />
+					<a className='twitch-link' href='#'>
+						View Commissions &nbsp; <FontAwesomeIcon icon={faArrowRight} />
 					</a>
 				</article>
 			</section>

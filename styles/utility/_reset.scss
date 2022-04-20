@@ -1,0 +1,150 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+::selection {
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+ul,
+ol,
+ul[role="list"],
+ol[role="list"] {
+    list-style: none;
+}
+
+ul[role="list"] li {
+    display: inline-block;
+}
+
+ul[role="list"] li + li {
+    margin-left: 1em;
+}
+
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+html {
+    scroll-behavior: smooth !important;
+}
+
+body,
+#__next {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    font-smooth: antialiased;
+    overflow-x: hidden;
+    background: var(--color-background);
+    position: relative;
+    // To keep footer at  bottom
+    display: flex;
+    flex-direction: column;
+}
+
+.flow > * + * {
+    margin-top: var(--flow-space, 1em);
+}
+
+.post {
+    --flow-space: var(--h3);
+    width: 90vw;
+    width: clamp(16rem, 90vw, 70rem);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+img,
+picture {
+    max-width: min(55rem, 100%);
+    display: block;
+}
+
+.img {
+    width: 100% !important;
+    position: relative !important;
+    min-height: auto !important;
+    height: auto !important;
+}
+
+.image-container {
+    max-width: 100%;
+    > div {
+        position: unset !important;
+    }
+    .image {
+        object-fit: contain;
+        max-width: 100% !important;
+        height: unset !important;
+    }
+}
+
+figcaption {
+    font-size: var(--h3);
+    font-style: italic;
+    margin-top: 1rem;
+}
+
+blockquote {
+    padding-left: var(--h4);
+    border-left: 5px solid;
+    font-style: italic;
+}
+
+main:focus {
+    outline: none;
+}
+
+[href]:hover {
+    text-decoration: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+}
+
+a {
+    text-decoration: none;
+    transition: all 0.25s ease-out !important;
+}
+
+section {
+    padding: 1em;
+}
+
+footer {
+    background-color: var(--footer-bg);
+}
+
+div[class*="span_"] {
+    padding: 1em;
+}
+
+div .layout {
+    position: relative;
+}
+
+footer {
+    margin-top: auto;
+}

@@ -56,4 +56,10 @@ a:not([class]) {
 
 .link-style {
     text-decoration: underline;
+    text-decoration-thickness: 0.1em;
+    text-underline-offset: 0.3em;
+}
+
+.twitch-link:hover {
+    color: var(--color-accent);
 }
