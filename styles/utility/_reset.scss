@@ -24,18 +24,14 @@ dd {
 }
 
 ul,
-ol,
-ul[role="list"],
-ol[role="list"] {
+ol {
     list-style: none;
 }
 
-ul[role="list"] li {
-    display: inline-block;
-}
-
-ul[role="list"] li + li {
-    margin-left: 1em;
+ul[role="list"],
+ol[role="list"] {
+    list-style: none;
+    display: block;
 }
 
 html:focus-within {
@@ -134,7 +130,7 @@ section {
 }
 
 footer {
-    background-color: var(--footer-bg);
+    background-color: var(--color-bg-dark);
 }
 
 div[class*="span_"] {

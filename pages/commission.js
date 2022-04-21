@@ -3,9 +3,9 @@ import { useEffect, useRef } from 'react';
 import Layout from '../src/components/layout';
 import Navigation from '../src/components/Navigation';
 import { gsap } from 'gsap/dist/gsap';
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHeart } from '@fortawesome/free-solid-svg-icons';
+
+import { faDollarSign } from '@fortawesome/free-solid-svg-icons';
 
 const Terms = () => {
 	const boxRef = useRef();
@@ -23,20 +23,22 @@ const Terms = () => {
 					<div>
 						<div>
 							<h1>
-								Commission & Pricing<span className=''>.</span>
+								Commission & Pricing<span className='accent'>.</span>
 							</h1>
 							<p>
 								Below are my prices for Digital Art, Twitch Emotes, and Traditonal Art. For any
 								prices not listed, reach out for quote.
 							</p>
-							<div>
-								<a role='button'>
-									View Pricing &nbsp;
-									<span className={`accent`}>
-										<FontAwesomeIcon icon={faHeart} />
-									</span>
-								</a>
-							</div>
+							<ul>
+								<li>
+									<a href='#featured' role='button'>
+										View Pricing &nbsp;
+										<span className='accent'>
+											<FontAwesomeIcon icon={faDollarSign} />
+										</span>
+									</a>
+								</li>
+							</ul>
 						</div>
 					</div>
 				</div>
@@ -67,82 +69,148 @@ const Terms = () => {
 					</svg>
 				</div>
 				<article className='container'>
-					<h2>Digital Art.</h2>
+					<h2>
+						Digital Art<span className='accent'>.</span>
+					</h2>
 					<p>
 						Digital drawings are my speciality. They are created in my own cute and simplistic style
 						with soft, and warm colors.
 					</p>
-					<ul>
+					<ul role='list'>
 						<li>Bust - $35 USD</li>
 						<li>Half Body - $45 USD</li>
 						<li>Full Body - $55 USD</li>
 					</ul>
-					<div>
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
+					<div className='displayGallery'>
+						<div className='displayGallery__item image-padding'>
+							<img src='https://ik.imagekit.io/sorudev/Nyacchii/digital/01_KZOJgbIPV.png?ik-sdk-version=javascript-1.4.3&updatedAt=1650502624127' />
+						</div>
+						<div className='displayGallery__item image-padding'>
+							<img src='https://ik.imagekit.io/sorudev/Nyacchii/digital/02_R2tsQgNvx.png?ik-sdk-version=javascript-1.4.3&updatedAt=1650500154665' />
+						</div>
+						<div className='displayGallery__item'>
+							<img src='https://ik.imagekit.io/sorudev/Nyacchii/digital/03_oS3HnY6PC.png?ik-sdk-version=javascript-1.4.3&updatedAt=1650500154818' />
+						</div>
+						<div className='displayGallery__item'>
+							<img src='https://ik.imagekit.io/sorudev/Nyacchii/digital/06_hG1UqaRcB.png?ik-sdk-version=javascript-1.4.3&updatedAt=1650500154991' />
+						</div>
+						<div className='displayGallery__item'>
+							<img src='https://ik.imagekit.io/sorudev/Nyacchii/digital/05_PBvwa8RAA.png?ik-sdk-version=javascript-1.4.3&updatedAt=1650500155189' />
+						</div>
+						<div className='displayGallery__item'>
+							<img src='https://ik.imagekit.io/sorudev/Nyacchii/digital/04_PXDBDXgX_.png?ik-sdk-version=javascript-1.4.3&updatedAt=1650503400893' />
+						</div>
 					</div>
 				</article>
 
 				<article className='container'>
-					<h2>Twitch Emotes.</h2>
+					<h2>
+						Twitch Emotes<span className='accent'>.</span>
+					</h2>
 					<p>
 						I offer static and animated emotes. Each emote goes through a process of detailed work,
 						from initial sketch, to the final drawing.
 					</p>
-					<ul>
+					<ul role='list'>
 						<li>Static - $25 USD / PER</li>
 						<li>Animated - $75 - 115 USD / PER</li>
 					</ul>
-					<div>
-						<div>
-							<div></div>
-							<div></div>
-							<div></div>
+					<div className='displayEmotes'>
+						<div className='displayEmotesGallery'>
+							<div className='displayEmotesGallery-item'>
+								<img src='https://ik.imagekit.io/sorudev/Nyacchii/emotes/normal/millie3_tssDLseay.png?ik-sdk-version=javascript-1.4.3&updatedAt=1650489616819' />
+							</div>
+							<div className='displayEmotesGallery-item'>
+								<img src='https://ik.imagekit.io/sorudev/Nyacchii/emotes/normal/millie2_ylpdpd-Y9.png?ik-sdk-version=javascript-1.4.3&updatedAt=1650489616807' />
+							</div>
+							<div className='displayEmotesGallery-item'>
+								<img src='https://ik.imagekit.io/sorudev/Nyacchii/emotes/normal/millie1_6eyf0SNI_x.png?ik-sdk-version=javascript-1.4.3&updatedAt=1650489616932' />
+							</div>
 
-							<div></div>
-							<div></div>
-							<div></div>
+							<div className='displayEmotesGallery-item'>
+								<img src='https://ik.imagekit.io/sorudev/Nyacchii/emotes/normal/gooey1_LSVFzExj_G.png?ik-sdk-version=javascript-1.4.3&updatedAt=1650489616920' />
+							</div>
+							<div className='displayEmotesGallery-item'>
+								<img src='https://ik.imagekit.io/sorudev/Nyacchii/emotes/normal/gooey2_0zRVnCc9J.png?ik-sdk-version=javascript-1.4.3&updatedAt=1650489616930' />
+							</div>
+							<div className='displayEmotesGallery-item'>
+								<img src='https://ik.imagekit.io/sorudev/Nyacchii/emotes/normal/gooey3_IvdMKMWVP.png?ik-sdk-version=javascript-1.4.3&updatedAt=1650489616890' />
+							</div>
 
-							<div></div>
-							<div></div>
-							<div></div>
+							<div className='displayEmotesGallery-item'>
+								<img src='https://ik.imagekit.io/sorudev/Nyacchii/emotes/normal/proxy1_ZFI9BCNUO.png?ik-sdk-version=javascript-1.4.3&updatedAt=1650489616832' />
+							</div>
+							<div className='displayEmotesGallery-item'>
+								<img src='https://ik.imagekit.io/sorudev/Nyacchii/emotes/normal/proxy2_amqecohTf.png?ik-sdk-version=javascript-1.4.3&updatedAt=1650489616867' />
+							</div>
+							<div className='displayEmotesGallery-item'>
+								<img src='https://ik.imagekit.io/sorudev/Nyacchii/emotes/normal/proxy3_kb3l6lN6H.png?ik-sdk-version=javascript-1.4.3&updatedAt=1650489616744' />
+							</div>
 						</div>
-						<div>
-							<div></div>
-							<div></div>
-							<div></div>
+						<div className='displayEmotesGallery'>
+							<div className='displayEmotesGallery-item'>
+								<img src='https://ik.imagekit.io/sorudev/Nyacchii/emotes/animated/inochi2_nEQCxWdpB.gif?ik-sdk-version=javascript-1.4.3&updatedAt=1650489652708' />
+							</div>
+							<div className='displayEmotesGallery-item'>
+								<img src='https://ik.imagekit.io/sorudev/Nyacchii/emotes/animated/inochi1_wS5PkBATB.gif?ik-sdk-version=javascript-1.4.3&updatedAt=1650489652821' />
+							</div>
+							<div className='displayEmotesGallery-item'>
+								<img src='https://ik.imagekit.io/sorudev/Nyacchii/emotes/animated/nyacchii1_Z-rHvj0uk.gif?ik-sdk-version=javascript-1.4.3&updatedAt=1650489651375' />
+							</div>
 
-							<div></div>
-							<div></div>
-							<div></div>
+							<div className='displayEmotesGallery-item'>
+								<img src='https://ik.imagekit.io/sorudev/Nyacchii/emotes/animated/nyacchii2_8fuwoYtdR.gif?ik-sdk-version=javascript-1.4.3&updatedAt=1650489652308' />
+							</div>
+							<div className='displayEmotesGallery-item'>
+								<img src='https://ik.imagekit.io/sorudev/Nyacchii/emotes/animated/panda2_aYQIZZ0mI.gif?ik-sdk-version=javascript-1.4.3&updatedAt=1650489651819' />
+							</div>
+							<div className='displayEmotesGallery-item'>
+								<img src='https://ik.imagekit.io/sorudev/Nyacchii/emotes/animated/panda1_XB1CRtRSq.gif?ik-sdk-version=javascript-1.4.3&updatedAt=1650489652918' />
+							</div>
 
-							<div></div>
-							<div></div>
-							<div></div>
+							<div className='displayEmotesGallery-item'>
+								<img src='https://ik.imagekit.io/sorudev/Nyacchii/emotes/animated/proxy2_id4aGcupJ.gif?ik-sdk-version=javascript-1.4.3&updatedAt=1650489651427' />
+							</div>
+							<div className='displayEmotesGallery-item'>
+								<img src='https://ik.imagekit.io/sorudev/Nyacchii/emotes/animated/proxy1_0zehL9Xrv.gif?ik-sdk-version=javascript-1.4.3&updatedAt=1650489653331' />
+							</div>
+							<div className='displayEmotesGallery-item'>
+								<img src='https://ik.imagekit.io/sorudev/Nyacchii/emotes/animated/random_iKAH2UA8H.gif?ik-sdk-version=javascript-1.4.3&updatedAt=1650489653293' />
+							</div>
 						</div>
 					</div>
 				</article>
 
 				<article className='container'>
-					<h2>Traditonal Art.</h2>
+					<h2>
+						Traditonal Art<span className='accent'>.</span>
+					</h2>
 					<p>
 						Mostly with water colors, I create clean and detailed traditional art. I love to blend
 						with creative colors and present in a frame style.
 					</p>
-					<ul>
+					<ul role='list'>
 						<li>Traditional - Pricing based on project.</li>
 					</ul>
-					<div>
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
+					<div className='displayGallery'>
+						<div className='displayGallery__item image-padding'>
+							<img src='https://ik.imagekit.io/sorudev/Nyacchii/traditional/01_S0o_dmm8O.png?ik-sdk-version=javascript-1.4.3&updatedAt=1650504769123' />
+						</div>
+						<div className='displayGallery__item image-padding'>
+							<img src='https://ik.imagekit.io/sorudev/Nyacchii/traditional/03_uix1dKqb6.png?ik-sdk-version=javascript-1.4.3&updatedAt=1650504721014' />
+						</div>
+						<div className='displayGallery__item image-padding'>
+							<img src='https://ik.imagekit.io/sorudev/Nyacchii/traditional/02_kaP37uMyn.png?ik-sdk-version=javascript-1.4.3&updatedAt=1650504720975' />
+						</div>
+						<div className='displayGallery__item image-padding'>
+							<img src='https://ik.imagekit.io/sorudev/Nyacchii/traditional/04_I35fmPaXH.png?ik-sdk-version=javascript-1.4.3&updatedAt=1650504720716' />
+						</div>
+						<div className='displayGallery__item image-padding'>
+							<img src='https://ik.imagekit.io/sorudev/Nyacchii/traditional/06_skhM9FJwx.png?ik-sdk-version=javascript-1.4.3&updatedAt=1650504720980' />
+						</div>
+						<div className='displayGallery__item image-padding'>
+							<img src='https://ik.imagekit.io/sorudev/Nyacchii/traditional/05_L-_yGHngf.png?ik-sdk-version=javascript-1.4.3&updatedAt=1650504720724' />
+						</div>
 					</div>
 				</article>
 			</section>

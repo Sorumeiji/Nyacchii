@@ -46,26 +46,25 @@
         box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08), 0 2px 2px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.16),
             0 8px 8px rgba(0, 0, 0, 0.2);
     }
+}
 
-    .displayGallery {
-        display: grid;
-        gap: 32px;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-        .displayGallery__item {
-            background-color: #0d0f14;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            border-radius: 0.5em;
-            padding: 0;
-            transition: all 0.25s ease-out !important;
-        }
+.displayGallery {
+    display: grid;
+    gap: 32px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    .displayGallery__item {
+        background-color: #0d0f14;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        border-radius: 0.5em;
+        transition: all 0.25s ease-out !important;
+    }
 
-        .displayGallery__item:hover {
-            cursor: pointer;
-            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08), 0 2px 2px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.16),
-                0 8px 8px rgba(0, 0, 0, 0.2);
-        }
+    .displayGallery__item:hover {
+        cursor: pointer;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08), 0 2px 2px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.16),
+            0 8px 8px rgba(0, 0, 0, 0.2);
     }
 }

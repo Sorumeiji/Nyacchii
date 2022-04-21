@@ -5,11 +5,12 @@ ul {
     grid-gap: 1em;
     gap: 1em;
     padding-block: 1em;
-    margin-block: 1em;
+    margin-block: 5em;
 }
 
 ul [role="list"] {
     list-style-type: none;
+    display: block;
 }
 
 a[role="button"] {
@@ -18,7 +19,7 @@ a[role="button"] {
     font-weight: var(--font-semi);
     transition: all 0.25s ease-out !important;
     display: block;
-    border-radius: 0.1em;
+    border-radius: 0.5em;
     padding-block: 1em;
     padding-inline: 0.9em;
 }
@@ -29,13 +30,12 @@ a[role="outlineButton"] {
     font-weight: var(--font-semi);
     transition: all 0.25s ease-out !important;
     display: block;
-    border-radius: 0.1em;
+    border-radius: 0.5em;
     padding-block: 0.9em;
     padding-inline: 0.9em;
 }
 
 a[role="button"]:hover {
-    background-color: var(--color-bg-dark);
 }
 
 a[role="outlineButton"]:hover {

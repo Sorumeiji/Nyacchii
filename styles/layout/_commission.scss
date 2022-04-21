@@ -1,3 +1,24 @@
 .commission {
     background-color: var(--color-bg-dark);
+
+    h2 {
+        color: var(--color-text);
+        padding-block: 0.5em;
+    }
+    .decoration {
+        padding-block: 10em;
+    }
+}
+
+.displayEmotes {
+    display: grid;
+    gap: 32px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    padding-block: 5em;
+
+    .displayEmotesGallery {
+        display: grid;
+        gap: 32px;
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
 }
