@@ -1,7 +1,7 @@
-import { useEffect, useRef } from 'react';
-import { gsap } from 'gsap/dist/gsap';
 import Image from 'next/image';
 import Navigation from '../src/components/Navigation';
+import { useRouter } from 'next/router';
+import Link from 'next/link';
 
 import feature01 from '../img/featured/01.png';
 import feature02 from '../img/featured/02.png';
@@ -15,6 +15,7 @@ import { faArrowRight, faHeart } from '@fortawesome/free-solid-svg-icons';
 import { faTwitch } from '@fortawesome/free-brands-svg-icons';
 
 const Index = () => {
+	const router = useRouter();
 	return (
 		<>
 			<section className='hero'>
@@ -102,9 +103,12 @@ const Index = () => {
 							<p>Traditional Raffle: 5PM - 9PM CST</p>
 						</div>
 					</div>
-					<a className='twitch-link' href='#'>
-						View Commissions &nbsp; <FontAwesomeIcon icon={faArrowRight} />
-					</a>
+
+					<Link href='/commission'>
+						<a className={router.pathname == '/commission' ? `${Nav.active}` : 'twitch-link'}>
+							View Commissions &nbsp; <FontAwesomeIcon icon={faArrowRight} />
+						</a>
+					</Link>
 				</article>
 			</section>
 		</>
