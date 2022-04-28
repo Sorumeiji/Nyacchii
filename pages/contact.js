@@ -6,7 +6,7 @@ import { faDiscord, faTwitter } from '@fortawesome/free-brands-svg-icons';
 function contact() {
 	return (
 		<>
-			<section className='contact'>
+			<section className='hero'>
 				<Navigation />
 				<div className='container'>
 					<h1>
@@ -18,17 +18,17 @@ function contact() {
 					</p>
 					<ul>
 						<li>
-							<a href='#featured' role='button'>
+							<a href='#featured' role='outlineButton'>
 								My Discord &nbsp;
-								<span className='accent'>
+								<span>
 									<FontAwesomeIcon icon={faDiscord} />
 								</span>
 							</a>
 						</li>
 						<li>
-							<a href='https://www.twitch.tv/nyacchii' target='_blank' role='button'>
+							<a href='https://www.twitch.tv/nyacchii' target='_blank' role='outlineButton'>
 								My Twitter &nbsp;
-								<span className='accent'>
+								<span>
 									<FontAwesomeIcon icon={faTwitter} />
 								</span>
 							</a>

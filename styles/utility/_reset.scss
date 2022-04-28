@@ -53,6 +53,9 @@ body,
     // To keep footer at  bottom
     display: flex;
     flex-direction: column;
+    animation: fadeInAnimation ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
 
 .flow > * + * {
@@ -125,12 +128,16 @@ a {
     transition: all 0.25s ease-out !important;
 }
 
-section {
-    padding: 1em;
-}
-
 footer {
     background-color: var(--color-bg-dark);
+    p,
+    a {
+        color: var(--color-text2);
+    }
+
+    a:hover {
+        color: var(--color-accent);
+    }
 }
 
 div[class*="span_"] {
@@ -146,5 +153,14 @@ footer {
 
     .container {
         padding-block: 2em;
+    }
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }

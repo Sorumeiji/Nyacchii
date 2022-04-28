@@ -31,7 +31,7 @@ const Index = () => {
 					<ul>
 						<li>
 							<a href='#featured' role='button'>
-								Preview Works &nbsp;
+								Preview my Work &nbsp;
 								<span className='accent'>
 									<FontAwesomeIcon icon={faHeart} />
 								</span>
@@ -40,7 +40,7 @@ const Index = () => {
 						<li>
 							<a href='https://www.twitch.tv/nyacchii' target='_blank' role='outlineButton'>
 								Follow on Twitch &nbsp;
-								<span className='accent'>
+								<span>
 									<FontAwesomeIcon icon={faTwitch} />
 								</span>
 							</a>
@@ -100,7 +100,7 @@ const Index = () => {
 						</div>
 						<div className='schedule-item'>
 							<p className='accent'>Sunday</p>
-							<p>Traditional Raffle: 5PM - 9PM CST</p>
+							<p>Raffle: 5PM - 9PM CST</p>
 						</div>
 					</div>
 

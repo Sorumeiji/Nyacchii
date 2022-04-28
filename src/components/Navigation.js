@@ -26,53 +26,61 @@ const Navigation = () => {
 		}
 	}
 	return (
-		<div className='navigation-container'>
-			<div className={`${Nav.Logo}`}>
-				<Image src={Logo} />
+		<section className='navigation'>
+			<div className='navigation-container'>
+				<div className={`${Nav.Logo}`}>
+					<Link href='/'>
+						<a>
+							<Image src={Logo} />
+						</a>
+					</Link>
+				</div>
+
+				<button
+					className={`${Nav.mobile_nav_toggle}`}
+					aria-controls='primary_navigation'
+					ref={buttonRef}
+					aria-expanded='false'>
+					<span className={`${Nav.sr_only}`}>menu</span>
+				</button>
+
+				<nav>
+					<ul
+						id='primary_navigation'
+						data-visible='false'
+						ref={navRef}
+						className={`${Nav.primary_navigation}`}>
+						<li>
+							<Link href='/'>
+								<a className={router.pathname == '/' ? `${Nav.active}` : ''}>Home</a>
+							</Link>
+						</li>
+						<li>
+							<Link href='/commission'>
+								<a className={router.pathname == '/commission' ? `${Nav.active}` : ''}>
+									Commission
+								</a>
+							</Link>
+						</li>
+						<li>
+							<a href='https://www.instagram.com/nyacchii.art/' target='_blank'>
+								Portfolio
+							</a>
+						</li>
+						<li>
+							<a href='https://store.streamelements.com/nyacchii' target='_blank'>
+								Shop
+							</a>
+						</li>
+						<li>
+							<Link href='/contact'>
+								<a className={router.pathname == '/contact' ? `${Nav.active}` : ''}>Contact</a>
+							</Link>
+						</li>
+					</ul>
+				</nav>
 			</div>
-
-			<button
-				className={`${Nav.mobile_nav_toggle}`}
-				aria-controls='primary_navigation'
-				ref={buttonRef}
-				aria-expanded='false'>
-				<span className={`${Nav.sr_only}`}>menu</span>
-			</button>
-
-			<nav>
-				<ul
-					id='primary_navigation'
-					data-visible='false'
-					ref={navRef}
-					className={`${Nav.primary_navigation}`}>
-					<li>
-						<Link href='/'>
-							<a className={router.pathname == '/' ? `${Nav.active}` : ''}>Home</a>
-						</Link>
-					</li>
-					<li>
-						<Link href='/commission'>
-							<a className={router.pathname == '/commission' ? `${Nav.active}` : ''}>Commission</a>
-						</Link>
-					</li>
-					<li>
-						<a href='https://www.instagram.com/nyacchii.art/' target='_blank'>
-							Portfolio
-						</a>
-					</li>
-					<li>
-						<a href='https://store.streamelements.com/nyacchii' target='_blank'>
-							Shop
-						</a>
-					</li>
-					<li>
-						<Link href='/contact'>
-							<a className={router.pathname == '/contact' ? `${Nav.active}` : ''}>Contact</a>
-						</Link>
-					</li>
-				</ul>
-			</nav>
-		</div>
+		</section>
 	);
 };
 

@@ -1,23 +1,37 @@
 .container {
-    width: 1200px;
+    width: 900px;
     max-width: 90%;
     margin-inline: auto;
     padding-block: 6em;
 }
 
+.navigation {
+    margin: 0;
+    max-width: 100%;
+}
+
 .navigation-container {
     display: flex;
     justify-content: space-between;
-    margin-block: 2em;
+    padding-block: 2em;
     align-items: center;
     max-width: 80%;
     margin-inline: auto;
 }
 
 footer {
+    padding-block: 15em 5em;
     .container {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding: 0;
+
+        padding-block: 1em;
+
+        ul {
+            padding: 0;
+            margin: 0;
+        }
     }
 }

@@ -5,7 +5,7 @@ import Navigation from '../src/components/Navigation';
 import { gsap } from 'gsap/dist/gsap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import { faDollarSign } from '@fortawesome/free-solid-svg-icons';
+import { faClipboardList, faDollarSign, faList } from '@fortawesome/free-solid-svg-icons';
 
 const Terms = () => {
 	const boxRef = useRef();
@@ -25,16 +25,28 @@ const Terms = () => {
 							<h1>
 								Commission & Pricing<span className='accent'>.</span>
 							</h1>
+							<p>Status: Closed</p>
 							<p>
 								Below are my prices for Digital Art, Twitch Emotes, and Traditonal Art. For any
 								prices not listed, reach out for quote.
 							</p>
 							<ul>
 								<li>
-									<a href='#featured' role='button'>
-										View Pricing &nbsp;
+									<a href='#digital' role='button'>
+										View my Prices &nbsp;
 										<span className='accent'>
 											<FontAwesomeIcon icon={faDollarSign} />
+										</span>
+									</a>
+								</li>
+								<li>
+									<a
+										href='https://trello.com/b/DSUJQavY/nyacchii-commissions'
+										target='_blank'
+										role='outlineButton'>
+										Waiting List &nbsp;
+										<span>
+											<FontAwesomeIcon icon={faClipboardList} />
 										</span>
 									</a>
 								</li>
@@ -44,7 +56,7 @@ const Terms = () => {
 				</div>
 			</section>
 
-			<section className='commission'>
+			<section className='commission' id='pricing'>
 				<div className='decoration'>
 					<svg width='1163' height='235' fill='none' xmlns='http://www.w3.org/2000/svg'>
 						<path
@@ -68,7 +80,7 @@ const Terms = () => {
 						</defs>
 					</svg>
 				</div>
-				<article className='container'>
+				<article className='container' id='digital'>
 					<h2>
 						Digital Art<span className='accent'>.</span>
 					</h2>
