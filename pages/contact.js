@@ -26,7 +26,7 @@ function contact() {
 							</a>
 						</li>
 						<li>
-							<a href='https://www.twitch.tv/nyacchii' target='_blank' role='outlineButton'>
+							<a href='https://twitter.com/nyacchii_art' target='_blank' role='outlineButton'>
 								My Twitter &nbsp;
 								<span>
 									<FontAwesomeIcon icon={faTwitter} />
