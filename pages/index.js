@@ -1,18 +1,8 @@
 import Image from 'next/image';
 import Navigation from '../src/components/Navigation';
 import { useRouter } from 'next/router';
-import Link from 'next/link';
-
-import feature01 from '../img/featured/01.png';
-import feature02 from '../img/featured/02.png';
-import feature03 from '../img/featured/03.png';
-import feature04 from '../img/featured/04.png';
-import feature05 from '../img/animated/inochi2.gif';
-import feature06 from '../img/featured/05.png';
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRight, faHeart } from '@fortawesome/free-solid-svg-icons';
-import { faTwitch } from '@fortawesome/free-brands-svg-icons';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 const Index = () => {
 	const router = useRouter();
@@ -28,87 +18,28 @@ const Index = () => {
 						Hello, my name is Nyacchii. I am a Full-Time Creative Streamer and Twitch Partner from
 						Mexico. Expertise in digital and traditional art.
 					</p>
-					<ul>
-						<li>
-							<a href='#featured' role='button'>
-								Preview my Work &nbsp;
-								<span className='accent'>
-									<FontAwesomeIcon icon={faHeart} />
-								</span>
-							</a>
-						</li>
-						<li>
-							<a href='https://www.twitch.tv/nyacchii' target='_blank' role='outlineButton'>
-								Follow on Twitch &nbsp;
-								<span>
-									<FontAwesomeIcon icon={faTwitch} />
-								</span>
-							</a>
-						</li>
-					</ul>
 				</article>
 			</section>
 
 			<section id='featured' className='featured'>
 				<article className='container'>
-					<h2>
-						Works on Display<span className='accent'>.</span>
-					</h2>
-					<div className='displayGallery'>
-						<div className='displayGallery__item image-container'>
-							<Image src={feature01} />
-						</div>
-						<div className='displayGallery__item'>
-							<Image src={feature02} />
-						</div>
-						<div className='displayGallery__item image-padding'>
-							<Image src={feature03} />
-						</div>
-						<div className='displayGallery__item image-padding'>
-							<Image src={feature04} />
-						</div>
-						<div className='displayGallery__item image-padding'>
-							<Image className='img' layout='fixed' src={feature05} />
-						</div>
-						<div className='displayGallery__item image-padding'>
-							<Image src={feature06} />
-						</div>
-					</div>
-				</article>
-
-				<article className='container'>
-					<div className='title'>
-						<h2>
-							Stream Schedule<span className='accent'>.</span>
-						</h2>
-						<a className='twitch-link' href='https://www.twitch.tv/nyacchii' target='_blank'>
-							<span className='link-style'>Twitch.tv</span>/Nyacchii
-						</a>
-					</div>
 					<div className='schedule'>
-						<div className='schedule-item'>
-							<p className='accent'>Monday</p>
-							<p>No Stream</p>
-						</div>
-						<div className='schedule-item'>
-							<p className='accent'>Tue Wed Fri Sat</p>
-							<p>Regular: 5PM - 9PM CST</p>
-						</div>
-						<div className='schedule-item'>
-							<p className='accent'>Thursday</p>
-							<p>Gaming: 5PM - 9PM CST</p>
-						</div>
-						<div className='schedule-item'>
-							<p className='accent'>Sunday</p>
-							<p>Raffle: 5PM - 9PM CST</p>
-						</div>
+						<a className='twitch-link' href='https://www.twitch.tv/nyacchii' target='_blank'>
+							<span className='link-style'> Visit Twitch.tv</span>/Nyacchii
+						</a>
+						<ul className='schedule-item'>
+							<li>
+								<strong className='accent'>+</strong> Monday: Day off
+							</li>
+							<li>
+								<strong className='accent'>+</strong> Tue - Sun: 5pm to 9pm CST (Mexico City time)
+							</li>
+						</ul>
 					</div>
 
-					<Link href='/commission'>
-						<a className={router.pathname == '/commission' ? `${Nav.active}` : 'twitch-link'}>
-							View Commissions &nbsp; <FontAwesomeIcon icon={faArrowRight} />
-						</a>
-					</Link>
+					<a href='https://www.twitch.tv/nyacchii/schedule' target='_blank'>
+						See Full Schedule &nbsp; <FontAwesomeIcon icon={faArrowRight} />
+					</a>
 				</article>
 			</section>
 		</>
