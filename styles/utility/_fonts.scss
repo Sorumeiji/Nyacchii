@@ -6,6 +6,7 @@
     --font-copy: "Open Sans", sans-serif;
     --font-semi: 600;
     --font-light: 400;
+
     --step--2: clamp(1.2rem, calc(0.51rem + 0.92vw), 0.69rem);
     --step--1: clamp(1.5rem, calc(0.59rem + 1.21vw), 0.83rem);
     --step-0: clamp(1rem, calc(0.68rem + 1.59vw), 1.88rem);
@@ -23,7 +24,7 @@ li {
     font-family: var(--font-copy);
     color: var(--color-text);
     line-height: 1.7;
-    max-width: 50ch;
+    max-width: 60ch;
 }
 label {
     font-size: var(--step--2);

@@ -3,6 +3,7 @@ import Navigation from '../src/components/Navigation';
 import { useRouter } from 'next/router';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { faTwitch, faTwitter } from '@fortawesome/free-brands-svg-icons';
 
 const Index = () => {
 	const router = useRouter();
@@ -18,6 +19,27 @@ const Index = () => {
 						Hello, my name is Nyacchii. I am a Full-Time Creative Streamer and Twitch Partner from
 						Mexico. Expertise in digital and traditional art.
 					</p>
+					<ul>
+						<li>
+							<a href='#prices' role='button'>
+								View my Prices &nbsp;
+								<span className='accent'>
+									<FontAwesomeIcon icon={faTwitch} />
+								</span>
+							</a>
+						</li>
+						<li>
+							<a
+								href='https://trello.com/b/DSUJQavY/nyacchii-commissions'
+								target='_blank'
+								role='outlineButton'>
+								Waiting List &nbsp;
+								<span>
+									<FontAwesomeIcon icon={faTwitter} />
+								</span>
+							</a>
+						</li>
+					</ul>
 				</article>
 			</section>
 

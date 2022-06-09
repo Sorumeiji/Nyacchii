@@ -5,21 +5,19 @@
     h1,
     h4,
     p {
-        padding-block: 0.5em;
         color: var(--color-text);
     }
 }
-
 .featured {
     .container {
-        padding-top: 0;
-        padding-bottom: 5em;
+        // padding-top: 0;
+        // padding-bottom: 5em;
     }
 
     background-color: var(--color-bg-light);
     background-image: url(../../img/backgrounds/pattern.png);
     h2 {
-        padding-block: 2em;
+        // padding-block: 2em;
     }
 
     a {
@@ -34,8 +32,8 @@
     .schedule {
         display: flex;
         flex-direction: column;
-        padding-top: 0;
-        padding-bottom: 2em;
+        // padding-top: 0;
+        // padding-bottom: 2em;
 
         p {
             color: var(--color-text2);
@@ -45,16 +43,8 @@
     .schedule-item {
         display: flex;
         flex-direction: column;
-        padding-block: 1em;
+        // padding-block: 1em;
         transition: all 0.25s ease-out !important;
         border-radius: 0.5em;
-    }
-}
-
-.modal {
-    padding: 1em;
-    max-width: 50ch;
-    & > * {
-        margin: 0 0 0.5rem 0;
     }
 }

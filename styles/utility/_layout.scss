@@ -1,8 +1,7 @@
 .container {
     width: 900px;
-    max-width: 90%;
+    max-width: 100%;
     margin-inline: auto;
-    padding-block: 6em;
 }
 
 .navigation {
@@ -20,7 +19,6 @@
 }
 
 footer {
-    padding-block: 15em 5em;
     .container {
         display: flex;
         justify-content: space-between;
