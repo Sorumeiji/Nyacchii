@@ -10,11 +10,6 @@ ul {
 ul [role="list"] {
     list-style-type: none;
     display: block;
-    font-size: var(--step--2);
-}
-
-.list li {
-    font-size: var(--step--2);
 }
 
 a[role="button"] {
@@ -24,9 +19,10 @@ a[role="button"] {
     transition: all 0.25s ease-out !important;
     display: block;
     border-radius: 0.5em;
-    padding-block: 1em;
+    padding-block: 0.5em;
+    padding-inline: 0.9em;
     max-width: 100%;
-    width: 280px;
+    width: 180px;
     display: flex;
     justify-content: center;
 }
@@ -35,8 +31,6 @@ a[role="button"]:hover {
     font-weight: var(--font-semi);
     transition: all 0.25s ease-out !important;
     border-radius: 0.5em;
-    padding-block: 1em;
-
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08), 0 2px 2px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.16),
         0 8px 8px rgba(0, 0, 0, 0.2);
 }
@@ -73,10 +67,10 @@ a[role="outlineButton"] {
     font-weight: var(--font-semi);
     transition: all 0.25s ease-out !important;
     border-radius: 0.5em;
-    padding-block: 0.9em;
+    padding-block: 0.5em;
     padding-inline: 0.9em;
     max-width: 100%;
-    width: 280px;
+    width: 180px;
     display: flex;
     justify-content: center;
 }

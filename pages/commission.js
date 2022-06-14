@@ -28,7 +28,7 @@ const commission = () => {
 							<ul>
 								<li>
 									<a href='#prices' role='button'>
-										View my Prices &nbsp;
+										View Prices &nbsp;
 										<span className='accent'>
 											<FontAwesomeIcon icon={faDollarSign} />
 										</span>

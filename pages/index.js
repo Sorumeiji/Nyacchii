@@ -3,7 +3,7 @@ import Navigation from '../src/components/Navigation';
 import { useRouter } from 'next/router';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
-import { faTwitch, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faInstagram, faTwitch, faTwitter } from '@fortawesome/free-brands-svg-icons';
 
 const Index = () => {
 	const router = useRouter();
@@ -11,7 +11,7 @@ const Index = () => {
 		<>
 			<section className='hero'>
 				<Navigation />
-				<article className='container'>
+				<article className='container flow'>
 					<h1>
 						Digital Creative & Twitch Partner<span className='accent'>.</span>
 					</h1>
@@ -22,7 +22,7 @@ const Index = () => {
 					<ul>
 						<li>
 							<a href='#prices' role='button'>
-								View my Prices &nbsp;
+								Twitch &nbsp;
 								<span className='accent'>
 									<FontAwesomeIcon icon={faTwitch} />
 								</span>
@@ -32,10 +32,21 @@ const Index = () => {
 							<a
 								href='https://trello.com/b/DSUJQavY/nyacchii-commissions'
 								target='_blank'
-								role='outlineButton'>
-								Waiting List &nbsp;
-								<span>
+								role='button'>
+								Twitter &nbsp;
+								<span className='accent'>
 									<FontAwesomeIcon icon={faTwitter} />
+								</span>
+							</a>
+						</li>
+						<li>
+							<a
+								href='https://trello.com/b/DSUJQavY/nyacchii-commissions'
+								target='_blank'
+								role='button'>
+								Instagram &nbsp;
+								<span className='accent'>
+									<FontAwesomeIcon icon={faInstagram} />
 								</span>
 							</a>
 						</li>
@@ -45,10 +56,10 @@ const Index = () => {
 
 			<section id='featured' className='featured'>
 				<article className='container'>
-					<div className='schedule'>
-						<a className='twitch-link' href='https://www.twitch.tv/nyacchii' target='_blank'>
-							<span className='link-style'> Visit Twitch.tv</span>/Nyacchii
-						</a>
+					<h4>
+						Stream Schedule<span className='accent'>.</span>
+					</h4>
+					<div className='schedule flow'>
 						<ul className='schedule-item'>
 							<li>
 								<strong className='accent'>+</strong> Monday: Day off
