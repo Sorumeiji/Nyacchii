@@ -23,6 +23,11 @@ const commission = () => {
 					<h1>
 						Commission & Pricing<span className='accent'>.</span>
 					</h1>
+					<div>
+						<h4 className='status'>
+							<span className='accent-gray'>Status: </span> Closed
+						</h4>
+					</div>
 					<p>
 						Below are my prices for Digital Art, Twitch Emotes, and Traditonal Art. For any prices
 						not listed, reach out for quote.
@@ -48,11 +53,6 @@ const commission = () => {
 							</a>
 						</li>
 					</ul>
-					<div>
-						<h4 className='status'>
-							<span className='accent-gray'>Status: </span> Closed
-						</h4>
-					</div>
 				</div>
 			</section>
 

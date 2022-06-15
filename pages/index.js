@@ -1,5 +1,7 @@
 import Image from 'next/image';
 import Navigation from '../src/components/Navigation';
+import { animate } from 'motion';
+import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
@@ -7,11 +9,12 @@ import { faInstagram, faTwitch, faTwitter } from '@fortawesome/free-brands-svg-i
 
 const Index = () => {
 	const router = useRouter();
+	useEffect(() => {});
 	return (
 		<>
 			<section className='hero'>
 				<Navigation />
-				<article className='container flow'>
+				<article className='container flow hero__content'>
 					<h1>
 						Digital Creative & Twitch Partner<span className='accent'>.</span>
 					</h1>
