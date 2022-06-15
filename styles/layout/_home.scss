@@ -1,33 +1,26 @@
 .hero {
     background-color: var(--color-bg-light);
     background-image: url(../../img/backgrounds/pattern.png);
-    padding-block: var(--space-s);
-    .container {
-        padding-block: var(--space-l);
-    }
-}
 
-.featured {
-    background-color: var(--color-bg-light);
-    background-image: url(../../img/backgrounds/pattern.png);
-    padding-block: var(--space-s);
     .container {
-        padding-block: var(--space-l);
-
-        a:hover {
-            color: var(--color-accent);
-            margin-left: 1em;
-        }
+        padding-block: var(--space-2xl);
         .schedule {
             display: flex;
             flex-direction: column;
-
             .schedule-item {
                 display: flex;
                 flex-direction: column;
-                padding-block: 1em;
                 transition: all 0.25s ease-out !important;
                 border-radius: 0.5em;
+            }
+
+            a {
+                display: block;
+                color: var(--color-gray);
+            }
+            a:hover {
+                color: var(--color-accent);
+                margin-left: 1em;
             }
         }
     }

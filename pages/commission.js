@@ -4,7 +4,12 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Navigation from '../src/components/Navigation';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faClipboardList, faDollarSign, faList } from '@fortawesome/free-solid-svg-icons';
+import {
+	faClipboardList,
+	faDollarSign,
+	faList,
+	faMoneyCheck,
+} from '@fortawesome/free-solid-svg-icons';
 
 import feature01 from '../img/digital/01_72ppi_Watermark.png';
 import feature02 from '../img/digital/INOCHI_001_72ppi _Watermark.png';
@@ -14,39 +19,39 @@ const commission = () => {
 		<>
 			<section className='hero'>
 				<Navigation />
-				<div className='container'>
+				<div className='container flow'>
+					<h1>
+						Commission & Pricing<span className='accent'>.</span>
+					</h1>
+					<p>
+						Below are my prices for Digital Art, Twitch Emotes, and Traditonal Art. For any prices
+						not listed, reach out for quote.
+					</p>
+					<ul>
+						<li>
+							<a href='#prices' role='button'>
+								View Prices &nbsp;
+								<span className='accent'>
+									<FontAwesomeIcon icon={faMoneyCheck} />
+								</span>
+							</a>
+						</li>
+						<li>
+							<a
+								href='https://trello.com/b/DSUJQavY/nyacchii-commissions'
+								target='_blank'
+								role='button'>
+								Waiting List &nbsp;
+								<span className='accent'>
+									<FontAwesomeIcon icon={faClipboardList} />
+								</span>
+							</a>
+						</li>
+					</ul>
 					<div>
-						<div>
-							<h1>
-								Commission & Pricing<span className='accent'>.</span>
-							</h1>
-							<h4>Status: Closed</h4>
-							<p>
-								Below are my prices for Digital Art, Twitch Emotes, and Traditonal Art. For any
-								prices not listed, reach out for quote.
-							</p>
-							<ul>
-								<li>
-									<a href='#prices' role='button'>
-										View Prices &nbsp;
-										<span className='accent'>
-											<FontAwesomeIcon icon={faDollarSign} />
-										</span>
-									</a>
-								</li>
-								<li>
-									<a
-										href='https://trello.com/b/DSUJQavY/nyacchii-commissions'
-										target='_blank'
-										role='outlineButton'>
-										Waiting List &nbsp;
-										<span>
-											<FontAwesomeIcon icon={faClipboardList} />
-										</span>
-									</a>
-								</li>
-							</ul>
-						</div>
+						<h4 className='status'>
+							<span className='accent-gray'>Status: </span> Closed
+						</h4>
 					</div>
 				</div>
 			</section>

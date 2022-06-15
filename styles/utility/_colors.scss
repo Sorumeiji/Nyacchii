@@ -1,8 +1,9 @@
 :root {
-    --color-bg-light: #f3f3f3;
-    --color-bg-dark: #131313;
-    --color-text: #131313;
-    --color-text2: #f3f3f3;
+    --color-bg-light: hsl(0, 0%, 95%);
+    --color-bg-dark: hsl(0, 0%, 7%);
+    --color-text: hsl(0, 0%, 7%);
+    --color-text2: hsl(0, 0%, 95%);
+    --color-gray: hsl(0, 0%, 56%);
     --color-accent: hsl(13, 96%, 70%);
 
     --color-gradient: linear-gradient(

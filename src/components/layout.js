@@ -6,12 +6,27 @@ function Layout({ children }) {
 		<>
 			<div className='layout'>{children}</div>
 			<footer className='footer'>
-				<div className='container'>
-					<div className='copy_lang'>
-						<p>&copy; NYACCHII. 2022. All Rights Reserved.</p>
-					</div>
-
+				<div className='container flow'>
 					<ul className='social'>
+						<li>
+							<a href='https://www.twitch.tv/nyacchii' target='_blank'>
+								Privacy Policy
+							</a>
+						</li>
+						<li>
+							<a href='https://twitter.com/nyacchii_art' target='_blank'>
+								Terms of Service
+							</a>
+						</li>
+					</ul>
+					<ul className='social'>
+						<li>
+							<div className='copy_lang'>
+								<p>&copy; NYACCHII. 2022. All Rights Reserved.</p>
+							</div>
+						</li>
+
+						<li>|</li>
 						<li>
 							<a href='https://www.twitch.tv/nyacchii' target='_blank'>
 								<FontAwesomeIcon icon={faTwitch} />

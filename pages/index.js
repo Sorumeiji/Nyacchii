@@ -51,14 +51,11 @@ const Index = () => {
 							</a>
 						</li>
 					</ul>
-				</article>
-			</section>
-
-			<section id='featured' className='featured'>
-				<article className='container'>
-					<h4>
-						Stream Schedule<span className='accent'>.</span>
-					</h4>
+					<div>
+						<h4>
+							Stream Schedule<span className='accent'>.</span>
+						</h4>
+					</div>
 					<div className='schedule flow'>
 						<ul className='schedule-item'>
 							<li>
@@ -68,11 +65,10 @@ const Index = () => {
 								<strong className='accent'>+</strong> Tue - Sun: 5pm to 9pm CST (Mexico City time)
 							</li>
 						</ul>
+						<a href='https://www.twitch.tv/nyacchii/schedule' target='_blank'>
+							See Full Schedule &nbsp; <FontAwesomeIcon icon={faArrowRight} />
+						</a>
 					</div>
-
-					<a href='https://www.twitch.tv/nyacchii/schedule' target='_blank'>
-						See Full Schedule &nbsp; <FontAwesomeIcon icon={faArrowRight} />
-					</a>
 				</article>
 			</section>
 		</>
