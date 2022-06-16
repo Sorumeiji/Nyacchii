@@ -1,33 +1,17 @@
-.commission {
+.information {
     background-color: var(--color-bg-dark);
+}
 
-    h2 {
-        color: var(--color-text2);
-        padding-block: 0.5em;
-    }
-
-    p,
-    ul li {
-        color: var(--color-text2);
-    }
-
-    p {
-        padding-block: 1em;
-    }
-
-    .decoration {
-        padding-block: 15em 15em;
-    }
-
-    .comm-information {
-        h2 {
-            padding-block: 1em;
+.pricing {
+    background-color: var(--color-bg-dark);
+    .pricing__content {
+        .pricing__content-title {
         }
-        div {
-            padding-block: 1em;
+        .pricing__content-example {
         }
-        p {
-            padding-block: 0.5em;
+        .pricing__content-info {
         }
+    }
+    .pricing__terms {
     }
 }

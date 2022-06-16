@@ -94,12 +94,6 @@ a[class~="accent"]:hover {
     color: var(--color-accent);
 }
 
-.decoration {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .status {
     border-left: medium solid var(--color-accent);
     & span {

@@ -55,9 +55,8 @@ const commission = () => {
 					</ul>
 				</div>
 			</section>
-
-			<section className='commission' id='prices'>
-				<div className='decoration'>
+			<section className='information' id='prices'>
+				<section className='decoration'>
 					<svg width='1102' height='151' fill='none' xmlns='http://www.w3.org/2000/svg'>
 						<mask
 							id='b'
@@ -92,9 +91,8 @@ const commission = () => {
 							</linearGradient>
 						</defs>
 					</svg>
-				</div>
-
-				<article id='information' className='container comm-information'>
+				</section>
+				<article id='general'>
 					<h2>
 						General Information<span className='accent'>.</span>
 					</h2>
@@ -127,303 +125,56 @@ const commission = () => {
 						<p>Payment is accepted via PayPal only.</p>
 					</div>
 				</article>
-
-				<div className='container button-group'>
+			</section>
+			<section className='pricing' id='pricing'>
+				<menu className='pricing-menu'>
 					<ul>
 						<li>
-							<a href='#emotes' role='buttonGroup'>
-								Emotes
-							</a>
+							<a href='#'>Emotes</a>
 						</li>
 						<li>
-							<a href='#digital' role='buttonGroup'>
-								Illustrations
-							</a>
+							<a href='#'>Illustrations</a>
 						</li>
 						<li>
-							<a href='#vtuber' role='buttonGroup'>
-								Vtubers
-							</a>
+							<a href='#'>Vtubers</a>
 						</li>
 					</ul>
-				</div>
-
-				<article id='emotes' className='container'>
-					<h2>
-						Emotes<span className='accent'>.</span>
-					</h2>
-
-					<div className='displayEmotes'>
-						<div className='displayContent'>
-							<h4>Normal Emotes</h4>
-							<div className='displayEmotesGallery'>
-								<div className='displayEmotesGallery-item'>
-									<img src='https://ik.imagekit.io/sorudev/Nyacchii/emotes/normal/millie3_tssDLseay.png?ik-sdk-version=javascript-1.4.3&updatedAt=1650489616819' />
-								</div>
-								<div className='displayEmotesGallery-item'>
-									<img src='https://ik.imagekit.io/sorudev/Nyacchii/emotes/normal/millie2_ylpdpd-Y9.png?ik-sdk-version=javascript-1.4.3&updatedAt=1650489616807' />
-								</div>
-								<div className='displayEmotesGallery-item'>
-									<img src='https://ik.imagekit.io/sorudev/Nyacchii/emotes/normal/millie1_6eyf0SNI_x.png?ik-sdk-version=javascript-1.4.3&updatedAt=1650489616932' />
-								</div>
-							</div>
-							<hr />
-							<div className='displayContent_price'>
-								<div>
-									<ul className='list'>
-										<li>
-											Normal: <span className='opacity'> $30 USD (each).</span>
-										</li>
-									</ul>
-								</div>
-								<div></div>
-								<div className='accordian'>
-									<div>
-										<input
-											type='checkbox'
-											name='accoridan'
-											id='normal'
-											className='accordian__input'
-										/>
-										<label for='normal' className='accordian__label'>
-											Normal Emote Specs.
-										</label>
-										<div className='accordian__content'>
-											<ul className='list'>
-												<li>
-													Size: <span className='opacity'>112px, 56px & 28px</span>
-												</li>
-												<li>
-													Resolution: <span className='opacity'>72ppi</span>
-												</li>
-											</ul>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div className='displayContent'>
-							<h4>Animated Emotes</h4>
-							<div className='displayEmotesGallery'>
-								<div className='displayEmotesGallery-item'>
-									<img src='https://ik.imagekit.io/sorudev/Nyacchii/emotes/animated/inochi2_nEQCxWdpB.gif?ik-sdk-version=javascript-1.4.3&updatedAt=1650489652708' />
-								</div>
-								<div className='displayEmotesGallery-item'>
-									<img src='https://ik.imagekit.io/sorudev/Nyacchii/emotes/animated/inochi1_wS5PkBATB.gif?ik-sdk-version=javascript-1.4.3&updatedAt=1650489652821' />
-								</div>
-								<div className='displayEmotesGallery-item'>
-									<img src='https://ik.imagekit.io/sorudev/Nyacchii/emotes/animated/nyacchii1_Z-rHvj0uk.gif?ik-sdk-version=javascript-1.4.3&updatedAt=1650489651375' />
-								</div>
-							</div>
-							<hr />
-							<div className='displayContent_price'>
-								<div>
-									<ul className='list'>
-										<li>
-											Animated: <span className='opacity'>$80 - $120 USD (each).</span>
-										</li>
-									</ul>
-								</div>
-
-								<div className='accordian'>
-									<div>
-										<input
-											type='checkbox'
-											name='accoridan'
-											id='animated'
-											className='accordian__input'
-										/>
-										<label for='animated' className='accordian__label'>
-											Animated Emote Specs.
-										</label>
-										<div className='accordian__content'>
-											<ul className='list'>
-												<li>
-													Twitch: <span className='opacity'>112px at 30fps</span>
-												</li>
-												<li>
-													Discord: <span className='opacity'>56px at 60fps</span>
-												</li>
-												<li>
-													Thumbnail: <span className='opacity'>112px, 56px & 28px</span>
-												</li>
-												<li>
-													Resolution: <span className='opacity'>72ppi</span>
-												</li>
-											</ul>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div className='displayContent-extra'>
-						<h4>Terms.</h4>
-						<p>
-							For work with a tight deadline, price will increase a 30%. In the case of animation,
-							if length is bigger than 60 frames total for Twitch emotes, the frame rate will be
-							reduced as necessary. If the file size is bigger than 256kb for Discord emotes, the
-							frame rate will be lowered to 30fps.
-						</p>
-						<p>
-							The emotes created for the commission is only for personal use only, in channels such
-							as: Twitch, Picarto, Discord, any social network, etc. It is forbidden to use the
-							commission for business purposes (such as merchandise) without my express permission.
-						</p>
-						<p>
-							Please
-							<Link href='/contact'>
-								<a className='accent'> contact me </a>
-							</Link>
-							directly if you would like to use a commission for business purposes.
-						</p>
-					</div>
-				</article>
-
-				<article id='digital' className='container'>
-					<h2>
-						Illustrations<span className='accent'>.</span>
-					</h2>
-
-					<div className='displayDigital'>
-						<div className='displayContent'>
-							<h4>
-								Character art<span className='accent'>.</span>
-							</h4>
-							<div className='displayGallery'>
-								<div className='displayGallery__item'>
-									<Image src={feature01} />
-								</div>
-							</div>
-							<hr />
-							<div className='displayContent_price'>
-								<div>
-									<ul role='list' className='list'>
-										<li>
-											Headshot: <span className='opacity'> $60 USD</span>
-										</li>
-										<li>
-											Half Body: <span className='opacity'> $90 USD</span>
-										</li>
-										<li>
-											Full Body:<span className='opacity'> $120 USD</span>
-										</li>
-									</ul>
-								</div>
-								<div></div>
-								<div className='accordian'>
-									<div>
-										<input
-											type='checkbox'
-											name='accoridan'
-											id='character'
-											className='accordian__input'
-										/>
-										<label for='character' className='accordian__label'>
-											Character Specs.
-										</label>
-										<div className='accordian__content'>
-											<ul role='list' className='list'>
-												<li>
-													Size: <span className='opacity'>1000 px</span>
-												</li>
-												<li>
-													Resolution: <span className='opacity'>72 ppi</span>
-												</li>
-											</ul>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div className='displayContent'>
-							<h4>
-								Backgrounds<span className='accent'>.</span>
-							</h4>
-							<div className='displayGallery'>
-								<div className='displayGallery__item'>
-									<Image src={feature02} />
-								</div>
-							</div>
-							<hr />
-							<div className='displayContent_price'>
-								<div>
-									<ul className='list'>
-										<li>
-											Background: <span className='opacity'>$60 - $500 USD</span>
-										</li>
-									</ul>
-								</div>
-								<div></div>
-								<div className='accordian'>
-									<div>
-										<input
-											type='checkbox'
-											name='accoridan'
-											id='background'
-											className='accordian__input'
-										/>
-										<label for='background' className='accordian__label'>
-											Background Specs.
-										</label>
-										<div className='accordian__content'>
-											<ul role='list' className='list'>
-												<li>
-													Size: <span className='opacity'>1000px</span>
-												</li>
-												<li>
-													Resolution: <span className='opacity'>72ppi</span>
-												</li>
-											</ul>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div className='displayContent-extra'>
-						<h4>Terms.</h4>
-						<p>Price may change based on complexity.</p>
-						<p>
-							Every extra character drawn within the same image will be priced at 80% of the
-							original price. For work with a tight deadline, price will increase a 30%.
-						</p>
-						<p>
-							The illustrations created for the commission is only for personal use only, in
-							channels such as: Twitch, Picarto, Discord, any social network, etc. It is forbidden
-							to use the commission for business purposes (such as merchandise) without my express
-							permission.
-						</p>
-						<p>
-							Please
-							<Link href='/contact'>
-								<a className='accent'> contact me </a>
-							</Link>
-							directly if you would like to use a commission for business purposes.
-						</p>
-					</div>
-				</article>
-
-				<article id='vtuber' className='container'>
-					<h2>
-						Vtubers / GIFtubers<span className='accent'>.</span>
-					</h2>
-					<div className='displayVtuber'>
-						<div className='displayContent'>
-							<h4>Coming Soon!</h4>
-						</div>
-					</div>
-
-					<div className='displayContent-extra'>
+				</menu>
+				<section className='pricing__content'>
+					<div className='pricing__content-title'></div>
+					<div className='pricing__content-example'></div>
+					<div className='pricing__content-info'>
 						<p>
 							Vtubers / Pngtubers are coming soon! Prices and speficiations are still being decided
 							upon, with no planned release date. I ask on your patience on this. Keep an eye on my
 							Twitter, Discord or Trello waiting list for updates.
 						</p>
 					</div>
-				</article>
+				</section>
+				<summary className='pricing__terms'>
+					<p>Price may change based on complexity.</p>
+					<p>Price may change based on complexity.</p>
+					<p>
+						Illustrations: Every extra character drawn within the same image will be priced at 80%
+						of the original price. For work with a tight deadline, price will increase a 30%.
+					</p>
+					<p>
+						Emotes: In the case of animation, if length is bigger than 60 frames total for Twitch
+						emotes, the frame rate will be reduced as necessary. If the file size is bigger than
+						256kb for Discord emotes, the frame rate will be lowered to 30fps.
+					</p>
+					<p>
+						Commissions are for personal use only, in channels such as: Twitch, Picarto, Discord,
+						any social network, etc.
+						<b>
+							It is forbidden to use the commission for business purposes (such as merchandise)
+							without my express permission.
+						</b>
+					</p>
+					<p>
+						Please contact me directly if you would like to use a commission for business purposes.
+					</p>
+				</summary>
 			</section>
 		</>
 	);

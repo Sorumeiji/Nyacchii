@@ -42,16 +42,13 @@ html:focus-within {
 body,
 #__next {
     min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
     text-rendering: optimizeSpeed;
     font-smooth: antialiased;
     overflow-x: hidden;
     background: var(--color-background);
     position: relative;
-    display: flex;
-    flex-direction: column;
-    animation: fadeInAnimation ease 2s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
     line-height: 1.33;
 }
 
