@@ -65,13 +65,22 @@
             display: grid;
             grid-gap: 1rem;
 
-            @supports (width: min(250px, 100%)) {
-                grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+            @supports (width: min(445px, 100%)) {
+                grid-template-columns: repeat(auto-fit, minmax(min(445px, 100%), 1fr));
             }
             .pricing__gallery {
                 display: grid;
+                border: 1px solid red;
+               
+                // Try to remove the space
+                grid-gap: 0;
                 @supports (width: min(250px, 100%)) {
-                    grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr));
+                    grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+                }
+                img{
+                    width: 240px;
+                    height: 200px;
+                    object-fit: cover;
                 }
             }
         }
