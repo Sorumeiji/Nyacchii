@@ -46,7 +46,7 @@ body,
     grid-template-rows: auto 1fr auto;
     text-rendering: optimizeSpeed;
     font-smooth: antialiased;
-    overflow-x: hidden;
+    // overflow-x: hidden;
     background: var(--color-background);
     position: relative;
     line-height: 1.33;
