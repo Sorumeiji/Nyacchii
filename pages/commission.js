@@ -20,15 +20,18 @@ export async function getStaticProps() {
 	});
 
 	const res = await client.getEntries({ content_type: 'commissionPricing' });
+	const pes = await client.getEntries({ content_type: 'gallery' });
 
 	return {
 		props: {
 			pricing: res.items,
+			gallery: pes.items,
 		},
 	};
 }
 
-const commission = ({ pricing }) => {
+const commission = ({ pricing, gallery }) => {
+	console.log(gallery);
 	const [emotes, setEmotes] = useState(<PriceCard1 pricing={pricing} />);
 	useEffect(() => {});
 	return (
@@ -122,7 +125,7 @@ const commission = ({ pricing }) => {
 						</a>
 					</div>
 					<div className='flow'>
-						<p>To enable notifications from Trello, you can follow these easy instructions : </p>
+						<p>To enable notifications from Trello, you can follow these easy instructions: </p>
 						<a
 							className='accent'
 							target='_blank'
