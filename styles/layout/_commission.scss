@@ -93,6 +93,12 @@
         @supports (width: min(400px, 100%)) {
             grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr));
         }
+        ul {
+            display: flex;
+            flex-direction: column;
+            border-left: 1px solid #909090b3;
+            padding-left: 1em;
+        }
     }
     .pricing__terms {
         padding-top: 2.6em;
