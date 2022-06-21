@@ -1,8 +1,8 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
-import PriceCard3 from '../src/components/PriceCard3.js';
-import PriceCard2 from '../src/components/PriceCard2.js';
-import PriceCard1 from '../src/components/PriceCard1.js';
+import Vtuber from '../src/components/Vtuber.js';
+import Illustration from '../src/components/Illustration.js';
+import Emotes from '../src/components/Emotes.js';
 import Navigation from '../src/components/Navigation';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -32,7 +32,7 @@ export async function getStaticProps() {
 
 const commission = ({ pricing, gallery }) => {
 	console.log(gallery);
-	const [emotes, setEmotes] = useState(<PriceCard1 pricing={pricing} />);
+	const [emotes, setEmotes] = useState(<Emotes pricing={pricing} />);
 	useEffect(() => {});
 	return (
 		<>
@@ -154,13 +154,13 @@ const commission = ({ pricing, gallery }) => {
 					</div>
 					<ul>
 						<li>
-							<a onClick={() => setEmotes(<PriceCard1 pricing={pricing} />)}>Emotes</a>
+							<a onClick={() => setEmotes(<Emotes pricing={pricing} />)}>Emotes</a>
 						</li>
 						<li>
-							<a onClick={() => setEmotes(<PriceCard2 pricing={pricing} />)}>Illustrations</a>
+							<a onClick={() => setEmotes(<Illustration pricing={pricing} />)}>Illustrations</a>
 						</li>
 						<li>
-							<a onClick={() => setEmotes(<PriceCard3 pricing={pricing} />)}>Vtubers</a>
+							<a onClick={() => setEmotes(<Vtuber pricing={pricing} />)}>Vtubers</a>
 						</li>
 					</ul>
 				</menu>

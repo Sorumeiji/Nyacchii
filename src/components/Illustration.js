@@ -1,4 +1,4 @@
-const PriceCard1 = ({ pricing }) => {
+const Illustration = ({ pricing }) => {
 	console.log(pricing);
 	let background = pricing[0].fields.assets;
 	let backgroundDetails = pricing[0].fields.details;
@@ -30,21 +30,35 @@ const PriceCard1 = ({ pricing }) => {
 				</div>
 				<div className='pricing__details'>
 					<div className='pricing__content flow'>
-						<h4>
+						<h4 className='price__subtitle'>
 							Characters<span className='accent'>.</span>
 						</h4>
-						<h5 className='accent'>
-							{characterPrice} <span className='accent-gray'>( each )</span>
-						</h5>
+						<ul className='price'>
+							<li>
+								<h6>
+									Headshot: <span className='accent'>$60</span> USD
+								</h6>
+							</li>
+							<li>
+								<h6>
+									Half Body: <span className='accent'>$90</span> USD
+								</h6>
+							</li>
+							<li>
+								<h6>
+									Full Body: <span className='accent'>$120</span> USD
+								</h6>
+							</li>
+						</ul>
+
 						<div>
-							<ul>
-								<li>{characterDetails[2]}</li>
-								<li>{characterDetails[3]}</li>
-								<li>{characterDetails[4]}</li>
-							</ul>
-							<ul>
-								<li>{characterDetails[0]}</li>
-								<li>{characterDetails[1]}</li>
+							<ul className='pricing__info'>
+								<li>
+									<p className='accent-gray'>{characterDetails[0]}</p>
+								</li>
+								<li>
+									<p className='accent-gray'>{characterDetails[1]}</p>
+								</li>
 							</ul>
 						</div>
 					</div>
@@ -52,15 +66,15 @@ const PriceCard1 = ({ pricing }) => {
 						<h4>
 							Backgrounds<span className='accent'>.</span>
 						</h4>
-						<h5 className='accent'>
-							{backgroundPrice} <span className='accent-gray'>( each )</span>
-						</h5>
-						<ul>
+						<h6>
+							Starting at <span className='accent'>$60</span> USD
+						</h6>
+						<ul className='pricing__info'>
 							<li>
-								<p>{backgroundDetails[0]}</p>
+								<p className='accent-gray'>{backgroundDetails[0]}</p>
 							</li>
 							<li>
-								<p>{backgroundDetails[1]}</p>
+								<p className='accent-gray'>{backgroundDetails[1]}</p>
 							</li>
 						</ul>
 					</div>
@@ -70,4 +84,4 @@ const PriceCard1 = ({ pricing }) => {
 	);
 };
 
-export default PriceCard1;
+export default Illustration;

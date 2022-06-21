@@ -59,7 +59,27 @@
         }
     }
 
+    .pricing__details {
+        display: grid;
+        grid-gap: 0;
+        border: 1px solid transparent;
+        @supports (width: min(400px, 100%)) {
+            grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr));
+        }
+        .pricing__info {
+            display: flex;
+            flex-direction: column;
+            border-left: 1px solid #909090b3;
+            padding-left: 1em;
+        }
+    }
+
     .pricing__content {
+        .price {
+            ul {
+                border: none;
+            }
+        }
         padding-top: var(--space-xl);
         .container {
             padding: 0;
@@ -67,7 +87,7 @@
         .pricing__example {
             padding-top: 2.6em;
             display: grid;
-            grid-gap: 0;
+            grid-gap: 2em;
             border: 1px solid transparent;
             @supports (width: min(400px, 100%)) {
                 grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr));
@@ -85,23 +105,32 @@
                 }
             }
         }
-    }
-    .pricing__details {
-        display: grid;
-        grid-gap: 0;
-        border: 1px solid transparent;
-        @supports (width: min(400px, 100%)) {
-            grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr));
+
+        .pricing__example_emotes {
+            padding-top: 2.6em;
+            display: grid;
+            grid-gap: 2em;
+            border: 1px solid transparent;
+            @supports (width: min(400px, 100%)) {
+                grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr));
+            }
+
+            .pricing__gallery_emotes {
+                display: grid;
+                grid-gap: 0;
+                @supports (width: min(60px, 100%)) {
+                    grid-template-columns: repeat(auto-fit, minmax(min(60px, 100%), 1fr));
+                }
+                img {
+                    max-width: 100%;
+                    object-fit: cover;
+                }
+            }
         }
-        ul {
-            display: flex;
-            flex-direction: column;
-            border-left: 1px solid #909090b3;
-            padding-left: 1em;
-        }
     }
+
     .pricing__terms {
-        padding-top: 2.6em;
+        padding-top: 3em;
         p {
             max-width: 60ch;
         }
