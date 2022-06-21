@@ -66,9 +66,18 @@ const Illustration = ({ pricing }) => {
 						<h4>
 							Backgrounds<span className='accent'>.</span>
 						</h4>
-						<h6>
-							Starting at <span className='accent'>$60</span> USD
-						</h6>
+						<ul className='price'>
+							<li>
+								<h6>
+									Simple starting at <span className='accent'>$60</span> USD
+								</h6>
+							</li>
+							<li>
+								<h6>
+									Complex starting at <span className='accent'>$120</span> USD
+								</h6>
+							</li>
+						</ul>
 						<ul className='pricing__info'>
 							<li>
 								<p className='accent-gray'>{backgroundDetails[0]}</p>
