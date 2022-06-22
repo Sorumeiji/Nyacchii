@@ -60,44 +60,62 @@ const Emotes = ({ pricing }) => {
 				</div>
 				<div className='pricing__details'>
 					<div className='pricing__content flow'>
-						<h4 className='price__subtitle'>
-							Normal<span className='accent'>.</span>
-						</h4>
-
-						<h6>
-							Starting at <span className='accent'>$30</span> USD ( Each )
-						</h6>
-
+						<div>
+							<h4 className='accent-lightgray'>
+								Normal<span className='accent'>.</span>
+							</h4>
+						</div>
+						<div>
+							<h5 className='accent'>
+								$30 <span className='priceFormat accent-lightgray'> USD ( Each )</span>
+							</h5>
+						</div>
 						<div>
 							<ul className='pricing__info'>
 								<li>
-									<p className='accent-gray'>Size: 112px, 56px & 28px</p>
+									<p>
+										Size: <span className='accent-lightgray'>112px, 56px & 28px</span>
+									</p>
 								</li>
 								<li>
-									<p className='accent-gray'>Resolution: 72ppi</p>
+									<p>
+										Resolution: <span className='accent-lightgray'>72ppi</span>
+									</p>
 								</li>
 							</ul>
 						</div>
 					</div>
 					<div className='pricing__content flow'>
-						<h4>
-							Animated<span className='accent'>.</span>
-						</h4>
-						<h6>
-							Starting at <span className='accent'>$75</span> USD ( Each )
-						</h6>
+						<div>
+							<h4 className='accent-lightgray'>
+								Animated<span className='accent'>.</span>
+							</h4>
+						</div>
+						<div>
+							<h5 className='accent'>
+								$75 <span className='accent-lightgray'> USD ( Each )</span>
+							</h5>
+						</div>
 						<ul className='pricing__info'>
 							<li>
-								<p className='accent-gray'>Twitch: 112px at 30fps</p>
+								<p>
+									Twitch: <span className='accent-lightgray'>112px at 30fps</span>
+								</p>
 							</li>
 							<li>
-								<p className='accent-gray'>Discord: 56px at 60fps</p>
+								<p>
+									Discord: <span className='accent-lightgray'>56px at 60fps</span>
+								</p>
 							</li>
 							<li>
-								<p className='accent-gray'>Thumbnail: 112px, 56px & 28px</p>
+								<p>
+									Thumbnail: <span className='accent-lightgray'>112px, 56px & 28px</span>
+								</p>
 							</li>
 							<li>
-								<p className='accent-gray'>Resolution: 72ppi</p>
+								<p>
+									Resolution: <span className='accent-lightgray'>72ppi</span>
+								</p>
 							</li>
 						</ul>
 					</div>

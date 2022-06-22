@@ -71,6 +71,11 @@ a:not([class]) {
 .accent-gray {
     color: var(--color-gray);
 }
+
+.accent-lightgray {
+    color: var(--color-lightgray);
+}
+
 a[class~="accent"] {
     transition: all 0.25s ease-out !important;
     border-bottom: 1px solid transparent;

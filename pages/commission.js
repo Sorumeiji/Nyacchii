@@ -168,9 +168,9 @@ const commission = ({ pricing, gallery }) => {
 				{/* {pricing.map((price) => (
 					<PriceCard key={price.sys.id} price={price} menuChoice={menuChoice} />
 				))} */}
-				<summary className='pricing__terms container '>
-					<span className='accent-gray flow'>
-						<p>Price may change based on complexity.</p>
+				<summary className='pricing__terms container flow'>
+					<div className='flow accent-gray'>
+						<p style={{ color: '#ffffff' }}>*Price may change based on complexity.</p>
 						<p>
 							Illustrations: Every extra character drawn within the same image will be priced at 80%
 							of the original price. For work with a tight deadline, price will increase a 30%.
@@ -189,7 +189,7 @@ const commission = ({ pricing, gallery }) => {
 							Please contact me directly if you would like to use a commission for business
 							purposes.
 						</p>
-					</span>
+					</div>
 				</summary>
 			</section>
 		</>

@@ -8,6 +8,11 @@ const Illustration = ({ pricing }) => {
 	let characterDetails = pricing[1].fields.details;
 	let characterPrice = pricing[1].fields.price;
 
+	//  May be a good idea to make the
+	// type lighter for text
+	// and leave the price on a heavy weght
+	// - Text White and Regular.
+
 	return (
 		<div>
 			<div className='pricing__content container flow'>
@@ -30,60 +35,68 @@ const Illustration = ({ pricing }) => {
 				</div>
 				<div className='pricing__details'>
 					<div className='pricing__content flow'>
-						<h4 className='price__subtitle'>
+						<h4 className='price__subtitle accent-lightgray'>
 							Characters<span className='accent'>.</span>
 						</h4>
 						<ul className='price'>
 							<li>
-								<h6>
-									Headshot: <span className='accent'>$60</span> USD
-								</h6>
+								<h5 className='accent'>
+									Headshot: $60 <span className='accent-lightgray priceFormat'>USD</span>
+								</h5>
 							</li>
 							<li>
-								<h6>
-									Half Body: <span className='accent'>$90</span> USD
-								</h6>
+								<h5 className='accent'>
+									Half Body: $90 <span className='accent-lightgray priceFormat'>USD</span>
+								</h5>
 							</li>
 							<li>
-								<h6>
-									Full Body: <span className='accent'>$120</span> USD
-								</h6>
+								<h5 className='accent'>
+									Full Body: $120 <span className='accent-lightgray priceFormat'>USD</span>
+								</h5>
 							</li>
 						</ul>
 
 						<div>
 							<ul className='pricing__info'>
 								<li>
-									<p className='accent-gray'>{characterDetails[0]}</p>
+									<p>
+										Size: <span className='accent-lightgray'>1000px</span>
+									</p>
 								</li>
 								<li>
-									<p className='accent-gray'>{characterDetails[1]}</p>
+									<p>
+										Resolution: <span className='accent-lightgray'>72ppi</span>
+									</p>
 								</li>
 							</ul>
 						</div>
 					</div>
 					<div className='pricing__content flow'>
-						<h4>
+						<h4 className='accent-lightgray'>
 							Backgrounds<span className='accent'>.</span>
 						</h4>
 						<ul className='price'>
 							<li>
-								<h6>
-									Simple starting at <span className='accent'>$60</span> USD
-								</h6>
+								<h5 className='accent'>
+									Simple $60 <span className='accent-lightgray priceFormat'>USD</span>
+								</h5>
 							</li>
 							<li>
-								<h6>
-									Complex starting at <span className='accent'>$120</span> USD
-								</h6>
+								<h5 className='accent'>
+									Complex $120 <span className='accent-lightgray priceFormat'>USD</span>
+								</h5>
 							</li>
 						</ul>
 						<ul className='pricing__info'>
 							<li>
-								<p className='accent-gray'>{backgroundDetails[0]}</p>
+								<p>
+									Size: <span className='accent-lightgray'>1000px</span>
+								</p>
 							</li>
 							<li>
-								<p className='accent-gray'>{backgroundDetails[1]}</p>
+								<p>
+									Resolution: <span className='accent-lightgray'>72ppi</span>
+								</p>
 							</li>
 						</ul>
 					</div>

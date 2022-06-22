@@ -31,7 +31,6 @@
     color: var(--color-text2);
 
     .pricing__menu {
-        // background-color: #151515da;
         background-image: "";
         display: flex;
         flex-direction: column;
@@ -61,7 +60,7 @@
 
     .pricing__details {
         display: grid;
-        grid-gap: 0;
+        grid-gap: 2em;
         border: 1px solid transparent;
         @supports (width: min(400px, 100%)) {
             grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr));
@@ -79,8 +78,9 @@
             ul {
                 border: none;
             }
+            p {
+            }
         }
-        padding-top: var(--space-xl);
         .container {
             padding: 0;
         }
@@ -94,7 +94,7 @@
             }
             .pricing__gallery {
                 display: grid;
-                grid-gap: 0;
+                grid-gap: 0em;
                 @supports (width: min(150px, 100%)) {
                     grid-template-columns: repeat(auto-fit, minmax(min(150px, 100%), 1fr));
                 }
@@ -117,7 +117,7 @@
 
             .pricing__gallery_emotes {
                 display: grid;
-                grid-gap: 0;
+                grid-gap: 0em;
                 @supports (width: min(60px, 100%)) {
                     grid-template-columns: repeat(auto-fit, minmax(min(60px, 100%), 1fr));
                 }
@@ -135,4 +135,11 @@
             max-width: 60ch;
         }
     }
+}
+
+.priceFormat {
+    font-weight: 300;
+}
+.boldText {
+    font-weight: 700;
 }
