@@ -41,17 +41,26 @@ const Illustration = ({ pricing }) => {
 						<ul className='price'>
 							<li>
 								<h5 className='accent'>
-									Headshot: $60 <span className='accent-lightgray priceFormat'>USD</span>
+									<span style={{ color: '#fafafa' }} className='openSansRegular'>
+										Headshot:{' '}
+									</span>
+									$60 <span className='priceFormat accent-lightgray'>usd</span>
 								</h5>
 							</li>
 							<li>
 								<h5 className='accent'>
-									Half Body: $90 <span className='accent-lightgray priceFormat'>USD</span>
+									<span style={{ color: '#fafafa' }} className='openSansRegular'>
+										Half Body:{' '}
+									</span>
+									$90 <span className='priceFormat accent-lightgray'>usd</span>
 								</h5>
 							</li>
 							<li>
 								<h5 className='accent'>
-									Full Body: $120 <span className='accent-lightgray priceFormat'>USD</span>
+									<span style={{ color: '#fafafa' }} className='openSansRegular'>
+										Full Body:{' '}
+									</span>
+									$120 <span className='priceFormat accent-lightgray'>usd</span>
 								</h5>
 							</li>
 						</ul>
@@ -78,12 +87,18 @@ const Illustration = ({ pricing }) => {
 						<ul className='price'>
 							<li>
 								<h5 className='accent'>
-									Simple $60 <span className='accent-lightgray priceFormat'>USD</span>
+									<span style={{ color: '#fafafa' }} className='openSansRegular'>
+										Simple:{' '}
+									</span>
+									$60 <span className='priceFormat accent-lightgray'>usd</span>
 								</h5>
 							</li>
 							<li>
 								<h5 className='accent'>
-									Complex $120 <span className='accent-lightgray priceFormat'>USD</span>
+									<span style={{ color: '#fafafa' }} className='openSansRegular'>
+										Complex:{' '}
+									</span>
+									$120 <span className='priceFormat accent-lightgray'>usd</span>
 								</h5>
 							</li>
 						</ul>

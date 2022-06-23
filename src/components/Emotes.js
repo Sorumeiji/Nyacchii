@@ -67,7 +67,7 @@ const Emotes = ({ pricing }) => {
 						</div>
 						<div>
 							<h5 className='accent'>
-								$30 <span className='priceFormat accent-lightgray'> USD ( Each )</span>
+								$30 <span className='priceFormat accent-lightgray'> usd ( Each )</span>
 							</h5>
 						</div>
 						<div>
@@ -93,7 +93,7 @@ const Emotes = ({ pricing }) => {
 						</div>
 						<div>
 							<h5 className='accent'>
-								$75 <span className='accent-lightgray'> USD ( Each )</span>
+								$75 - $120 <span className=' priceFormat accent-lightgray'> usd ( each )</span>
 							</h5>
 						</div>
 						<ul className='pricing__info'>

@@ -148,29 +148,33 @@ const commission = ({ pricing, gallery }) => {
 				</article>
 			</section>
 			<section className='pricing' id='pricing'>
-				<menu className='pricing__menu flow'>
+				<menu className='pricing__menu container flow'>
 					<div className='pricing__menu-title'>
 						<p>Commission Menu</p>
 					</div>
-					<ul>
-						<li>
-							<a onClick={() => setEmotes(<Emotes pricing={pricing} />)}>Emotes</a>
-						</li>
-						<li>
-							<a onClick={() => setEmotes(<Illustration pricing={pricing} />)}>Illustrations</a>
-						</li>
-						<li>
-							<a onClick={() => setEmotes(<Vtuber pricing={pricing} />)}>Vtubers</a>
-						</li>
-					</ul>
+					<div className='menu-group'>
+						<div className='line-border'></div>
+						<ul>
+							<li>
+								<a onClick={() => setEmotes(<Emotes pricing={pricing} />)}>Emotes</a>
+							</li>
+							<li>
+								<a onClick={() => setEmotes(<Illustration pricing={pricing} />)}>Illustrations</a>
+							</li>
+							<li>
+								<a onClick={() => setEmotes(<Vtuber pricing={pricing} />)}>Vtubers</a>
+							</li>
+						</ul>
+						<div className='line-border'></div>
+					</div>
 				</menu>
 				{emotes}
-				{/* {pricing.map((price) => (
-					<PriceCard key={price.sys.id} price={price} menuChoice={menuChoice} />
-				))} */}
+				<summary className='container flow disclaimer'>
+					<p style={{ color: '#fafafa' }}>*Price may change based on complexity.</p>
+				</summary>
 				<summary className='pricing__terms container flow'>
 					<div className='flow accent-gray'>
-						<p style={{ color: '#ffffff' }}>*Price may change based on complexity.</p>
+						<p>Extra information:</p>
 						<p>
 							Illustrations: Every extra character drawn within the same image will be priced at 80%
 							of the original price. For work with a tight deadline, price will increase a 30%.

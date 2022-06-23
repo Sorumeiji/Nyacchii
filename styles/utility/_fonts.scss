@@ -4,8 +4,8 @@
 :root {
     --font-primary: "Open Sans", sans-serif;
     --font-copy: "Open Sans", sans-serif;
-    --font-semi: 600;
-    --font-light: 400;
+    --font-bold: 600;
+    --font-regular: 400;
 
     // Font Steps
 
@@ -95,5 +95,17 @@ h3,
 h4,
 h5,
 h6 {
-    font-weight: var(--font-semi);
+    font-weight: var(--font-bold);
+}
+
+.openSansRegular {
+    font-weight: var(--font-regular);
+}
+
+.openSansBold {
+    font-weight: var(--font-bold);
+}
+.priceFormat {
+    font-variant: small-caps;
+    text-transform: lowercase;
 }

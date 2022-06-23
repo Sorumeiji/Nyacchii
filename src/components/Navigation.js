@@ -63,14 +63,14 @@ const Navigation = () => {
 							</Link>
 						</li>
 						<li>
-							<a href='https://www.instagram.com/nyacchii.art/' target='_blank'>
-								Portfolio
-							</a>
+							<Link href='/portfolio'>
+								<a className={router.pathname == '/portfolio' ? `${Nav.active}` : ''}>Portfolio</a>
+							</Link>
 						</li>
 						<li>
-							<a href='https://store.streamelements.com/nyacchii' target='_blank'>
-								Shop
-							</a>
+							<Link href='/shop'>
+								<a className={router.pathname == '/shop' ? `${Nav.active}` : ''}>Shop</a>
+							</Link>
 						</li>
 						<li>
 							<Link href='/contact'>
