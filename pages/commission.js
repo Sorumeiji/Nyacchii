@@ -162,7 +162,7 @@ const commission = ({ pricing, gallery }) => {
 										handleClick();
 									}}
 									className={isActive ? 'menuActive' : null}>
-									Emotes<span className='accent'>.</span>
+									Emotes
 								</a>
 							</li>
 							<li>
@@ -172,7 +172,7 @@ const commission = ({ pricing, gallery }) => {
 										handleClick();
 									}}
 									className={isActive ? 'menuActive' : null}>
-									Illustrations<span className='accent'>.</span>
+									Illustrations
 								</a>
 							</li>
 							<li>
@@ -182,7 +182,7 @@ const commission = ({ pricing, gallery }) => {
 										handleClick();
 									}}
 									className={isActive ? 'menuActive' : null}>
-									Vtubers<span className='accent'>.</span>
+									Vtubers
 								</a>
 							</li>
 						</ul>
