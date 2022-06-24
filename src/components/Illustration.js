@@ -1,5 +1,4 @@
 const Illustration = ({ pricing }) => {
-	console.log(pricing);
 	let background = pricing[0].fields.assets;
 	let backgroundDetails = pricing[0].fields.details;
 	let backgroundPrice = pricing[0].fields.price;
@@ -15,10 +14,10 @@ const Illustration = ({ pricing }) => {
 
 	return (
 		<div>
-			<div className='pricing__content container flow'>
-				<h3>
+			<div className='pricing__content container'>
+				{/* <h3>
 					Illustrations<span className='accent'>.</span>
-				</h3>
+				</h3> */}
 				<div className='pricing__example'>
 					<div className='pricing__gallery'>
 						<img src={character[0].fields.file.url} />

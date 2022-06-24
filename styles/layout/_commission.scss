@@ -31,22 +31,20 @@
     color: var(--color-text2);
 
     .pricing__content {
-        padding-top: var(--space-l);
+        padding-top: var(--space-s);
         .price {
             ul {
                 border: none;
-            }
-            p {
             }
         }
         .container {
             padding: 0;
         }
         .pricing__example {
-            padding-top: 2.6em;
             display: grid;
-            grid-gap: 2em;
+            grid-gap: 1.3em;
             border: 1px solid transparent;
+
             @supports (width: min(400px, 100%)) {
                 grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr));
             }
@@ -65,17 +63,17 @@
         }
 
         .pricing__example_emotes {
-            padding-top: 2.6em;
             display: grid;
             grid-gap: 2em;
             border: 1px solid transparent;
-            @supports (width: min(400px, 100%)) {
+            @supports (width: min(200px, 100%)) {
                 grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr));
             }
 
             .pricing__gallery_emotes {
                 display: grid;
-                grid-gap: 0em;
+                row-gap: 0.7em;
+                column-gap: 0.5em;
                 @supports (width: min(60px, 100%)) {
                     grid-template-columns: repeat(auto-fit, minmax(min(60px, 100%), 1fr));
                 }
@@ -90,9 +88,9 @@
     .pricing__menu {
         background-image: "";
         border-bottom: 1px solid var(--color-gray);
+        padding-inline: 0;
         display: flex;
         flex-direction: column;
-        padding-block: 2em;
         align-items: center;
         justify-content: center;
         z-index: 999;
@@ -106,15 +104,32 @@
                 padding-block-start: 0.5em;
             }
             a:hover {
-                color: var(--color-accent);
+                border-top: 1px solid var(--color-lightgray);
+                border-left: 1px solid var(--color-lightgray);
+                border-right: 1px solid var(--color-lightgray);
+                color: var(--color-text2);
                 cursor: pointer;
             }
+            a:active {
+                border-top: 1px solid var(--color-lightgray);
+                border-left: 1px solid var(--color-lightgray);
+                border-right: 1px solid var(--color-lightgray);
+                color: var(--color-text2);
+            }
+        }
+
+        .menuActive {
+            border-top: 1px solid var(--color-lightgray);
+            border-left: 1px solid var(--color-lightgray);
+            border-right: 1px solid var(--color-lightgray);
+            color: var(--color-text2);
         }
 
         .menu-group {
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
             position: relative;
+            width: 100%;
         }
 
         .pricing__menu-title {

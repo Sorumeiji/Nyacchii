@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 const Emotes = ({ pricing }) => {
-	console.log(pricing);
 	let background = pricing[2].fields.assets;
 	let backgroundDetails = pricing[2].fields.details;
 	let backgroundPrice = pricing[2].fields.price;
@@ -11,11 +10,11 @@ const Emotes = ({ pricing }) => {
 
 	return (
 		<div>
-			<div className='pricing__content container flow'>
-				<h3>
+			<div className='pricing__content container'>
+				{/* <h3>
 					Emotes<span className='accent'>.</span>
-				</h3>
-				<div className='pricing__example_emotes'>
+				</h3> */}
+				<div className='pricing__example_emotes emoteContainer'>
 					<div className='pricing__gallery_emotes'>
 						<img src={character[0].fields.file.url} />
 						<img src={character[1].fields.file.url} />

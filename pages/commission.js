@@ -31,8 +31,11 @@ export async function getStaticProps() {
 }
 
 const commission = ({ pricing, gallery }) => {
-	console.log(gallery);
 	const [emotes, setEmotes] = useState(<Emotes pricing={pricing} />);
+	const [isActive, setActive] = useState(false);
+	const handleClick = () => {
+		setActive(!isActive);
+	};
 	useEffect(() => {});
 	return (
 		<>
@@ -149,20 +152,38 @@ const commission = ({ pricing, gallery }) => {
 			</section>
 			<section className='pricing' id='pricing'>
 				<menu className='pricing__menu container flow'>
-					<div className='pricing__menu-title'>
-						<p>Commission Menu</p>
-					</div>
 					<div className='menu-group'>
 						<div className='line-border'></div>
 						<ul>
 							<li>
-								<a onClick={() => setEmotes(<Emotes pricing={pricing} />)}>Emotes</a>
+								<a
+									onClick={() => {
+										setEmotes(<Emotes pricing={pricing} />);
+										handleClick();
+									}}
+									className={isActive ? 'menuActive' : null}>
+									Emotes<span className='accent'>.</span>
+								</a>
 							</li>
 							<li>
-								<a onClick={() => setEmotes(<Illustration pricing={pricing} />)}>Illustrations</a>
+								<a
+									onClick={() => {
+										setEmotes(<Illustration pricing={pricing} />);
+										handleClick();
+									}}
+									className={isActive ? 'menuActive' : null}>
+									Illustrations<span className='accent'>.</span>
+								</a>
 							</li>
 							<li>
-								<a onClick={() => setEmotes(<Vtuber pricing={pricing} />)}>Vtubers</a>
+								<a
+									onClick={() => {
+										setEmotes(<Vtuber pricing={pricing} />);
+										handleClick();
+									}}
+									className={isActive ? 'menuActive' : null}>
+									Vtubers<span className='accent'>.</span>
+								</a>
 							</li>
 						</ul>
 						<div className='line-border'></div>
