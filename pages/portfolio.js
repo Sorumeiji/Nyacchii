@@ -22,6 +22,11 @@ export async function getStaticProps() {
 
 const commission = ({ gallery }) => {
 	console.log(gallery);
+	let background = gallery[0].fields.assets;
+	let character = gallery[1].fields.assets;
+	let normalEmotes = gallery[2].fields.assets;
+	let animatedEmotes = gallery[3].fields.assets;
+
 	return (
 		<>
 			<section className='hero'>
@@ -33,8 +38,8 @@ const commission = ({ gallery }) => {
 						</h1>
 					</div>
 					<p>
-						Below are my prices for Digital Art, Twitch Emotes, and Traditonal Art. For any prices
-						not listed, reach out for quote.
+						Here is a gallery of most of my work, and my favorite drawings.I hope you enjoy taking a
+						look.
 					</p>
 					<ul>
 						<li>
@@ -48,7 +53,7 @@ const commission = ({ gallery }) => {
 					</ul>
 				</div>
 			</section>
-			<section className='gallery'>
+			<section className='gallery flow'>
 				<section className='decoration container'>
 					<svg
 						width='100%'
@@ -90,23 +95,57 @@ const commission = ({ gallery }) => {
 						</defs>
 					</svg>
 				</section>
-				<article>
+				<article className='portfolioEmotes container'>
 					<div>
 						<h3>
 							Normal Emotes<span className='accent'>.</span>
 						</h3>
+						<div className='wrapper'>
+							<div className='portfolioGallery'>
+								{normalEmotes.map((normalEmotes) => (
+									<img src={normalEmotes.fields.file.url} />
+								))}
+							</div>
+						</div>
 					</div>
 					<div>
 						<h3>
 							Animated Emotes<span className='accent'>.</span>
 						</h3>
+						<div className='wrapper'>
+							<div className='portfolioGallery'>
+								{animatedEmotes.map((normalEmotes) => (
+									<img src={normalEmotes.fields.file.url} />
+								))}
+							</div>
+						</div>
 					</div>
-					<div>
+				</article>
+				<article className='galleryIllustration container flow'>
+					<div className='flow'>
 						<h3>
-							Animated Emotes<span className='accent'>.</span>
+							Characters<span className='accent'>.</span>
 						</h3>
+						<div className='wrapper'>
+							<div className='portfolioGallery'>
+								{character.map((character) => (
+									<img src={character.fields.file.url} />
+								))}
+							</div>
+						</div>
 					</div>
-					<div></div>
+					<div className='flow'>
+						<h3>
+							Backgrounds<span className='accent'>.</span>
+						</h3>
+						<div className='wrapper'>
+							<div className='portfolioGallery'>
+								{background.map((background) => (
+									<img src={background.fields.file.url} />
+								))}
+							</div>
+						</div>
+					</div>
 				</article>
 			</section>
 		</>
