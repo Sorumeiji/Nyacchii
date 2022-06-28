@@ -89,7 +89,7 @@ const Illustration = ({ pricing }) => {
 									<span style={{ color: '#fafafa' }} className='openSansRegular'>
 										Simple:{' '}
 									</span>
-									$60 <span className='priceFormat accent-lightgray'>usd</span>
+									$100 <span className='priceFormat accent-lightgray'>usd</span>
 								</h5>
 							</li>
 							<li>
@@ -97,7 +97,7 @@ const Illustration = ({ pricing }) => {
 									<span style={{ color: '#fafafa' }} className='openSansRegular'>
 										Complex:{' '}
 									</span>
-									$120 <span className='priceFormat accent-lightgray'>usd</span>
+									$300 <span className='priceFormat accent-lightgray'>usd</span>
 								</h5>
 							</li>
 						</ul>
