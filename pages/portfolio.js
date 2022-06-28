@@ -22,9 +22,9 @@ export async function getStaticProps() {
 
 const commission = ({ gallery }) => {
 	console.log(gallery);
-	let background = gallery[0].fields.assets;
-	let character = gallery[1].fields.assets;
-	let normalEmotes = gallery[2].fields.assets;
+	let background = gallery[1].fields.assets;
+	let character = gallery[2].fields.assets;
+	let normalEmotes = gallery[0].fields.assets;
 	let animatedEmotes = gallery[3].fields.assets;
 
 	return (
@@ -144,6 +144,9 @@ const commission = ({ gallery }) => {
 									<img src={background.fields.file.url} />
 								))}
 							</div>
+							<video controls width='250'>
+								<source src='/media/cc0-videos/flower.webm' type='video/mp4' />
+							</video>
 						</div>
 					</div>
 				</article>
