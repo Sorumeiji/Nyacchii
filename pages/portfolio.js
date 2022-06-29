@@ -43,7 +43,7 @@ const portfolio = ({ gallery }) => {
 					</p>
 					<ul>
 						<li>
-							<a href='#portfolio' role='button'>
+							<a href='#view' role='button'>
 								View Portfolio &nbsp;
 								<span className='accent'>
 									<FontAwesomeIcon icon={faMoneyCheck} />
