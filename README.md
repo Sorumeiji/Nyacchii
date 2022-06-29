@@ -34,6 +34,9 @@ For more information run a command with the --help flag
   $ next build --help
 ```
 
+## Roadmap
+Coming soon
+
 ## Contributing
 Requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
