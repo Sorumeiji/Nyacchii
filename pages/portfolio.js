@@ -20,7 +20,7 @@ export async function getStaticProps() {
 	};
 }
 
-const commission = ({ gallery }) => {
+const portfolio = ({ gallery }) => {
 	console.log(gallery);
 	let background = gallery[1].fields.assets;
 	let character = gallery[2].fields.assets;
@@ -43,7 +43,7 @@ const commission = ({ gallery }) => {
 					</p>
 					<ul>
 						<li>
-							<a href='#prices' role='button'>
+							<a href='#portfolio' role='button'>
 								View Portfolio &nbsp;
 								<span className='accent'>
 									<FontAwesomeIcon icon={faMoneyCheck} />
@@ -95,8 +95,8 @@ const commission = ({ gallery }) => {
 						</defs>
 					</svg>
 				</section>
-				<article className='portfolioEmotes container'>
-					<div>
+				<article id='portfolio' className='portfolioEmotes container flow'>
+					<div className='flow normalEmotes'>
 						<h3>
 							Normal Emotes<span className='accent'>.</span>
 						</h3>
@@ -108,14 +108,14 @@ const commission = ({ gallery }) => {
 							</div>
 						</div>
 					</div>
-					<div>
+					<div className='flow animatedEmotes'>
 						<h3>
 							Animated Emotes<span className='accent'>.</span>
 						</h3>
 						<div className='wrapper'>
 							<div className='portfolioGallery'>
-								{animatedEmotes.map((normalEmotes) => (
-									<img src={normalEmotes.fields.file.url} />
+								{animatedEmotes.map((animatedEmotes) => (
+									<img src={animatedEmotes.fields.file.url} />
 								))}
 							</div>
 						</div>
@@ -126,7 +126,7 @@ const commission = ({ gallery }) => {
 						<h3>
 							Characters<span className='accent'>.</span>
 						</h3>
-						<div className='wrapper'>
+						<div className='wrapper characters'>
 							<div className='portfolioGallery'>
 								{character.map((character) => (
 									<img src={character.fields.file.url} />
@@ -134,7 +134,7 @@ const commission = ({ gallery }) => {
 							</div>
 						</div>
 					</div>
-					<div className='flow'>
+					<div className='flow backgrounds'>
 						<h3>
 							Backgrounds<span className='accent'>.</span>
 						</h3>
@@ -144,9 +144,6 @@ const commission = ({ gallery }) => {
 									<img src={background.fields.file.url} />
 								))}
 							</div>
-							<video controls width='250'>
-								<source src='/media/cc0-videos/flower.webm' type='video/mp4' />
-							</video>
 						</div>
 					</div>
 				</article>
@@ -155,4 +152,4 @@ const commission = ({ gallery }) => {
 	);
 };
 
-export default commission;
+export default portfolio;

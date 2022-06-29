@@ -7,11 +7,6 @@ const Illustration = ({ pricing }) => {
 	let characterDetails = pricing[1].fields.details;
 	let characterPrice = pricing[1].fields.price;
 
-	//  May be a good idea to make the
-	// type lighter for text
-	// and leave the price on a heavy weght
-	// - Text White and Regular.
-
 	return (
 		<div>
 			<div className='pricing__content container'>

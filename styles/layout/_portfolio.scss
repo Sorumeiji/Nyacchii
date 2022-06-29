@@ -1,3 +1,59 @@
 .gallery {
     background-color: var(--color-bg-dark);
+
+    h3 {
+        color: var(--color-text2);
+    }
+}
+
+.portfolioEmotes {
+    .normalEmotes {
+    }
+
+    .animatedEmotes {
+    }
+
+    .wrapper {
+        .portfolioGallery {
+            display: grid;
+            row-gap: 0.3em;
+            column-gap: 0;
+            @supports (width: min(60px, 100%)) {
+                grid-template-columns: repeat(auto-fit, minmax(min(60px, 100%), 1fr));
+            }
+            img {
+                max-width: 100%;
+                object-fit: cover;
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+.galleryIllustration {
+    margin-top: var(--space-2xl);
+    .characters {
+    }
+    .backgrounds {
+    }
+
+    .wrapper {
+        .portfolioGallery {
+            display: grid;
+            grid-gap: 0em;
+            @supports (width: min(150px, 100%)) {
+                grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr));
+            }
+            img {
+                width: 340px;
+                height: 200px;
+                object-fit: cover;
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
 }
