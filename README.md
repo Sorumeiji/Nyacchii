@@ -12,27 +12,6 @@ This project was created using:
 - Twitch API - [https://dev.twitch.tv/]( https://dev.twitch.tv/)
 - GSAP - [https://greensock.com/](https://greensock.com/)
  
-## Installation
-
-Git clone and use the package manager [npm](https://nodejs.org/en/) from Node JS to install locally.
-
-
-## Usage
-
-```javascript
-Usage
-  $ npm run <command>
-
-Available commands
-  build, dev
-
-Options
-  --version, -v   Version number
-  --help, -h      Displays this message
-
-For more information run a command with the --help flag
-  $ next build --help
-```
 
 ## Roadmap
 Coming soon
