@@ -1,21 +1,13 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useState } from 'react';
 import { faInstagram, faTwitch, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons';
-import { motion, AnimatePresence, animate } from 'framer-motion';
 
 function Layout({ children }) {
 	const [words, setWords] = useState(true);
 
 	return (
 		<>
-			<motion.div
-				key='modal'
-				initial={{ opacity: 0 }}
-				animate={{ opacity: 1 }}
-				exit={{ opacity: 0 }}
-				transition={{ easeIn: [0.17, 0.67, 0.83, 0.67], duration: 1 }}>
-				{children}
-			</motion.div>
+			<div>{children}</div>
 
 			<footer className='footer'>
 				<div className='container flow'>

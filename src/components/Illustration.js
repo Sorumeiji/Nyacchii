@@ -1,3 +1,6 @@
+import FsLightbox from 'fslightbox-react';
+import { useState } from 'react';
+
 const Illustration = ({ pricing }) => {
 	let background = pricing[0].fields.assets;
 	let backgroundDetails = pricing[0].fields.details;
@@ -7,15 +10,14 @@ const Illustration = ({ pricing }) => {
 	let characterDetails = pricing[1].fields.details;
 	let characterPrice = pricing[1].fields.price;
 
+	const [toggler, setToggler] = useState(false);
+
 	return (
 		<div>
 			<div className='pricing__content container'>
-				{/* <h3>
-					Illustrations<span className='accent'>.</span>
-				</h3> */}
 				<div className='pricing__example'>
 					<div className='pricing__gallery'>
-						<img src={character[0].fields.file.url} />
+						<img onClick={() => setToggler(!toggler)} src={character[0].fields.file.url} />
 						<img src={character[1].fields.file.url} />
 						<img src={character[2].fields.file.url} />
 						<img src={character[3].fields.file.url} />
@@ -26,6 +28,7 @@ const Illustration = ({ pricing }) => {
 						<img src={background[2].fields.file.url} />
 						<img src={background[2].fields.file.url} />
 					</div>
+					<FsLightbox toggler={toggler} sources={['https://i.imgur.com/fsyrScY.jpg']} />
 				</div>
 				<div className='pricing__details'>
 					<div className='pricing__content flow'>
