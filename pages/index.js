@@ -24,7 +24,7 @@ const Index = () => {
 					</p>
 					<ul>
 						<li>
-							<a href='#prices' role='button'>
+							<a href='https://www.twitch.tv/nyacchii' role='button' target='_blank'>
 								Twitch &nbsp;
 								<span className='accent'>
 									<FontAwesomeIcon icon={faTwitch} />
@@ -32,10 +32,7 @@ const Index = () => {
 							</a>
 						</li>
 						<li>
-							<a
-								href='https://trello.com/b/DSUJQavY/nyacchii-commissions'
-								target='_blank'
-								role='button'>
+							<a href='https://twitter.com/nyacchii_art' target='_blank' role='button'>
 								Twitter &nbsp;
 								<span className='accent'>
 									<FontAwesomeIcon icon={faTwitter} />
@@ -43,10 +40,7 @@ const Index = () => {
 							</a>
 						</li>
 						<li>
-							<a
-								href='https://trello.com/b/DSUJQavY/nyacchii-commissions'
-								target='_blank'
-								role='button'>
+							<a href='https://www.instagram.com/nyacchii.art/' target='_blank' role='button'>
 								Instagram &nbsp;
 								<span className='accent'>
 									<FontAwesomeIcon icon={faInstagram} />

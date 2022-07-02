@@ -112,12 +112,12 @@
             }
         }
 
-        // .menuActive {
-        //     border-top: 1px solid var(--color-gray);
-        //     border-left: 1px solid var(--color-gray);
-        //     border-right: 1px solid var(--color-gray);
-        //     color: var(--color-text2);
-        // }
+        .menuActive {
+            border-top: 1px solid var(--color-gray);
+            border-left: 1px solid var(--color-gray);
+            border-right: 1px solid var(--color-gray);
+            color: var(--color-text2);
+        }
 
         .menu-group {
             display: flex;

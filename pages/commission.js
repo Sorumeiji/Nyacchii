@@ -32,10 +32,23 @@ export async function getStaticProps() {
 
 const commission = ({ pricing, gallery }) => {
 	const [emotes, setEmotes] = useState(<Emotes pricing={pricing} />);
-	const [isActive, setActive] = useState(false);
-	const handleClick = () => {
-		setActive(!isActive);
+	const [isActive, setActive] = useState('emotes');
+
+	const handleEmotes = () => {
+		// update the state to tab1
+		setActive('emotes');
 	};
+
+	const handleIllustrations = () => {
+		// update the state to tab1
+		setActive('illustrations');
+	};
+
+	const handleVtubers = () => {
+		// update the state to tab1
+		setActive('vtubers');
+	};
+
 	useEffect(() => {});
 	return (
 		<>
@@ -56,7 +69,7 @@ const commission = ({ pricing, gallery }) => {
 					</p>
 					<ul>
 						<li>
-							<a href='#prices' role='button'>
+							<a href='#pricing' role='button'>
 								View Prices &nbsp;
 								<span className='accent'>
 									<FontAwesomeIcon icon={faMoneyCheck} />
@@ -77,7 +90,7 @@ const commission = ({ pricing, gallery }) => {
 					</ul>
 				</div>
 			</section>
-			<section className='information' id='prices'>
+			<section className='information'>
 				<section className='decoration container'>
 					<svg width='100%' height='118' fill='none' xmlns='http://www.w3.org/2000/svg'>
 						<mask
@@ -159,9 +172,9 @@ const commission = ({ pricing, gallery }) => {
 								<a
 									onClick={() => {
 										setEmotes(<Emotes pricing={pricing} />);
-										handleClick();
+										handleEmotes();
 									}}
-									className={isActive ? 'menuActive' : null}>
+									className={isActive === 'emotes' ? 'menuActive' : ''}>
 									Emotes
 								</a>
 							</li>
@@ -169,9 +182,9 @@ const commission = ({ pricing, gallery }) => {
 								<a
 									onClick={() => {
 										setEmotes(<Illustration pricing={pricing} />);
-										handleClick();
+										handleIllustrations();
 									}}
-									className={isActive ? 'menuActive' : null}>
+									className={isActive === 'illustrations' ? 'menuActive' : ''}>
 									Illustrations
 								</a>
 							</li>
@@ -179,9 +192,9 @@ const commission = ({ pricing, gallery }) => {
 								<a
 									onClick={() => {
 										setEmotes(<Vtuber pricing={pricing} />);
-										handleClick();
+										handleVtubers();
 									}}
-									className={isActive ? 'menuActive' : null}>
+									className={isActive === 'vtubers' ? 'menuActive' : ''}>
 									Vtubers
 								</a>
 							</li>
@@ -190,20 +203,23 @@ const commission = ({ pricing, gallery }) => {
 					</div>
 				</menu>
 				{emotes}
-				<summary className='container flow disclaimer'>
-					<p style={{ color: '#fafafa' }}>*Price may change based on complexity.</p>
-				</summary>
+
 				<summary className='pricing__terms container flow'>
 					<div className='flow accent-gray'>
 						<p>Extra information:</p>
+
+						<p>*Price may change based on complexity.</p>
+
 						<p>
-							Illustrations: Every extra character drawn within the same image will be priced at 80%
-							of the original price. For work with a tight deadline, price will increase a 30%.
+							<span className='accent'> Illustrations - </span> Every extra character drawn within
+							the same image will be priced at 80% of the original price. For work with a tight
+							deadline, price will increase a 30%.
 						</p>
 						<p>
-							Emotes: In the case of animation, if length is bigger than 60 frames total for Twitch
-							emotes, the frame rate will be reduced as necessary. If the file size is bigger than
-							256kb for Discord emotes, the frame rate will be lowered to 30fps.
+							<span className='accent'> Animated Emotes - </span> In the case of animation, if
+							length is bigger than 60 frames total for Twitch emotes, the frame rate will be
+							reduced as necessary. If the file size is bigger than 256kb for Discord emotes, the
+							frame rate will be lowered to 30fps.
 						</p>
 						<p>
 							Commissions are for personal use only, in channels such as: Twitch, Picarto, Discord,
@@ -211,8 +227,8 @@ const commission = ({ pricing, gallery }) => {
 							(such as merchandise) without my express permission.
 						</p>
 						<p>
-							Please contact me directly if you would like to use a commission for business
-							purposes.
+							Please <span className='accent'>contact me</span> directly if you would like to use a
+							commission for business purposes.
 						</p>
 					</div>
 				</summary>

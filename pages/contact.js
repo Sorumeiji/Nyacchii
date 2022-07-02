@@ -23,7 +23,10 @@ function contact() {
 					</p>
 					<ul>
 						<li>
-							<a href='https://discordapp.com/invite/T5xDbqd' target='_blank' role='button'>
+							<a
+								href='https://discordapp.com/users/250100895084183562'
+								target='_blank'
+								role='button'>
 								My Discord &nbsp;
 								<span className='accent'>
 									<FontAwesomeIcon icon={faDiscord} />
