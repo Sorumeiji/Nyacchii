@@ -213,17 +213,16 @@ const commission = ({ pricing, gallery }) => {
 						<p>Extra information:</p>
 
 						<p>*Price may change based on complexity.</p>
-
-						<p>
-							<span className='accent'> Illustrations - </span> Every extra character drawn within
-							the same image will be priced at 80% of the original price. For work with a tight
-							deadline, price will increase a 30%.
-						</p>
 						<p>
 							<span className='accent'> Animated Emotes - </span> In the case of animation, if
 							length is bigger than 60 frames total for Twitch emotes, the frame rate will be
 							reduced as necessary. If the file size is bigger than 256kb for Discord emotes, the
 							frame rate will be lowered to 30fps.
+						</p>
+						<p>
+							<span className='accent'> Illustrations - </span> Every extra character drawn within
+							the same image will be priced at 80% of the original price. For work with a tight
+							deadline, price will increase a 30%.
 						</p>
 						<p>
 							Commissions are for personal use only, in channels such as: Twitch, Picarto, Discord,

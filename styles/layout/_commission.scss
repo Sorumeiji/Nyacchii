@@ -54,6 +54,11 @@
                     width: 240px;
                     height: 200px;
                     object-fit: cover;
+
+                    &:hover {
+                        filter: grayscale(50%);
+                        cursor: pointer;
+                    }
                 }
             }
         }
@@ -91,10 +96,12 @@
         justify-content: center;
         z-index: 999;
         ul {
+            li {
+                margin-top: auto;
+            }
             li + li {
                 margin-left: 1em;
             }
-
             li a {
                 color: #909090;
             }
@@ -107,11 +114,14 @@
         .menuActive {
             font-size: var(--step-2);
             color: var(--color-text2);
-        }
-
-        .menuActive::after {
-            content: ".";
-            color: var(--color-accent);
+            position: relative;
+            border-bottom: thin solid var(--color-accent);
+            padding-bottom: 7px;
+            &::after {
+                content: ".";
+                color: var(--color-accent);
+                position: absolute;
+            }
         }
 
         .menu-group {
