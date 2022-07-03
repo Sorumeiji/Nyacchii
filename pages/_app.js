@@ -9,7 +9,6 @@ function MyApp({ Component, pageProps, router }) {
 			<Head>
 				<title>NYACCHII - Full-Time Creative Streamer and Twitch Partner from Mexico.</title>
 			</Head>
-
 			<Layout>
 				<Component {...pageProps} key={router.pathname} />
 			</Layout>

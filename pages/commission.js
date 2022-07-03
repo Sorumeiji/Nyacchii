@@ -90,6 +90,7 @@ const commission = ({ pricing, gallery }) => {
 					</ul>
 				</div>
 			</section>
+
 			<section className='information'>
 				<section className='decoration container'>
 					<svg width='100%' height='118' fill='none' xmlns='http://www.w3.org/2000/svg'>
@@ -131,24 +132,6 @@ const commission = ({ pricing, gallery }) => {
 					<h2>
 						General Information<span className='accent'>.</span>
 					</h2>
-					<div className='flow'>
-						<p>Current work and waiting list via Trello:</p>
-						<a
-							className='accent'
-							href='https://trello.com/b/DSUJQavY/nyacchii-commissions'
-							target='_blank'>
-							https://trello.com/b/DSUJQavY/nyacchii-commissions
-						</a>
-					</div>
-					<div className='flow'>
-						<p>To enable notifications from Trello, you can follow these easy instructions: </p>
-						<a
-							className='accent'
-							target='_blank'
-							href='https://help.trello.com/article/799-watching-cards-lists-and-boards '>
-							https://help.trello.com/article/799-watching-cards-lists-and-boards
-						</a>
-					</div>
 					<div>
 						<p>
 							In order to save a spot on the waiting list, you have to wait until commissions are
@@ -158,7 +141,28 @@ const commission = ({ pricing, gallery }) => {
 					</div>
 					<div>
 						<p>
-							<span className='accent-gray'>Payment is accepted via PayPal only.</span>
+							<span className='accent'>+</span> Payment via PayPal only.
+						</p>
+					</div>
+					<ul>
+						<li>
+							<a
+								href='https://trello.com/b/DSUJQavY/nyacchii-commissions'
+								target='_blank'
+								role='outlineButton'>
+								Waiting List &nbsp;
+								<FontAwesomeIcon icon={faClipboardList} />
+							</a>
+						</li>
+					</ul>
+					<div className='trelloNotifi flow'>
+						<p>
+							To enable notifications from the waiting list, you can{' '}
+							<a
+								className='accent'
+								href='https://help.trello.com/article/799-watching-cards-lists-and-boards'>
+								follow these easy instructions.
+							</a>
 						</p>
 					</div>
 				</article>

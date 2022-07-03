@@ -7,21 +7,17 @@
         color: var(--color-text2);
     }
     color: var(--color-text2);
-
     .decoration {
         padding-block: var(--space-2xl);
         display: flex;
         justify-content: center;
         align-items: center;
     }
+}
 
-    .general {
-        a {
-            display: block;
-        }
-        p {
-            max-width: 60ch;
-        }
+.general {
+    p {
+        max-width: 60ch;
     }
 }
 
@@ -75,7 +71,7 @@
                 row-gap: 0.3em;
                 column-gap: 0;
                 @supports (width: min(60px, 100%)) {
-                    grid-template-columns: repeat(auto-fit, minmax(min(60px, 100%), 1fr));
+                    grid-template-columns: repeat(auto-fill, minmax(min(60px, 100%), 1fr));
                 }
                 img {
                     max-width: 100%;
@@ -95,28 +91,27 @@
         justify-content: center;
         z-index: 999;
         ul {
+            li + li {
+                margin-left: 1em;
+            }
+
             li a {
                 color: #909090;
-                // border-top: 1px solid var(--color-gray);
-                // border-left: 1px solid var(--color-gray);
-                // border-right: 1px solid var(--color-gray);
-                padding-inline: 1em;
-                padding-block-start: 0.5em;
             }
             a:hover {
-                border-top: 1px solid var(--color-gray);
-                border-left: 1px solid var(--color-gray);
-                border-right: 1px solid var(--color-gray);
                 color: var(--color-text2);
                 cursor: pointer;
             }
         }
 
         .menuActive {
-            border-top: 1px solid var(--color-gray);
-            border-left: 1px solid var(--color-gray);
-            border-right: 1px solid var(--color-gray);
+            font-size: var(--step-2);
             color: var(--color-text2);
+        }
+
+        .menuActive::after {
+            content: ".";
+            color: var(--color-accent);
         }
 
         .menu-group {
@@ -161,4 +156,8 @@
 
 .disclaimer {
     padding-block: var(--space-l);
+}
+
+.trelloNotifi p {
+    max-width: 35ch;
 }
