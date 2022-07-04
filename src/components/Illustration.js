@@ -10,32 +10,36 @@ const Illustration = ({ pricing }) => {
 	let characterDetails = pricing[1].fields.details;
 	let characterPrice = pricing[1].fields.price;
 
-	const [toggler, setToggler] = useState(false);
+	const [lightboxController, setLightboxController] = useState({
+		toggler: false,
+		slide: 1,
+	});
 
-	function toString(sample) {
-		return sample + '';
+	function openLightboxOnSlide(number) {
+		setLightboxController({
+			toggler: !lightboxController.toggler,
+			slide: number,
+		});
 	}
-
-	console.log(character[1].fields.file.url);
 
 	return (
 		<div>
 			<div className='pricing__content container'>
 				<div className='pricing__example'>
 					<div className='pricing__gallery'>
-						<img onClick={() => setToggler(!toggler)} src={character[0].fields.file.url} />
-						<img onClick={() => setToggler(!toggler)} src={character[1].fields.file.url} />
-						<img onClick={() => setToggler(!toggler)} src={character[2].fields.file.url} />
-						<img onClick={() => setToggler(!toggler)} src={character[3].fields.file.url} />
+						<img onClick={() => openLightboxOnSlide(1)} src={character[0].fields.file.url} />
+						<img onClick={() => openLightboxOnSlide(2)} src={character[1].fields.file.url} />
+						<img onClick={() => openLightboxOnSlide(3)} src={character[2].fields.file.url} />
+						<img onClick={() => openLightboxOnSlide(4)} src={character[3].fields.file.url} />
 					</div>
 					<div className='pricing__gallery'>
-						<img onClick={() => setToggler(!toggler)} src={background[0].fields.file.url} />
-						<img onClick={() => setToggler(!toggler)} src={background[1].fields.file.url} />
-						<img onClick={() => setToggler(!toggler)} src={background[2].fields.file.url} />
-						<img onClick={() => setToggler(!toggler)} src={background[2].fields.file.url} />
+						<img onClick={() => openLightboxOnSlide(5)} src={background[0].fields.file.url} />
+						<img onClick={() => openLightboxOnSlide(6)} src={background[1].fields.file.url} />
+						<img onClick={() => openLightboxOnSlide(7)} src={background[2].fields.file.url} />
+						<img onClick={() => openLightboxOnSlide(7)} src={background[2].fields.file.url} />
 					</div>
 					<FsLightbox
-						toggler={toggler}
+						toggler={lightboxController.toggler}
 						sources={[
 							'https://images.ctfassets.net/wpd16o1h1n58/17Ty2XrG1wn0No5EPeYrQ1/ddb4fe5a5cff735b914943cd3b1d4dab/01_72ppi_-_Watermark.png',
 							'https://images.ctfassets.net/wpd16o1h1n58/14nNpDKrlGoSQUws4gXvZU/01205409dfefe57d81c0c428281ffde0/Doushin_002_72ppi_-_Watermark.png',
@@ -45,33 +49,34 @@ const Illustration = ({ pricing }) => {
 							'https://images.ctfassets.net/wpd16o1h1n58/4FgSbXKXg2P2fV7aNMe7Ew/7005347108e77fc8294e5c2e76160ff2/VENTI_002_72ppi_-_Watermark.png',
 							'https://images.ctfassets.net/wpd16o1h1n58/7tCC2m96lxjd5rU7iNhwce/7fa5b3aeee0412f456b15c732c3c9627/INOCHI_001_72ppi_-_Watermark.png',
 						]}
+						slide={lightboxController.slide}
 					/>
 				</div>
 				<div className='pricing__details'>
 					<div className='pricing__content flow'>
-						<h4 className='price__subtitle accent-lightgray'>
+						<h4 className='price__subtitle accent-lightgray openSansRegular'>
 							Characters<span className='accent'>.</span>
 						</h4>
 						<ul className='price'>
 							<li>
-								<h5 className='accent'>
-									<span style={{ color: '#fafafa' }} className='openSansRegular'>
+								<h5 className='accent openSansRegular'>
+									<span style={{ color: '#fafafa' }} className='openSansLight'>
 										Headshot:{' '}
 									</span>
 									$60 <span className='priceFormat accent-lightgray'>usd</span>
 								</h5>
 							</li>
 							<li>
-								<h5 className='accent'>
-									<span style={{ color: '#fafafa' }} className='openSansRegular'>
+								<h5 className='accent openSansRegular'>
+									<span style={{ color: '#fafafa' }} className='openSansLight'>
 										Half Body:{' '}
 									</span>
 									$90 <span className='priceFormat accent-lightgray'>usd</span>
 								</h5>
 							</li>
 							<li>
-								<h5 className='accent'>
-									<span style={{ color: '#fafafa' }} className='openSansRegular'>
+								<h5 className='accent openSansRegular'>
+									<span style={{ color: '#fafafa' }} className='openSansLight'>
 										Full Body:{' '}
 									</span>
 									$120 <span className='priceFormat accent-lightgray'>usd</span>
@@ -95,21 +100,21 @@ const Illustration = ({ pricing }) => {
 						</div>
 					</div>
 					<div className='pricing__content flow'>
-						<h4 className='accent-lightgray'>
+						<h4 className='accent-lightgray openSansRegular'>
 							Backgrounds<span className='accent'>.</span>
 						</h4>
 						<ul className='price'>
 							<li>
-								<h5 className='accent'>
-									<span style={{ color: '#fafafa' }} className='openSansRegular'>
+								<h5 className='accent openSansRegular'>
+									<span style={{ color: '#fafafa' }} className='openSansLight'>
 										Simple:{' '}
 									</span>
 									$100 <span className='priceFormat accent-lightgray'>usd</span>
 								</h5>
 							</li>
 							<li>
-								<h5 className='accent'>
-									<span style={{ color: '#fafafa' }} className='openSansRegular'>
+								<h5 className='accent openSansRegular'>
+									<span style={{ color: '#fafafa' }} className='openSansLight'>
 										Complex:{' '}
 									</span>
 									$300 <span className='priceFormat accent-lightgray'>usd</span>

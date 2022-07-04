@@ -1,6 +1,7 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 import Vtuber from '../src/components/Vtuber.js';
+import Link from 'next/link';
 import Illustration from '../src/components/Illustration.js';
 import Emotes from '../src/components/Emotes.js';
 import Navigation from '../src/components/Navigation';
@@ -230,8 +231,11 @@ const commission = ({ pricing, gallery }) => {
 							(such as merchandise) without my express permission.
 						</p>
 						<p>
-							Please <span className='accent'>contact me</span> directly if you would like to use a
-							commission for business purposes.
+							Please{' '}
+							<Link href='/contact'>
+								<a className='accent'>contact me</a>
+							</Link>{' '}
+							directly if you would like to use a commission for business purposes.
 						</p>
 					</div>
 				</summary>

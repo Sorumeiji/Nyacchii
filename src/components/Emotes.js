@@ -11,9 +11,6 @@ const Emotes = ({ pricing }) => {
 	return (
 		<div>
 			<div className='pricing__content container'>
-				{/* <h3>
-					Emotes<span className='accent'>.</span>
-				</h3> */}
 				<div className='pricing__example_emotes emoteContainer'>
 					<div className='pricing__gallery_emotes'>
 						<img src={character[0].fields.file.url} />
@@ -60,12 +57,12 @@ const Emotes = ({ pricing }) => {
 				<div className='pricing__details'>
 					<div className='pricing__content flow'>
 						<div>
-							<h4 className='accent-lightgray'>
+							<h4 className='accent-lightgray openSansRegular'>
 								Normal<span className='accent'>.</span>
 							</h4>
 						</div>
 						<div>
-							<h5 className='accent'>
+							<h5 className='accent openSansRegular'>
 								$30 <span className='priceFormat accent-lightgray'> usd ( Each )</span>
 							</h5>
 						</div>
@@ -86,12 +83,12 @@ const Emotes = ({ pricing }) => {
 					</div>
 					<div className='pricing__content flow'>
 						<div>
-							<h4 className='accent-lightgray'>
+							<h4 className='accent-lightgray openSansRegular'>
 								Animated<span className='accent'>.</span>
 							</h4>
 						</div>
 						<div>
-							<h5 className='accent'>
+							<h5 className='accent openSansRegular'>
 								$75 - $120 <span className=' priceFormat accent-lightgray'> usd ( each )</span>
 							</h5>
 						</div>
