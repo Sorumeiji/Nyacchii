@@ -27,8 +27,9 @@
     color: var(--color-text2);
 
     .pricing__content {
-        padding-top: var(--space-s);
+        padding-top: var(--space-xs);
         .price {
+            margin-top: 0;
             ul {
                 border: none;
             }

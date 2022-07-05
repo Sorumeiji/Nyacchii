@@ -61,7 +61,7 @@ const Emotes = ({ pricing }) => {
 								Normal<span className='accent'>.</span>
 							</h4>
 						</div>
-						<div>
+						<div className='price'>
 							<h5 className='accent openSansRegular'>
 								$30 <span className='priceFormat accent-lightgray'> usd ( Each )</span>
 							</h5>
@@ -87,7 +87,7 @@ const Emotes = ({ pricing }) => {
 								Animated<span className='accent'>.</span>
 							</h4>
 						</div>
-						<div>
+						<div className='price'>
 							<h5 className='accent openSansRegular'>
 								$75 - $120 <span className=' priceFormat accent-lightgray'> usd ( each )</span>
 							</h5>

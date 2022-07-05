@@ -16,7 +16,10 @@ const Vtuber = ({ pricing }) => {
 				</h3> */}
 
 				<div className='pricing__details'>
-					<div>
+					<div className='flow'>
+						<h3>
+							Coming Soon<span className='accent'>!</span>
+						</h3>
 						<p>
 							Vtubers / Pngtubers are coming soon! Prices and speficiations are still being decided
 							upon, with no planned release date. I ask on your patience on this. Keep an eye on my
