@@ -8,10 +8,10 @@ function MyApp({ Component, pageProps, router }) {
 	return (
 		<>
 			<Head>
-				<title>NYACCHII - Full-Time Creative Streamer and Twitch Partner from Mexico.</title>
+				<title>NYACCHII - Digital Artist</title>
 				<meta
 					name='description'
-					content='a Full-Time Creative Streamer and Twitch Partner from Mexico. Expertise in digital and traditional art.'
+					content='A Full-Time Creative Streamer and Twitch Partner from Mexico. Expertise in digital and traditional art.'
 				/>
 				<meta name='author' content='Nyacchii' />
 			</Head>
