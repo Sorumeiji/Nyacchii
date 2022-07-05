@@ -57,7 +57,7 @@ const Emotes = ({ pricing }) => {
 				<div className='pricing__details'>
 					<div className='pricing__content flow'>
 						<div>
-							<h4 className='accent-lightgray openSansRegular'>
+							<h4 className='accent-lightgray'>
 								Normal<span className='accent'>.</span>
 							</h4>
 						</div>
@@ -83,7 +83,7 @@ const Emotes = ({ pricing }) => {
 					</div>
 					<div className='pricing__content flow'>
 						<div>
-							<h4 className='accent-lightgray openSansRegular'>
+							<h4 className='accent-lightgray'>
 								Animated<span className='accent'>.</span>
 							</h4>
 						</div>

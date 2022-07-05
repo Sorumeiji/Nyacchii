@@ -54,7 +54,7 @@ const Illustration = ({ pricing }) => {
 				</div>
 				<div className='pricing__details'>
 					<div className='pricing__content flow'>
-						<h4 className='price__subtitle accent-lightgray openSansRegular'>
+						<h4 className='price__subtitle accent-lightgray'>
 							Characters<span className='accent'>.</span>
 						</h4>
 						<ul className='price'>
@@ -100,7 +100,7 @@ const Illustration = ({ pricing }) => {
 						</div>
 					</div>
 					<div className='pricing__content flow'>
-						<h4 className='accent-lightgray openSansRegular'>
+						<h4 className='accent-lightgray'>
 							Backgrounds<span className='accent'>.</span>
 						</h4>
 						<ul className='price'>
