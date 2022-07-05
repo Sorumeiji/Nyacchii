@@ -46,11 +46,6 @@ function Layout({ children }) {
 								<FontAwesomeIcon icon={faInstagram} />
 							</a>
 						</li>
-						<li>
-							<a href='https://www.youtube.com/channel/UC8QRmNyX61s10GytF0CpOgw' target='_blank'>
-								<FontAwesomeIcon icon={faYoutube} />
-							</a>
-						</li>
 					</ul>
 				</div>
 			</footer>
