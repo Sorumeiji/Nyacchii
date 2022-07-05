@@ -77,17 +77,6 @@ const commission = ({ pricing, gallery }) => {
 								</span>
 							</a>
 						</li>
-						<li>
-							<a
-								href='https://trello.com/b/DSUJQavY/nyacchii-commissions'
-								target='_blank'
-								role='button'>
-								Waiting List &nbsp;
-								<span className='accent'>
-									<FontAwesomeIcon icon={faClipboardList} />
-								</span>
-							</a>
-						</li>
 					</ul>
 				</div>
 			</section>
