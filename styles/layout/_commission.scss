@@ -81,6 +81,7 @@
                 column-gap: 0;
                 @supports (width: min(60px, 100%)) {
                     grid-template-columns: repeat(auto-fill, minmax(min(60px, 100%), 1fr));
+                    max-width: 80%;
                 }
                 img {
                     max-width: 100%;
