@@ -1,6 +1,7 @@
 import Navigation from '../src/components/Navigation';
 import { useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { motion } from 'framer-motion';
 import { faDiscord, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { faShoppingBag } from '@fortawesome/free-solid-svg-icons';
 
@@ -9,9 +10,25 @@ function shop() {
 		<>
 			<section className='hero'>
 				<Navigation />
-				<div className='container flow contact__content'>
+				<motion.div
+					initial='hidden'
+					animate='visible'
+					variants={{
+						hidden: {
+							scale: 0.8,
+							opacity: 0,
+						},
+						visible: {
+							scale: 1,
+							opacity: 1,
+							transition: {
+								delay: 0.5,
+							},
+						},
+					}}
+					className='container flow contact__content'>
 					<h1>
-						Merchanidise and Goodies<span className='accent'>.</span>
+						Merchanidise &<br /> Goodies<span className='accent'>.</span>
 					</h1>
 					<p>
 						Want to grab a shirt, mousepad or a couple of cute stickers of my orginal characters? I
@@ -27,7 +44,7 @@ function shop() {
 							</a>
 						</li>
 					</ul>
-				</div>
+				</motion.div>
 			</section>
 		</>
 	);

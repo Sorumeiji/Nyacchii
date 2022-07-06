@@ -15,62 +15,33 @@ const Index = () => {
 			<section className='hero'>
 				<Navigation />
 
-				<article className='container flow hero__content'>
-					<motion.div
-						initial='hidden'
-						animate='visible'
-						variants={{
-							hidden: {
-								scale: 0.8,
-								opacity: 0,
+				<motion.article
+					initial='hidden'
+					animate='visible'
+					variants={{
+						hidden: {
+							scale: 0.8,
+							opacity: 0,
+						},
+						visible: {
+							scale: 1,
+							opacity: 1,
+							transition: {
+								delay: 0.5,
 							},
-							visible: {
-								scale: 1,
-								opacity: 1,
-								transition: {
-									delay: 0.5,
-								},
-							},
-						}}>
+						},
+					}}
+					className='container flow hero__content'>
+					<div>
 						<h1>
 							Digital Creative & Twitch Partner<span className='accent'>.</span>
 						</h1>
-					</motion.div>
-					<motion.p
-						initial='hidden'
-						animate='visible'
-						variants={{
-							hidden: {
-								scale: 0.8,
-								opacity: 0,
-							},
-							visible: {
-								scale: 1,
-								opacity: 1,
-								transition: {
-									delay: 1,
-								},
-							},
-						}}>
+					</div>
+					<p>
 						Hello, my name is Nyacchii. I am a Full-Time Creative Streamer and Twitch Partner from
 						Mexico. Expertise in digital and traditional art.
-					</motion.p>
-					<motion.ul
-						initial='hidden'
-						animate='visible'
-						variants={{
-							hidden: {
-								scale: 0.8,
-								opacity: 0,
-							},
-							visible: {
-								scale: 1,
-								opacity: 1,
-								transition: {
-									delay: 1.5,
-								},
-							},
-						}}>
+					</p>
+					<ul>
 						<li>
 							<a href='https://www.twitch.tv/nyacchii' role='button' target='_blank'>
 								Twitch &nbsp;
@@ -95,25 +66,8 @@ const Index = () => {
 								</span>
 							</a>
 						</li>
-					</motion.ul>
-
-					<motion.div
-						className='schedule flow'
-						initial='hidden'
-						animate='visible'
-						variants={{
-							hidden: {
-								scale: 0.8,
-								opacity: 0,
-							},
-							visible: {
-								scale: 1,
-								opacity: 1,
-								transition: {
-									delay: 1.5,
-								},
-							},
-						}}>
+					</ul>
+					<div className='schedule flow'>
 						<div>
 							<h4>
 								Stream Schedule<span className='accent'>.</span>
@@ -130,8 +84,8 @@ const Index = () => {
 						<a href='https://www.twitch.tv/nyacchii/schedule' target='_blank'>
 							See Full Schedule &nbsp; <FontAwesomeIcon icon={faArrowRight} />
 						</a>
-					</motion.div>
-				</article>
+					</div>
+				</motion.article>
 			</section>
 		</>
 	);

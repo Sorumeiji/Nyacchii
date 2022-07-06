@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Illustration from '../src/components/Illustration.js';
 import Emotes from '../src/components/Emotes.js';
 import Navigation from '../src/components/Navigation';
+import { motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
 	faClipboardList,
@@ -55,9 +56,25 @@ const commission = ({ pricing, gallery }) => {
 		<>
 			<section className='hero'>
 				<Navigation />
-				<div className='container flow'>
+				<motion.div
+					initial='hidden'
+					animate='visible'
+					variants={{
+						hidden: {
+							scale: 0.8,
+							opacity: 0,
+						},
+						visible: {
+							scale: 1,
+							opacity: 1,
+							transition: {
+								delay: 0.5,
+							},
+						},
+					}}
+					className='container flow'>
 					<h1>
-						Commission & Pricing<span className='accent'>.</span>
+						Services & <br /> Pricing<span className='accent'>.</span>
 					</h1>
 					<div>
 						<h4 className='status'>
@@ -78,9 +95,8 @@ const commission = ({ pricing, gallery }) => {
 							</a>
 						</li>
 					</ul>
-				</div>
+				</motion.div>
 			</section>
-
 			<section className='information'>
 				<section className='decoration container'>
 					<svg width='100%' height='118' fill='none' xmlns='http://www.w3.org/2000/svg'>
@@ -197,37 +213,38 @@ const commission = ({ pricing, gallery }) => {
 					</div>
 				</menu>
 				{emotes}
+				{isActive !== 'vtubers' && (
+					<summary className='pricing__terms container flow'>
+						<div className='flow accent-gray'>
+							<p>Extra information:</p>
 
-				<summary className='pricing__terms container flow'>
-					<div className='flow accent-gray'>
-						<p>Extra information:</p>
-
-						<p>*Price may change based on complexity.</p>
-						<p>
-							<span className='accent'> Animated Emotes - </span> In the case of animation, if
-							length is bigger than 60 frames total for Twitch emotes, the frame rate will be
-							reduced as necessary. If the file size is bigger than 256kb for Discord emotes, the
-							frame rate will be lowered to 30fps.
-						</p>
-						<p>
-							<span className='accent'> Illustrations - </span> Every extra character drawn within
-							the same image will be priced at 80% of the original price. For work with a tight
-							deadline, price will increase a 30%.
-						</p>
-						<p>
-							Commissions are for personal use only, in channels such as: Twitch, Picarto, Discord,
-							any social network, etc. It is forbidden to use the commission for business purposes
-							(such as merchandise) without my express permission.
-						</p>
-						<p>
-							Please{' '}
-							<Link href='/contact'>
-								<a className='accent'>contact me</a>
-							</Link>{' '}
-							directly if you would like to use a commission for business purposes.
-						</p>
-					</div>
-				</summary>
+							<p>*Price may change based on complexity.</p>
+							<p>
+								<span className='accent'> Animated Emotes - </span> In the case of animation, if
+								length is bigger than 60 frames total for Twitch emotes, the frame rate will be
+								reduced as necessary. If the file size is bigger than 256kb for Discord emotes, the
+								frame rate will be lowered to 30fps.
+							</p>
+							<p>
+								<span className='accent'> Illustrations - </span> Every extra character drawn within
+								the same image will be priced at 80% of the original price. For work with a tight
+								deadline, price will increase a 30%.
+							</p>
+							<p>
+								Commissions are for personal use only, in channels such as: Twitch, Picarto,
+								Discord, any social network, etc. It is forbidden to use the commission for business
+								purposes (such as merchandise) without my express permission.
+							</p>
+							<p>
+								Please{' '}
+								<Link href='/contact'>
+									<a className='accent'>contact me</a>
+								</Link>{' '}
+								directly if you would like to use a commission for business purposes.
+							</p>
+						</div>
+					</summary>
+				)}
 			</section>
 		</>
 	);

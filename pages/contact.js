@@ -1,5 +1,6 @@
 import Navigation from '../src/components/Navigation';
 import { useEffect } from 'react';
+import { motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDiscord, faTwitter } from '@fortawesome/free-brands-svg-icons';
 
@@ -8,7 +9,23 @@ function contact() {
 		<>
 			<section className='hero'>
 				<Navigation />
-				<div className='container flow contact__content'>
+				<motion.div
+					initial='hidden'
+					animate='visible'
+					variants={{
+						hidden: {
+							scale: 0.8,
+							opacity: 0,
+						},
+						visible: {
+							scale: 1,
+							opacity: 1,
+							transition: {
+								delay: 0.5,
+							},
+						},
+					}}
+					className='container flow contact__content'>
 					<h1>
 						Contact Me<span className='accent'>.</span>
 					</h1>
@@ -42,7 +59,7 @@ function contact() {
 							</a>
 						</li>
 					</ul>
-				</div>
+				</motion.div>
 			</section>
 		</>
 	);
