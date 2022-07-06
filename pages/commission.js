@@ -166,6 +166,7 @@ const commission = ({ pricing, gallery }) => {
 							To enable notifications from the waiting list, you can{' '}
 							<a
 								className='accent'
+								target="_blank"
 								href='https://help.trello.com/article/799-watching-cards-lists-and-boards'>
 								follow these easy instructions.
 							</a>
