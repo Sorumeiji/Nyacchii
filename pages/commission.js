@@ -4,6 +4,7 @@ import Vtuber from '../src/components/Vtuber.js';
 import Link from 'next/link';
 import Illustration from '../src/components/Illustration.js';
 import Emotes from '../src/components/Emotes.js';
+import Terms from '../src/components/Terms.js';
 import Navigation from '../src/components/Navigation';
 import { motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -49,6 +50,11 @@ const commission = ({ pricing, gallery }) => {
 	const handleVtubers = () => {
 		// update the state to tab1
 		setActive('vtubers');
+	};
+
+	const handleTerms = () => {
+		// update the state to tab1
+		setActive('terms');
 	};
 
 	useEffect(() => {});
@@ -208,12 +214,22 @@ const commission = ({ pricing, gallery }) => {
 									Vtubers
 								</a>
 							</li>
+							<li>
+								<a
+									onClick={() => {
+										setEmotes(<Terms pricing={pricing} />);
+										handleTerms();
+									}}
+									className={isActive === 'terms' ? 'menuActive' : ''}>
+									Terms
+								</a>
+							</li>
 						</ul>
 						<div className='line-border'></div>
 					</div>
 				</menu>
 				{emotes}
-				{isActive !== 'vtubers' && (
+				{isActive !== 'vtubers' && isActive !== 'terms' && (
 					<summary className='pricing__terms container flow'>
 						<div className='flow accent-gray'>
 							<p>Extra information:</p>
