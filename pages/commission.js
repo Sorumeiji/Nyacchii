@@ -172,7 +172,7 @@ const commission = ({ pricing, gallery }) => {
 							To enable notifications from the waiting list, you can{' '}
 							<a
 								className='accent'
-								target="_blank"
+								target='_blank'
 								href='https://help.trello.com/article/799-watching-cards-lists-and-boards'>
 								follow these easy instructions.
 							</a>
@@ -237,15 +237,21 @@ const commission = ({ pricing, gallery }) => {
 
 							<p>*Price may change based on complexity.</p>
 							<p>
-								<span className='accent'> Animated Emotes - </span> In the case of animation, if
-								length is bigger than 60 frames total for Twitch emotes, the frame rate will be
-								reduced as necessary. If the file size is bigger than 256kb for Discord emotes, the
-								frame rate will be lowered to 30fps.
+								<span className='openSansBold' style={{ color: 'white' }}>
+									{' '}
+									Animated Emotes -{' '}
+								</span>{' '}
+								In the case of animation, if length is bigger than 60 frames total for Twitch
+								emotes, the frame rate will be reduced as necessary. If the file size is bigger than
+								256kb for Discord emotes, the frame rate will be lowered to 30fps.
 							</p>
 							<p>
-								<span className='accent'> Illustrations - </span> Every extra character drawn within
-								the same image will be priced at 80% of the original price. For work with a tight
-								deadline, price will increase a 30%.
+								<span className='openSansBold' style={{ color: 'white' }}>
+									{' '}
+									Illustrations -{' '}
+								</span>{' '}
+								Every extra character drawn within the same image will be priced at 80% of the
+								original price. For work with a tight deadline, price will increase a 30%.
 							</p>
 							<p>
 								Commissions are for personal use only, in channels such as: Twitch, Picarto,
