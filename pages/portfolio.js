@@ -22,10 +22,6 @@ export async function getStaticProps() {
 
 const portfolio = ({ gallery }) => {
 	console.log(gallery);
-	let background = gallery[1].fields.assets;
-	let character = gallery[2].fields.assets;
-	let normalEmotes = gallery[0].fields.assets;
-	let animatedEmotes = gallery[3].fields.assets;
 
 	return (
 		<>
@@ -102,9 +98,9 @@ const portfolio = ({ gallery }) => {
 						</h3>
 						<div className='wrapper'>
 							<div className='portfolioGallery'>
-								{normalEmotes.map((normalEmotes, index) => (
+								{/* {normalEmotes.map((normalEmotes, index) => (
 									<img key={index} src={normalEmotes.fields.file.url} />
-								))}
+								))} */}
 							</div>
 						</div>
 					</div>
@@ -118,12 +114,12 @@ const portfolio = ({ gallery }) => {
 						</h3>
 						<div className='wrapper'>
 							<div className='portfolioGallery'>
-								{character.map((character, index) => (
+								{/* {character.map((character, index) => (
 									<img key={index} src={character.fields.file.url} />
 								))}
 								{background.map((background, index) => (
 									<img key={index} src={background.fields.file.url} />
-								))}
+								))} */}
 							</div>
 						</div>
 					</div>
