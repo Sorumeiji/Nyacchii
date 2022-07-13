@@ -62,11 +62,11 @@ const Navigation = () => {
 								</a>
 							</Link>
 						</li>
-						{/* <li>
+						<li>
 							<Link href='/portfolio'>
 								<a className={router.pathname == '/portfolio' ? `${Nav.active}` : ''}>Portfolio</a>
 							</Link>
-						</li> */}
+						</li>
 						<li>
 							<Link href='/shop'>
 								<a className={router.pathname == '/shop' ? `${Nav.active}` : ''}>Shop</a>
