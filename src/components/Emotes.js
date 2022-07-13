@@ -1,57 +1,21 @@
 import { useEffect, useState } from 'react';
-const Emotes = ({ pricing }) => {
-	let background = pricing[2].fields.assets;
-	let backgroundDetails = pricing[2].fields.details;
-	let backgroundPrice = pricing[2].fields.price;
-
-	let character = pricing[3].fields.assets;
-	let characterDetails = pricing[3].fields.details;
-	let characterPrice = pricing[3].fields.price;
+const Emotes = ({ normalEmotes, animatedEmotes }) => {
+	let animated = animatedEmotes[0].fields.assets;
+	let normal = normalEmotes[0].fields.assets;
 
 	return (
 		<div>
 			<div className='pricing__content container'>
 				<div className='pricing__example_emotes emoteContainer'>
 					<div className='pricing__gallery_emotes'>
-						<img src={character[0].fields.file.url} />
-						<img src={character[1].fields.file.url} />
-						<img src={character[2].fields.file.url} />
-						<img src={character[4].fields.file.url} />
-						<img src={character[5].fields.file.url} />
-						<img src={character[6].fields.file.url} />
-						<img src={character[7].fields.file.url} />
-						<img src={character[8].fields.file.url} />
-						<img src={character[9].fields.file.url} />
-						<img src={character[10].fields.file.url} />
-						<img src={character[11].fields.file.url} />
-						<img src={character[12].fields.file.url} />
-						<img src={character[13].fields.file.url} />
-						<img src={character[14].fields.file.url} />
-						<img src={character[15].fields.file.url} />
-						<img src={character[16].fields.file.url} />
-						<img src={character[17].fields.file.url} />
-						<img src={character[18].fields.file.url} />
+						{normal.map((normal, index) => (
+							<img key={index} src={normal.fields.file.url} />
+						))}
 					</div>
 					<div className='pricing__gallery_emotes'>
-						<img src={background[0].fields.file.url} />
-						<img src={background[1].fields.file.url} />
-						<img src={background[2].fields.file.url} />
-						<img src={background[4].fields.file.url} />
-						<img src={background[5].fields.file.url} />
-						<img src={background[6].fields.file.url} />
-
-						<img src={background[8].fields.file.url} />
-						<img src={background[9].fields.file.url} />
-						<img src={background[10].fields.file.url} />
-						<img src={background[11].fields.file.url} />
-						<img src={background[12].fields.file.url} />
-						<img src={background[13].fields.file.url} />
-						<img src={background[14].fields.file.url} />
-						<img src={background[15].fields.file.url} />
-						<img src={background[16].fields.file.url} />
-						<img src={background[17].fields.file.url} />
-						<img src={background[18].fields.file.url} />
-						<img src={background[19].fields.file.url} />
+						{animated.map((animated, index) => (
+							<img key={index} src={animated.fields.file.url} />
+						))}
 					</div>
 				</div>
 				<div className='pricing__details'>

@@ -22,19 +22,25 @@ export async function getStaticProps() {
 		accessToken: process.env.CONTENTFUL_ACCESS_KEY,
 	});
 
-	const res = await client.getEntries({ content_type: 'commissionPricing' });
-	const pes = await client.getEntries({ content_type: 'gallery' });
+	const ne = await client.getEntries({ content_type: 'normalEmotes' });
+	const ae = await client.getEntries({ content_type: 'animatedEmotes' });
+	const ca = await client.getEntries({ content_type: 'characterArt' });
+	const ba = await client.getEntries({ content_type: 'backgroundArt' });
 
 	return {
 		props: {
-			pricing: res.items,
-			gallery: pes.items,
+			normalEmotes: ne.items,
+			animatedEmotes: ae.items,
+			characterArt: ca.items,
+			backgroundArt: ba.items,
 		},
 	};
 }
 
-const commission = ({ pricing, gallery }) => {
-	const [emotes, setEmotes] = useState(<Emotes pricing={pricing} />);
+const commission = ({ normalEmotes, animatedEmotes, characterArt, backgroundArt }) => {
+	const [emotes, setEmotes] = useState(
+		<Emotes normalEmotes={normalEmotes} animatedEmotes={animatedEmotes} />
+	);
 	const [isActive, setActive] = useState('emotes');
 
 	const handleEmotes = () => {
@@ -188,7 +194,9 @@ const commission = ({ pricing, gallery }) => {
 							<li>
 								<a
 									onClick={() => {
-										setEmotes(<Emotes pricing={pricing} />);
+										setEmotes(
+											<Emotes normalEmotes={normalEmotes} animatedEmotes={animatedEmotes} />
+										);
 										handleEmotes();
 									}}
 									className={isActive === 'emotes' ? 'menuActive' : ''}>
@@ -198,7 +206,9 @@ const commission = ({ pricing, gallery }) => {
 							<li>
 								<a
 									onClick={() => {
-										setEmotes(<Illustration pricing={pricing} />);
+										setEmotes(
+											<Illustration characterArt={characterArt} backgroundArt={backgroundArt} />
+										);
 										handleIllustrations();
 									}}
 									className={isActive === 'illustrations' ? 'menuActive' : ''}>
@@ -208,7 +218,7 @@ const commission = ({ pricing, gallery }) => {
 							<li>
 								<a
 									onClick={() => {
-										setEmotes(<Vtuber pricing={pricing} />);
+										setEmotes(<Vtuber />);
 										handleVtubers();
 									}}
 									className={isActive === 'vtubers' ? 'menuActive' : ''}>
@@ -218,7 +228,7 @@ const commission = ({ pricing, gallery }) => {
 							<li>
 								<a
 									onClick={() => {
-										setEmotes(<Terms pricing={pricing} />);
+										setEmotes(<Terms />);
 										handleTerms();
 									}}
 									className={isActive === 'terms' ? 'menuActive' : ''}>

@@ -1,13 +1,5 @@
 import { useEffect, useState } from 'react';
 const Vtuber = ({ pricing }) => {
-	let background = pricing[0].fields.assets;
-	let backgroundDetails = pricing[0].fields.details;
-	let backgroundPrice = pricing[0].fields.price;
-
-	let character = pricing[1].fields.assets;
-	let characterDetails = pricing[1].fields.details;
-	let characterPrice = pricing[1].fields.price;
-
 	return (
 		<div className='pricing__content container'>
 			<div className='pricing__details'>
