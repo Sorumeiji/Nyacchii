@@ -1,56 +1,63 @@
-.gallery {
+.portfolio {
     background-color: var(--color-bg-dark);
+    padding-bottom: var(--space-l);
 
-    h3 {
+    h2 {
         color: var(--color-text2);
     }
 }
 
-.portfolioEmotes {
-    .normalEmotes {
-    }
-
-    .animatedEmotes {
-    }
-
+.portfolio__emotesContent {
     .wrapper {
-        .portfolioGallery {
+        width: 90vw;
+        width: clamp(16rem, 90vw, 75rem);
+        margin-inline: auto;
+        position: relative;
+        .portfolio__gallery {
             display: grid;
             row-gap: 0.3em;
             column-gap: 0;
             @supports (width: min(60px, 100%)) {
-                grid-template-columns: repeat(auto-fit, minmax(min(60px, 100%), 1fr));
+                grid-template-columns: repeat(auto-fill, minmax(min(60px, 100%), 1fr));
+                max-width: 80%;
+                display: flex;
+                flex-wrap: wrap;
             }
             img {
                 max-width: 100%;
                 object-fit: cover;
-                &:hover {
-                    cursor: pointer;
-                }
+            }
+
+            img + img {
+                margin-left: 0.3em;
             }
         }
     }
 }
 
-.galleryIllustration {
-    margin-top: var(--space-2xl);
-    .characters {
-    }
-    .backgrounds {
-    }
-
+.portfolio__digitalGallery {
     .wrapper {
-        .portfolioGallery {
+        width: 90vw;
+        width: clamp(16rem, 90vw, 75rem);
+        margin-inline: auto;
+        position: relative;
+        .portfolio__gallery {
             display: grid;
-            grid-gap: 0em;
-            @supports (width: min(150px, 100%)) {
-                grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr));
-            }
+            gap: 0.1em;
+            grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
             img {
-                max-width: 100%;
+                width: 400px;
+                height: 400px;
+                display: block;
+
                 object-fit: cover;
                 &:hover {
                     cursor: pointer;
+                }
+
+                &:nth-child(even) {
+                    width: 400px;
+                    height: 400px;
                 }
             }
         }
