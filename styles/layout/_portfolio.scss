@@ -43,11 +43,11 @@
         position: relative;
         .portfolio__gallery {
             display: grid;
-            gap: 0.1em;
-            grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: masonry;
             img {
-                width: 400px;
-                height: 400px;
+                // width: 400px;
+                // height: 400px;
                 display: block;
 
                 object-fit: cover;

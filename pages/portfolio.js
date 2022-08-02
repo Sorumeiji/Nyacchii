@@ -98,7 +98,7 @@ const portfolio = ({ egallery, igallery }) => {
 				</section>
 				<article id='view' className='[ portfolio__emoteGallery ] [ flow ]'>
 					<div className='[ flow ] [ portfolio__emotesContent ]'>
-						<div className='container'>
+						<div className='wrapper'>
 							<h2>
 								Emotes<span className='accent'>.</span>
 							</h2>
@@ -114,7 +114,7 @@ const portfolio = ({ egallery, igallery }) => {
 				</article>
 				<article className='[ portfolio__digitalGallery ] [ flow ]'>
 					<div className='[ flow ] [ portfolio__digitalContent ]'>
-						<div className='container'>
+						<div className='wrapper'>
 							<h2>
 								Digital Art<span className='accent'>.</span>
 							</h2>
