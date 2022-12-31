@@ -44,22 +44,18 @@ const commission = ({ normalEmotes, animatedEmotes, characterArt, backgroundArt 
 	const [isActive, setActive] = useState('emotes');
 
 	const handleEmotes = () => {
-		// update the state to tab1
 		setActive('emotes');
 	};
 
 	const handleIllustrations = () => {
-		// update the state to tab1
 		setActive('illustrations');
 	};
 
 	const handleVtubers = () => {
-		// update the state to tab1
 		setActive('vtubers');
 	};
 
 	const handleTerms = () => {
-		// update the state to tab1
 		setActive('terms');
 	};
 
