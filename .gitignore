@@ -3,3 +3,4 @@ node_modules
 .next
 .history
 .env.local
+.env
