@@ -30,9 +30,7 @@ const Navigation = () => {
 			<div className='navigation-container'>
 				<div className={`${Nav.Logo}`}>
 					<Link href='/'>
-						<a>
-							<Image src={Logo} />
-						</a>
+						<Image src={Logo} />
 					</Link>
 				</div>
 
@@ -51,30 +49,34 @@ const Navigation = () => {
 						ref={navRef}
 						className={`${Nav.primary_navigation}`}>
 						<li>
-							<Link href='/'>
-								<a className={router.pathname == '/' ? `${Nav.active}` : ''}>Home</a>
+							<Link className={router.pathname == '/' ? `${Nav.active}` : ''} href='/'>
+								Home
 							</Link>
 						</li>
 						<li>
-							<Link href='/commission'>
-								<a className={router.pathname == '/commission' ? `${Nav.active}` : ''}>
-									Commission
-								</a>
+							<Link
+								className={router.pathname == '/commission' ? `${Nav.active}` : ''}
+								href='/commission'>
+								Commission
 							</Link>
 						</li>
 						<li>
-							<Link href='/portfolio'>
-								<a className={router.pathname == '/portfolio' ? `${Nav.active}` : ''}>Portfolio</a>
+							<Link
+								className={router.pathname == '/portfolio' ? `${Nav.active}` : ''}
+								href='/portfolio'>
+								Portfolio
 							</Link>
 						</li>
 						<li>
-							<Link href='/shop'>
-								<a className={router.pathname == '/shop' ? `${Nav.active}` : ''}>Shop</a>
+							<Link className={router.pathname == '/shop' ? `${Nav.active}` : ''} href='/shop'>
+								Shop
 							</Link>
 						</li>
 						<li>
-							<Link href='/contact'>
-								<a className={router.pathname == '/contact' ? `${Nav.active}` : ''}>Contact</a>
+							<Link
+								className={router.pathname == '/contact' ? `${Nav.active}` : ''}
+								href='/contact'>
+								Contact
 							</Link>
 						</li>
 					</ul>

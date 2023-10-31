@@ -266,8 +266,8 @@ const commission = ({ normalEmotes, animatedEmotes, characterArt, backgroundArt 
 							</p>
 							<p>
 								Please{' '}
-								<Link href='/contact'>
-									<a className='accent'>contact me</a>
+								<Link className='accent' href='/contact'>
+									contact me
 								</Link>{' '}
 								directly if you would like to use a commission for business purposes.
 							</p>
