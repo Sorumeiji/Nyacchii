@@ -105,6 +105,7 @@ const commission = ({ normalEmotes, animatedEmotes, characterArt, backgroundArt 
 					</ul>
 				</motion.div>
 			</section>
+
 			<section className='information'>
 				<section className='decoration container'>
 					<svg width='100%' height='118' fill='none' xmlns='http://www.w3.org/2000/svg'>
@@ -182,6 +183,7 @@ const commission = ({ normalEmotes, animatedEmotes, characterArt, backgroundArt 
 					</div>
 				</article>
 			</section>
+
 			<section className='pricing' id='pricing'>
 				<menu className='pricing__menu container flow'>
 					<div className='menu-group'>
