@@ -26,14 +26,14 @@ const Navigation = () => {
 		}
 	}
 	return (
-		<section className='navigation'>
+        <section className='navigation'>
 			<div className='navigation-container'>
 				<div className={`${Nav.Logo}`}>
 					<Link href='/'>
-						<a>
-							<Image src={Logo} />
-						</a>
-					</Link>
+
+                        <Image src={Logo} />
+
+                    </Link>
 				</div>
 
 				<button
@@ -51,37 +51,45 @@ const Navigation = () => {
 						ref={navRef}
 						className={`${Nav.primary_navigation}`}>
 						<li>
-							<Link href='/'>
-								<a className={router.pathname == '/' ? `${Nav.active}` : ''}>Home</a>
+							<Link href='/' className={router.pathname == '/' ? `${Nav.active}` : ''}>
+								Home
 							</Link>
 						</li>
 						<li>
-							<Link href='/commission'>
-								<a className={router.pathname == '/commission' ? `${Nav.active}` : ''}>
+							<Link
+                                href='/commission'
+                                className={router.pathname == '/commission' ? `${Nav.active}` : ''}>
+								
 									Commission
-								</a>
+								
 							</Link>
 						</li>
 						<li>
-							<Link href='/portfolio'>
-								<a className={router.pathname == '/portfolio' ? `${Nav.active}` : ''}>Portfolio</a>
+							<Link
+                                href='/portfolio'
+                                className={router.pathname == '/portfolio' ? `${Nav.active}` : ''}>
+								Portfolio
 							</Link>
 						</li>
 						<li>
-							<Link href='/shop'>
-								<a className={router.pathname == '/shop' ? `${Nav.active}` : ''}>Shop</a>
+							<Link
+                                href='/shop'
+                                className={router.pathname == '/shop' ? `${Nav.active}` : ''}>
+								Shop
 							</Link>
 						</li>
 						<li>
-							<Link href='/contact'>
-								<a className={router.pathname == '/contact' ? `${Nav.active}` : ''}>Contact</a>
+							<Link
+                                href='/contact'
+                                className={router.pathname == '/contact' ? `${Nav.active}` : ''}>
+								Contact
 							</Link>
 						</li>
 					</ul>
 				</nav>
 			</div>
 		</section>
-	);
+    );
 };
 
 export default Navigation;
